@@ -23,8 +23,8 @@ Dalej robimy nowego brancha na ktorym bedziemy wprowadzac własne zmiany
 
 3. Albo alternatywnie mozesz utworzyc nowa galaz i do niej przejsc osobno
     ```bash
-    git branch "nazwa" #tworzysz gałąź
-    git checkout "nazwa" #przełączasz się na nią
+    git branch [nazwa] #tworzysz gałąź
+    git checkout [nazwa] #przełączasz się na nią
     ```
 4. Potem wiadomo każde nowe zmiany wprowadzasz tak
     ```bash
@@ -35,7 +35,7 @@ Dalej robimy nowego brancha na ktorym bedziemy wprowadzac własne zmiany
     ```bash
     git checkout main #przełączasz sie na main
     git pull origin main #robisz update main
-    git merge nowa_funkcja #i walisz merge
+    git merge [nazwa] #i walisz merge
     ```
     Jak beda jakies konflikty to rozwiaz je jak trzeba
 6. No i wisienka na torcie czyli
