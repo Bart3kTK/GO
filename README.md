@@ -1,5 +1,47 @@
-# GO
-GO game :smile:
+# GRA W GO!
+
+## TASKI:
+1. DIAGRAMY UML
+2. Trzeba dokladniej uzgodnnic
+3.
+4.
+5.
+6. .
+
+
+## Dobra Maciek tu mamy instrukcje
+1. wiec jesli robimy cos przy projekcie to dajemy
+    ```bash
+    git pull origin main
+    ```
+
+2. To wiadomo da nam update wszytstkiego.
+Dalej robimy nowego brancha na ktorym bedziemy wprowadzac własne zmiany
+    ```bash
+    git checkout -b "nazwa"
+    ```
+
+3. Albo alternatywnie mozesz utworzyc nowa galaz i do niej przejsc osobno
+    ```bash
+    git branch "nazwa" #tworzysz gałąź
+    git checkout "nazwa" #przełączasz się na nią
+    ```
+4. Potem wiadomo każde nowe zmiany wprowadzasz tak
+    ```bash
+    git add .
+    git commit -m "Opis zmian"
+    ```
+5. I gdy zakonczysz juz sesje aktualizacji to robisz merge
+    ```bash
+    git checkout main #przełączasz sie na main
+    git pull origin main #robisz update main
+    git merge nowa_funkcja #i walisz merge
+    ```
+    Jak beda jakies konflikty to rozwiaz je jak trzeba
+6. No i wisienka na torcie czyli
+    ```bash
+    git push origin main
+    ```
 
 
 
@@ -7,7 +49,8 @@ GO game :smile:
 
 
 
-**ŚCIĄGA**
+
+# **ŚCIĄGA DO PLIKU .MD**
 
 ```python
 
