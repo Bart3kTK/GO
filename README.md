@@ -31,17 +31,11 @@ Dalej robimy nowego brancha na ktorym bedziemy wprowadzac własne zmiany
     git add .
     git commit -m "Opis zmian"
     ```
-5. I gdy zakonczysz juz sesje aktualizacji to robisz merge
+5. I gdy zakonczysz juz sesje aktualizacji to nie robisz merge tylko **git push origin**
     ```bash
-    git checkout main #przełączasz sie na main
-    git pull origin main #robisz update main
-    git merge [nazwa] #i walisz merge
+    git push origin [nazwa] 
     ```
-    Jak beda jakies konflikty to rozwiaz je jak trzeba
-6. No i wisienka na torcie czyli
-    ```bash
-    git push origin main
-    ```
+
 
 
 
