@@ -1,12 +1,19 @@
 # GRA W GO!
 
-## TASKI:
-1. DIAGRAMY UML
-2. Trzeba dokladniej uzgodnnic
-3.
+## TASKI DO 20.12:
+1. Diagramy UML
+2. Proste działanie klient serwer
+3. Proste GUI i planszą, która pozwala klaść pionki
 4.
 5.
-6. .
+6. ...
+
+## TASKI DO KONCA SEMESTRU:
+1. Diagram klas
+2. Logika
+3.
+4.
+5. ...
 
 
 ## Dobra Maciek tu mamy instrukcje
@@ -35,6 +42,7 @@ Dalej robimy nowego brancha na ktorym bedziemy wprowadzac własne zmiany
     ```bash
     git push origin [nazwa] 
     ```
+6. Potem wbijasz na GitHuba i wchodzisz w branches, szukasz tego co robiles wlasnie i klikasz trzy kropki i klikasz pull request no i tam dodajesz jakis kom i potem mozna to bezpiecznie zmergowac
 
 
 
