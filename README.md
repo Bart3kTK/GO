@@ -15,8 +15,41 @@
 4.
 5. ...
 
+# **Założenia**
+## Część klienta
+1. PionkiGUI musza dziedziczyc po kole z javafx
+2. Board z tablciami idzie na serwer
+3. Trzeba utworzyc nowy board (BoardGUI)
+4. Utorzyc kalsę StartGUI (proste)
+5. Utworzyć klasę do kontaktu z serwerem 
+4. Klient posiada klasy:
+    - StartGUI
+    - ClientConnection
+    - PawnGUI
+    - BoardGUI
+5. Opis klas:
 
-## Dobra Maciek tu mamy instrukcje
+    - *StartGUI* - toggle group button do wyboru trybu gry, wybór rozmiaru planszy. **Server connection**
+    - *ClientConnection* - klasa odpowiedzilna za kontak z serwerem. **Server connection**
+    - *PawnGUI* - kalsa dziedziczaca po kole, domyślnie będąca niewidoczna, zawiera zmienne x, y, color oraz metody setWhite(colorWhite, visible), setBlack(colorBlack, visible), setInvisible.
+    - *BoardGUI* - kalsa posiadajaca kwadraty z zamalowanym marginesem oraz posiadajaca obiekty kalsy **PawnGUI** na wszystkich mozliwych polach w stanie invisible. Okno musi posiadać przycisk pass i surrender   . Klasa również przchwytuje kliknięcia użytkownika **Server connection**
+
+## Część serwerowa
+1. 
+
+## Prboblemy do rozwiazania
+1. Settings *problem rozwiazany*
+
+## Uruchamianie projektu gogo (część kliena)
+```bash
+mvn javafx:run
+```
+## Uruchamianie projektu server (część serwera)
+```bash
+mvn clean install #kompilacja
+mvn exec:java #opalanie
+```
+## Dobra Maciek tu mamy instrukcje dotycząca Git'a i GitHub'a 
 1. wiec jesli robimy cos przy projekcie to dajemy
     ```bash
     git pull origin main
