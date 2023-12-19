@@ -15,8 +15,16 @@
 4.
 5. ...
 
-
-## Dobra Maciek tu mamy instrukcje
+## Uruchamianie projektu gogo (część kliena)
+```bash
+mvn javafx:run
+```
+## Uruchamianie projektu server (seczęść serwera)
+```bash
+mvn clean install #kompilacja
+mvn exec:java #opalanie
+```
+## Dobra Maciek tu mamy instrukcje dotycząca Git'a i GitHub'a 
 1. wiec jesli robimy cos przy projekcie to dajemy
     ```bash
     git pull origin main
