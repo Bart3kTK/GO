@@ -1,4 +1,9 @@
-/home/maciej/Desktop/studia/semestr-3/TP/laboratoria-lista-4/GO/gogo/src/main/java/com/example/xd/PrimaryController.java
-/home/maciej/Desktop/studia/semestr-3/TP/laboratoria-lista-4/GO/gogo/src/main/java/module-info.java
-/home/maciej/Desktop/studia/semestr-3/TP/laboratoria-lista-4/GO/gogo/src/main/java/com/example/xd/SecondaryController.java
-/home/maciej/Desktop/studia/semestr-3/TP/laboratoria-lista-4/GO/gogo/src/main/java/com/example/xd/App.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/App.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/pawns/BlackPawn.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/GUISquare.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/GUIBoard.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/pawns/WhitePawn.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/Controller.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/pawns/Pawn.java
+/home/bartek/GO/gogo/src/main/java/com/example/xd/GUICircle.java
+/home/bartek/GO/gogo/src/main/java/module-info.java
