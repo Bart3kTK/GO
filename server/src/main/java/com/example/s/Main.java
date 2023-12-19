@@ -9,6 +9,8 @@ import java.net.Socket;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import main.java.com.example.s.engine.Engine;
+
 public class Main {    
     public static void main(String[] args) 
     {
@@ -31,7 +33,7 @@ public class Main {
                 String userPreferences = bufferedReader.readLine();
                 String[] splitedUserPreferences = userPreferences.split(" ");
 
-                if (splitedUserPreferences[0] == "bot")
+                if (splitedUserPreferences[0].equals("bot"))
                 {
                     // new bot_game(player)
 
@@ -43,8 +45,13 @@ public class Main {
                 }
                 else
                 {
+                    Socket player2 = queue.poll();
                     //nowy wątek dla pvp
-                    // new match(player, queue.poll()):
+                    if (player.isConnected() && player2.isConnected())
+                    {
+                        Engine engine = new Engine(player, player2);
+                        engine.run();
+                    }
                 }
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
                 // TODO: w ktorym bedzie jakas kolejka dolaczania do graczy
