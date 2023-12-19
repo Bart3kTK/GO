@@ -15,8 +15,6 @@ public class Main {
                 Socket socket = serverSocket.accept();
                 System.out.println("Dolaczyl nowy uzytkownik!");
 
-                
-                
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
                 // TODO: w ktorym bedzie jakas kolejka dolaczania do graczy
             }
