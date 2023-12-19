@@ -8,6 +8,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import com.example.xd.pawns.BlackPawn;
+import com.example.xd.pawns.WhitePawn;
+
 /**
  * JavaFX App
  */
@@ -32,6 +35,14 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        Board board = new Board(9, 9);
+        board.putPawn(0, 0, new BlackPawn());
+        board.putPawn(5, 8, new WhitePawn());
+
+        System.out.println(board);
+
+        board.removePawn(5, 8);
+        System.out.println(board);
         launch();
         //elo
     }
