@@ -2,18 +2,15 @@
 
 ## TASKI DO 20.12:
 1. Diagramy UML
-2. Proste działanie klient serwer
+2. PawnGUI
 3. Proste GUI i planszą, która pozwala klaść pionki
-4.
-5.
-6. ...
+4. Utworzenie założeń
+5. Wstępna implementacja serwera
 
 ## TASKI DO KONCA SEMESTRU:
 1. Diagram klas
 2. Logika
-3.
-4.
-5. ...
+3. i cala reszta
 
 # **Założenia**
 ## Część klienta
@@ -32,10 +29,25 @@
     - *StartGUI* - toggle group button do wyboru trybu gry, wybór rozmiaru planszy. **Server connection**
     - *ClientConnection* - klasa odpowiedzilna za kontak z serwerem. **Server connection**
     - *PawnGUI* - kalsa dziedziczaca po kole, domyślnie będąca niewidoczna, zawiera zmienne x, y, color oraz metody setWhite(colorWhite, visible), setBlack(colorBlack, visible), setInvisible.
-    - *BoardGUI* - kalsa posiadajaca kwadraty z zamalowanym marginesem oraz posiadajaca obiekty kalsy **PawnGUI** na wszystkich mozliwych polach w stanie invisible. Okno musi posiadać przycisk pass i surrender   . Klasa również przchwytuje kliknięcia użytkownika **Server connection**
+    - *BoardGUI* - kalsa posiadajaca kwadraty z zamalowanym marginesem oraz posiadajaca obiekty kalsy **PawnGUI** na wszystkich mozliwych polach w stanie invisible. Okno musi posiadać przycisk pass i surrender. Klasa również przchwytuje kliknięcia użytkownika **Server connection**
 
 ## Część serwerowa
-1. 
+
+1. Serwer posiada klasy:
+- Main
+- PvpGame
+- BotGame
+- Bot
+- Board
+- Logic
+- Settings
+2. Opis klas:
+    - *Main* - tworzy serwer o socket 8888. Plan jest taki, ze klasa ma trzy kolejki typu soket w pętli whlie(true) bedzie przyjmowany nowy socket, nastepnie beda pobierane od niego informacje na temat wybranego trybu gry oraz rozmiaru planszy. W dlaszej czesci while bedzie if'y ktore najpierw albo odpalaja gre z botem albo dodaja gracza do odpowiedzniej kolejki a potem bedzie sprawdzane czy kolajka ma wiecej niz 2 el jesli tak to sprawdza czy dwa kolejne sa aktywne jesli oba git to nowa gra jesli nie to usuwany ten nie git.
+    - *PvpGame* - klasa implementujaca runnable, ktora przyjmuje dwa sockety od aktwynych graczy, posiada obiek klasy **Logic** 
+    - *Bot Game* - klasa implementujaca runnable, ktora przyjmuje jeden socket od atywnego gracza, posiada obiek klasy **Logic** oraz posiada obiekt kalsy **Bot**, która emituje drugi socket 
+    - *Bot* - implementacja bota
+    - *Logic* - sprawdzanie lagalnosci ruchu, sprawdzanie czy nastapilo uduszneie itd. cala logika gry
+    - *Board* klasa posiadajaca informacje o planszy
 
 ## Prboblemy do rozwiazania
 1. Settings *problem rozwiazany*
