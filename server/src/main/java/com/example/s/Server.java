@@ -46,6 +46,7 @@ public class Server
                     System.out.println("wybral bota");
                     // new bot_game(playerSocket)
                     //TU BYL KONFLIKT
+
                     // new bot_game(player)
 
                 }
