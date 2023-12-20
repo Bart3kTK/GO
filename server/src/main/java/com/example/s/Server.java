@@ -44,7 +44,11 @@ public class Server
                 if (splitedUserPreferences[0].equals("bot"))
                 {
                     System.out.println("wybral bota");
+<<<<<<< HEAD:server/src/main/java/com/example/s/Server.java
                     // new bot_game(playerSocket)
+=======
+                    // new bot_game(player)
+>>>>>>> 7f283a3 (drugi commit do tego poprzedniego):server/src/main/java/com/example/s/Main.java
 
                 }
 
