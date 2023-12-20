@@ -6,8 +6,11 @@ public class GUISquare extends Rectangle {
     private static int number = 0;
     private final int index;
     private int side = 50;
-    private int ilosc = 11;
-    public GUISquare(){
+    private final int size;
+    private final int column;
+    private final int row;
+    public GUISquare(int size){
+        this.size = size;
         index = number;
         number ++;
         setWidth(side);
@@ -15,13 +18,15 @@ public class GUISquare extends Rectangle {
         setStroke(Color.BLACK);
         setFill(Color.WHITE);
         setStrokeWidth(1);
-        setX(100+ side * (index / ilosc));
-        setY(100+ side * (index % ilosc));
-        if(index / ilosc == 10)
+        column = index / size;
+        row = index % size;
+        setX(100+ side * column);
+        setY(100+ side * row);
+        if(index / size == size - 1)
         {
             setVisible(false);
         }
-        if(index % ilosc == 10)
+        if(index % size == size - 1)
         {
             setVisible(false);
         }
@@ -33,6 +38,14 @@ public class GUISquare extends Rectangle {
     public double getYpos()
     {
         return getY();
+    }
+    public int getColumn()
+    {
+        return column;
+    }
+    public int getRow()
+    {
+        return row;
     }
 
 }

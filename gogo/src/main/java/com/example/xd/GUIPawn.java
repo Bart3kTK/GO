@@ -3,16 +3,16 @@ package com.example.xd;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class GUICircle extends Circle{
+public class GUIPawn extends Circle{
     private static int clickNumber = 0;
     private boolean isClicked = false;
-    public GUICircle(double x, double y)
+    public GUIPawn(double x, double y)
     {
         setCenterX(x);
         setCenterY(y);
         setRadius(20);
         setPickOnBounds(true);
-        setFill(Color.TRANSPARENT);
+        setClear();
 
         setOnMouseClicked(e -> {
             if (!isClicked)
@@ -34,6 +34,25 @@ public class GUICircle extends Circle{
             }
             
         });
+    }
+
+    public void setClear()
+    {
+        setFill(Color.TRANSPARENT);
+        setStroke(Color.TRANSPARENT);
+        isClicked = false;
+    }
+    public void setBlack()
+    {
+        setFill(Color.BLACK);
+        setStroke(Color.BLACK);
+        isClicked = true;
+    }
+    public void setWhite()
+    {
+        setFill(Color.WHITE);
+        setStroke(Color.BLACK);
+        isClicked = true; 
     }
     
 }
