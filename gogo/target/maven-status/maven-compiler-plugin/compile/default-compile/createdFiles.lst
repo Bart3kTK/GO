@@ -1,1 +1,13 @@
+<<<<<<< HEAD
+=======
+com/example/xd/pawns/BlackPawn.class
+com/example/xd/App.class
+com/example/xd/GUIBoard.class
+com/example/xd/GUISquare.class
+com/example/xd/pawns/WhitePawn.class
+com/example/xd/pawns/Pawn.class
+com/example/xd/GUIPawn.class
+>>>>>>> 307f49a (board update and testClient for server)
 module-info.class
+com/example/xd/gameGUI/GameBoardGUIController.class
+com/example/xd/Controller.class
