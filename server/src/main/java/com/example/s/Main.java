@@ -9,7 +9,8 @@ import java.net.Socket;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import main.java.com.example.s.engine.Engine;
+import com.example.s.engine.Engine;
+
 
 public class Main {    
     public static void main(String[] args) 
@@ -35,6 +36,7 @@ public class Main {
 
                 if (splitedUserPreferences[0].equals("bot"))
                 {
+                    System.out.println("wybral bota");
                     // new bot_game(player)
 
                 }
