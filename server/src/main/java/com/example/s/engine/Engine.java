@@ -1,4 +1,4 @@
-package main.java.com.example.s.engine;
+package com.example.s.engine;
 
 import java.net.Socket;
 
