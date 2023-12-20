@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -23,19 +24,11 @@ public class GUIBoard {
         Pane pane = (Pane) scene.lookup("#MyPane");
         Button surrenderButton = (Button) scene.lookup("#surrender");
         Button passButton = (Button) scene.lookup("#pass");
+        Button okButton = (Button) scene.lookup("#testok");
+        TextField textfield = (TextField) scene.lookup("#testarea");
 
-        ArrayList<GUISquare> squares = new ArrayList<>();
 
-        for (int i = 0; i< 121; i++)
-        {
-            GUISquare sq = new GUISquare();
-            pane.getChildren().add(sq);
-            squares.add(sq);
-        }
-        for (GUISquare sq : squares)
-        {
-            pane.getChildren().add(new GUICircle(sq.getXpos(), sq.getYpos()));
-        }
+        new GamePane(pane, 10, okButton, textfield);
 
 
     //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
