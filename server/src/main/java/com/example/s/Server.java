@@ -44,15 +44,13 @@ public class Server
                 if (splitedUserPreferences[0].equals("bot"))
                 {
                     System.out.println("wybral bota");
-<<<<<<< HEAD:server/src/main/java/com/example/s/Server.java
                     // new bot_game(playerSocket)
-=======
+                    //TU BYL KONFLIKT
                     // new bot_game(player)
->>>>>>> 7f283a3 (drugi commit do tego poprzedniego):server/src/main/java/com/example/s/Main.java
 
                 }
 
-                else if(queue.isEmpty())
+                else if (queue.isEmpty())
                 {
                     IPlayer player = new Player(playerSocket, inputReader);
                     queue.add(player);
