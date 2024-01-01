@@ -11,10 +11,14 @@ import java.util.Queue;
 
 import com.example.s.engine.Engine;
 
-public class Main {    
+public class Server {    
     public static void main(String[] args) 
     {
+        start();
+    }
 
+    private static void start()
+    {
         Queue<Socket> queue = new LinkedList<Socket>();
 
         try (ServerSocket serverSocket = new ServerSocket(8888)) {
