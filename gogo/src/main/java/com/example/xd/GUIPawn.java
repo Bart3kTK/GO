@@ -4,10 +4,16 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class GUIPawn extends Circle{
-    private static int clickNumber = 0;
     private boolean isClicked = false;
-    public GUIPawn(double x, double y)
+    private boolean isUsed = false;
+    private int row;
+    private int column;
+    private boolean isLocked = true;
+
+    public GUIPawn(double x, double y, int row, int column)
     {
+        this.row = row;
+        this.column = column;
         setCenterX(x);
         setCenterY(y);
         setRadius(20);
@@ -15,23 +21,11 @@ public class GUIPawn extends Circle{
         setClear();
 
         setOnMouseClicked(e -> {
-            if (!isClicked)
-            {
-                if (clickNumber % 2 == 0)
-                {
-                    setFill(Color.BLACK);
-                    isClicked = true;
-                }
-                else
-                {
-                    setFill(Color.WHITE);
-                    setStrokeWidth(1);
-                    setStroke(Color.BLACK);
-                    isClicked = true;
-                }
-                
-                clickNumber ++;
+            if (!isLocked){
+                isClicked = true;
+                isLocked = true;
             }
+            
             
         });
     }
@@ -54,5 +48,39 @@ public class GUIPawn extends Circle{
         setStroke(Color.BLACK);
         isClicked = true; 
     }
+    public boolean isClicked()
+    {
+        return isClicked;
+    }
+    public void setClicked(boolean isClicked)
+    {
+        this.isClicked = isClicked;
+    }
+    public int getColumn()
+    {
+        return column;
+    }
+    public int getRow()
+    {
+        return row;
+    }
+    public boolean isUsed()
+    {
+        return isUsed;
+    }
+    public void setUsed(boolean isUsed)
+    {
+        this.isUsed = isUsed;
+    }
+    public void lock()
+    {
+        isLocked = true;
+    }
+    public void unlock()
+    {
+        isLocked = false;
+    }
+
+
     
 }
