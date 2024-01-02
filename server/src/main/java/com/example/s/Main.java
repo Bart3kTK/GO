@@ -40,7 +40,7 @@ public class Main {
 
                 }
 
-                else if (queue.isEmpty())
+                else if(queue.isEmpty())
                 {
                     queue.add(player);
                 }
