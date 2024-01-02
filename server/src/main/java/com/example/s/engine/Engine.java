@@ -2,7 +2,6 @@ package com.example.s.engine;
 
 import java.net.Socket;
 
-<<<<<<< HEAD
 import com.example.s.board.Board;
 import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.WhitePawn;
@@ -15,16 +14,6 @@ public class Engine extends Thread
     protected final IPlayer player2;   // w grze z botem player dwa to będzie bot
 
     public Engine(final IPlayer player1, final IPlayer player2, Board gameBoard)
-=======
-import com.example.s.player.IPlayer;
-
-public class Engine extends Thread
-{
-    protected final IPlayer player1;
-    protected final IPlayer player2;
-
-    public Engine(final IPlayer player1, final IPlayer player2)
->>>>>>> main
     {
         this.player1 = player1;
         this.player2 = player2;

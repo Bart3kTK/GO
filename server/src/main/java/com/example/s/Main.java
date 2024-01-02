@@ -10,11 +10,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.example.s.engine.Engine;
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-
 public class Main {    
     public static void main(String[] args) 
     {
