@@ -48,7 +48,7 @@ public class Server
 
                 }
 
-                else if (queue.isEmpty())
+                else if(queue.isEmpty())
                 {
                     IPlayer player = new Player(playerSocket, inputReader);
                     queue.add(player);
