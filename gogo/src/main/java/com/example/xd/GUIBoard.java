@@ -30,6 +30,7 @@ public class GUIBoard{
 
         new GamePane(pane, 10, okButton, textfield, passButton, surrenderButton);
 
+
     //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
 
     // //   stage.setHeight(Settings.getWindowHeight());

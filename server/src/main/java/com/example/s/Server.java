@@ -10,16 +10,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.example.s.engine.Engine;
-<<<<<<< HEAD:server/src/main/java/com/example/s/Server.java
 import com.example.s.players.IPlayer;
 import com.example.s.players.Player;
 import com.example.s.board.*;
 
 public class Server
 {    
-=======
-public class Main {    
->>>>>>> b880a57 (rozwiazanie konfliktu):server/src/main/java/com/example/s/Main.java
+
     public static void main(String[] args) 
     {
         start();
@@ -70,6 +67,7 @@ public class Main {
                     {
                         Engine engine = new Engine(player1, player2, new Board(9, 9));
                         engine.start();
+
                     }
                 }
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
