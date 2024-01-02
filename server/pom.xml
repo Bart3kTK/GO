@@ -15,14 +15,16 @@
                 <version>3.0.0</version>
                 <executions>
                     <execution>
+                        <id>start-server</id>
+                        <phase>pre-integration-test</phase>
                         <goals>
                             <goal>java</goal>
                         </goals>
+                        <configuration>
+                            <mainClass>com.example.s.Server</mainClass>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <mainClass>com.example.s.Main</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>

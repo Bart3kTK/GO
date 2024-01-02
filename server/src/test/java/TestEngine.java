@@ -1,5 +1,7 @@
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,15 +15,16 @@ public class TestEngine
     @Before
     public void connectPlayers()
     {
-        Server.main(null);
+        // Server.main(null);
         System.out.println("mamy maina");
         this.player1 = new ClientTest("pvp", "9x9");
         this.player2 = new ClientTest("pvp", "9x9");
     }
 
     @Test
-    public void testEngine()
+    public void testPlayer1PutPawn() throws IOException
     {
-        assertTrue(true);
+        player1.wariteOutput("8 8");
+        assertTrue("8 8 White".equals(player1.readInput()));
     }
 }

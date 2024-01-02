@@ -1,6 +1,6 @@
-package com.example.s;
+package com.example.xd;
 
-import com.example.s.pawns.Pawn;
+import com.example.xd.pawns.Pawn;
 
 /*
  *  @brief class wich represents board and holds pawns in 2D array

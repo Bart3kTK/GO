@@ -11,6 +11,7 @@ public class ClientInputReader
 
     public ClientInputReader(final Socket source) 
     {
+        System.out.println(source);
         try {
             this.inputReader = new BufferedReader(new InputStreamReader(source.getInputStream()));
         } catch (IOException e) {
@@ -22,7 +23,15 @@ public class ClientInputReader
     public String readInput()
     {
         try {
-            return inputReader.readLine();
+            System.out.println("czytam inpita");
+            String input = null;
+            while(input == null)
+            {
+                System.out.println("elo");
+                input = inputReader.readLine();
+                System.out.println(input);
+            }
+            return input;
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

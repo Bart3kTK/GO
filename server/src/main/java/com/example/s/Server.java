@@ -10,8 +10,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.example.s.engine.Engine;
+import com.example.s.players.IPlayer;
+import com.example.s.players.Player;
+import com.example.s.board.*;
 
-public class Server {    
+public class Server
+{    
     public static void main(String[] args) 
     {
         start();
@@ -19,7 +23,7 @@ public class Server {
 
     private static void start()
     {
-        Queue<Socket> queue = new LinkedList<Socket>();
+        Queue<IPlayer> queue = new LinkedList<IPlayer>();
 
         try (ServerSocket serverSocket = new ServerSocket(8888)) {
  
@@ -27,35 +31,38 @@ public class Server {
  
             while (true) 
             {
-                Socket player = serverSocket.accept();
+                Socket playerSocket = serverSocket.accept();
                 System.out.println("Dolaczyl nowy uzytkownik!");
 
-                InputStream playerInput = player.getInputStream();
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(playerInput));
+                ClientInputReader inputReader = new ClientInputReader(playerSocket);
 
-                // oczekujemy stringa w postaci: "pvp/bot 9x9/13x13/19/19"
-                String userPreferences = bufferedReader.readLine();
+                // oczekujemy stringa w postaci: "pvp/bot 9x9/13x13/19/19
+                String userPreferences = inputReader.readInput();
+                System.out.println(userPreferences);
                 String[] splitedUserPreferences = userPreferences.split(" ");
 
                 if (splitedUserPreferences[0].equals("bot"))
                 {
                     System.out.println("wybral bota");
-                    // new bot_game(player)
+                    // new bot_game(playerSocket)
 
                 }
 
                 else if (queue.isEmpty())
                 {
+                    IPlayer player = new Player(playerSocket, inputReader);
                     queue.add(player);
                 }
                 else
                 {
-                    Socket player2 = queue.poll();
+                    IPlayer player1 = queue.poll();
+                    IPlayer player2 = new Player(playerSocket, inputReader);
+
                     //nowy wątek dla pvp
-                    if (player.isConnected() && player2.isConnected())
+                    if (true) //if player1.isConnected() && player2.isConnected()
                     {
-                        // Engine engine = new Engine(player, player2);
-                        // engine.run();
+                        Engine engine = new Engine(player1, player2, new Board(9, 9));
+                        engine.start();
                     }
                 }
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
