@@ -2,7 +2,6 @@ package com.example.s.engine;
 
 import java.net.Socket;
 
-<<<<<<< HEAD
 import com.example.s.board.Board;
 import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.WhitePawn;
