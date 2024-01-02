@@ -13,7 +13,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 
-public class GUIBoard {
+public class GUIBoard{
 
     public GUIBoard(Stage stage) throws IOException{
         Parent parent = FXMLLoader.load(getClass().getResource("GUIBoard.fxml"));
@@ -28,7 +28,7 @@ public class GUIBoard {
         TextField textfield = (TextField) scene.lookup("#testarea");
 
 
-        new GamePane(pane, 10, okButton, textfield);
+        new GamePane(pane, 10, okButton, textfield, passButton, surrenderButton);
 
 
     //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
