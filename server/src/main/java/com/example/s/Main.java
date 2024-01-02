@@ -10,7 +10,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import com.example.s.engine.Engine;
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 
 public class Main {    
     public static void main(String[] args) 
@@ -51,8 +54,8 @@ public class Main {
                     //nowy wątek dla pvp
                     if (player.isConnected() && player2.isConnected())
                     {
-                        Engine engine = new Engine(player, player2);
-                        engine.run();
+                        // Engine engine = new Engine(player, player2);
+                        // engine.run();
                     }
                 }
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
