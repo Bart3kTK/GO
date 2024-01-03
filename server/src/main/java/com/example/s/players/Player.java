@@ -15,6 +15,8 @@ public class Player implements IPlayer
 
     private String playerInput;
 
+    private Boolean isPassed = false;
+
     public Player(final Socket socket, ClientInputReader clientInputReader) throws IOException
     {
         this.socket = socket;
@@ -26,12 +28,16 @@ public class Player implements IPlayer
     public void loadInput() 
     {
         this.playerInput = reader.readInput();
+        if (playerInput.equals("pass"))
+        {
+            this.isPassed = true;
+        }
+
     }
 
     @Override
     public int[] moveRequest() 
     {
-        loadInput();
         String[] stringPosition = this.playerInput.split(" ");
         int[] intPosition = new int[2];
 
@@ -42,13 +48,15 @@ public class Player implements IPlayer
     }
 
     @Override
-    public Boolean isPassed() {
-        loadInput();
-        if (playerInput.equals("pass"))
-        {
-            return true;
-        }
-        return false;
+    public Boolean getIsPassed() 
+    {
+        return isPassed;
+    }
+
+    @Override
+    public void setIsPassed(Boolean isPassed) 
+    {
+        this.isPassed = isPassed;
     }
 
     @Override

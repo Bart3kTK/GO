@@ -29,7 +29,8 @@ public class Engine extends Thread
         {
             while (true)
             {
-                if(player1.isPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
+                player1.loadInput();
+                if(player1.getIsPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
                 {
                     System.out.println("spasował :(");
                     break;
@@ -39,8 +40,8 @@ public class Engine extends Thread
                 if (gameBoard.isPositionFree(player1Request[0], player1Request[1])) // to trzeba uzupełnić  // już nie trzeba
                 {
                     gameBoard.putPawn(player1Request[0], player1Request[1], new WhitePawn());
-                    player1.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " White");
-                    player2.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " White");
+                    player1.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " white");
+                    player2.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " white");
                     System.out.println("stoi");
                     break;
                 }
@@ -53,7 +54,8 @@ public class Engine extends Thread
 
             while (true)
             {
-                if(player2.isPassed())
+                player2.loadInput();
+                if(player2.getIsPassed())
                 {
                     System.out.println("spasował :(");
                     break;
