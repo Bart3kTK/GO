@@ -64,14 +64,10 @@ public class Server
                     //nowy wątek dla pvp
                     if (true) //if player1.isConnected() && player2.isConnected()
                     {
-<<<<<<< HEAD:server/src/main/java/com/example/s/Main.java
-                        Engine engine = new Engine(player, player2);
-                        engine.run();
-=======
-                        Engine engine = new Engine(player1, player2, new Board(9, 9));
-                        engine.start();
 
->>>>>>> 1e03060d9e604633646ac73304a6666e721ebcf7:server/src/main/java/com/example/s/Server.java
+                       // Engine engine = new Engine(player1, player2, new Board(9, 9));
+                       // engine.start();
+
                     }
                 }
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
