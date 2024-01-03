@@ -12,7 +12,7 @@ import java.util.Queue;
 import com.example.s.engine.Engine;
 import com.example.s.players.IPlayer;
 import com.example.s.players.Player;
-import com.example.s.board.*;
+import com.example.s.board.Board;
 
 public class Server
 {    
@@ -45,13 +45,10 @@ public class Server
                 {
                     System.out.println("wybral bota");
                     // new bot_game(playerSocket)
-                    //TU BYL KONFLIKT
-
-                    // new bot_game(player)
 
                 }
 
-                else if(queue.isEmpty())
+                else if (queue.isEmpty())
                 {
                     IPlayer player = new Player(playerSocket, inputReader);
                     queue.add(player);
@@ -64,10 +61,8 @@ public class Server
                     //nowy wątek dla pvp
                     if (true) //if player1.isConnected() && player2.isConnected()
                     {
-
-                       // Engine engine = new Engine(player1, player2, new Board(9, 9));
-                       // engine.start();
-
+                        Engine engine = new Engine(player1, player2, new Board(9, 9));
+                        engine.start();
                     }
                 }
                 // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
