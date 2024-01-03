@@ -11,6 +11,7 @@ public interface IPlayer
     public int[] moveRequest();
     public void loadInput();
     public void writeOutput(String outputMessage);
-    public Boolean isPassed();
+    public Boolean getIsPassed();
+    public void setIsPassed(Boolean isPassed);
     public String introduce();
 }
