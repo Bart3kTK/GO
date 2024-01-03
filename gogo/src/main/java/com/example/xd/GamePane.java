@@ -28,13 +28,13 @@ public class GamePane{
         Thread thread = new Thread(clientConnection);
         thread.start();
 
-        okButton.setOnMouseClicked(e -> {handleMouseClick(textField);});
-        passButton.setOnMouseClicked(e -> {
-            System.out.println("pass");
-        });
-        surrenderButton.setOnMouseClicked(e -> {
-            System.out.println("surrender");
-        });
+        // okButton.setOnMouseClicked(e -> {handleMouseClick(textField);});
+        // passButton.setOnMouseClicked(e -> {
+        //     System.out.println("pass");
+        // });
+        // surrenderButton.setOnMouseClicked(e -> {
+        //     System.out.println("surrender");
+        // });
 
 
 

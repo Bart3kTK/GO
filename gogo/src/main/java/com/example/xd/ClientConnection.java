@@ -36,8 +36,10 @@ public class ClientConnection implements Runnable{
         socket = new Socket(host, port); 
         out = new PrintWriter(socket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        out.println("elo 123");
 
         passButton.setOnMouseClicked(e -> {
+
             if(isMyTurn)
             {
                 out.println("pass");
