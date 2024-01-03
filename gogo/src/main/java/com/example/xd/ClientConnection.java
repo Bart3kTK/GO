@@ -38,11 +38,19 @@ public class ClientConnection implements Runnable{
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
         passButton.setOnMouseClicked(e -> {
-            out.println("pass");
+            if(isMyTurn)
+            {
+                out.println("pass");
+                isMyTurn = false;
+            }
         });
 
         surrenderButton.setOnMouseClicked(e -> {
-            out.println("surrender");
+            if(isMyTurn)
+            {
+                out.println("surrender");
+                isMyTurn = false;
+            }
         });
 
         pane.setOnMouseClicked(e -> {
