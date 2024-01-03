@@ -1,3 +1,4 @@
 *.class
 *.lst
 /gogo/target/
+/server/target/
