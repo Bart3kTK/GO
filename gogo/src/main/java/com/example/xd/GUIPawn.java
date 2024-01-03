@@ -25,8 +25,10 @@ public class GUIPawn extends Circle{
                 isClicked = true;
                 isLocked = true;
             }
+
             
             
+
         });
     }
 
@@ -83,4 +85,5 @@ public class GUIPawn extends Circle{
 
 
     
+
 }
