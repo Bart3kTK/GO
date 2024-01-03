@@ -29,28 +29,30 @@ public class Engine extends Thread
         {
             while (true)
             {
-                player1.loadInput();
                 if(player1.isPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
                 {
                     System.out.println("spasował :(");
                     break;
                 }
                 int[] player1Request = player1.moveRequest();
+                System.out.println("przeczytałem, pozdro");
                 if (gameBoard.isPositionFree(player1Request[0], player1Request[1])) // to trzeba uzupełnić  // już nie trzeba
                 {
                     gameBoard.putPawn(player1Request[0], player1Request[1], new WhitePawn());
-                    System.out.println("weź poinformuj gracza o tym że pionek się zmienił");
+                    player1.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " White");
+                    player2.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " White");
+                    System.out.println("stoi");
                     break;
                 }
                 else
                 {
                     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
+                    player1.writeOutput("incorrect position");
                 }
             }
 
             while (true)
             {
-                player2.loadInput();
                 if(player2.isPassed())
                 {
                     System.out.println("spasował :(");
@@ -60,11 +62,13 @@ public class Engine extends Thread
                 if (gameBoard.isPositionFree(player2Request[0], player2Request[1])) // to trzeba uzupełnić
                 {
                     gameBoard.putPawn(player2Request[0], player2Request[1], new BlackPawn());
-                    System.out.println("weź poinformuj gracza o tym że pionek się zmienił");
+                    player1.writeOutput(Integer.toString(player2Request[0]) + " " + Integer.toString(player2Request[1]) + " Black");
+                    player2.writeOutput(Integer.toString(player2Request[0]) + " " + Integer.toString(player2Request[1]) + " Black");
                     break;
                 }
                 else
                 {
+                    player2.writeOutput("incorrect position");
                     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
                 }
             }
