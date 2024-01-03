@@ -8,8 +8,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.logging.Level;
 
 import com.example.s.engine.Engine;
+import com.example.s.logger.MyLogger;
 import com.example.s.players.IPlayer;
 import com.example.s.players.Player;
 import com.example.s.board.Board;
@@ -18,6 +20,8 @@ public class Server
 {    
     public static void main(String[] args) 
     {
+        MyLogger.loggerConfig();
+        MyLogger.logger.log(Level.INFO, "Huj");
         start();
     }
 
