@@ -27,4 +27,11 @@ public class TestEngine
         player1.wariteOutput("8 8");
         assertTrue("8 8 White".equals(player1.readInput()));
     }
+
+    @Test
+    public void testMoveCollision() throws IOException
+    {
+        player2.wariteOutput("8 8");
+        assertTrue(player2.readInput().equals("incorrect position"));
+    }
 }

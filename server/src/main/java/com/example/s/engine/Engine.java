@@ -41,11 +41,13 @@ public class Engine extends Thread
                     gameBoard.putPawn(player1Request[0], player1Request[1], new WhitePawn());
                     player1.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " White");
                     player2.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " White");
+                    System.out.println("stoi");
                     break;
                 }
                 else
                 {
                     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
+                    player1.writeOutput("incorrect position");
                 }
             }
 
@@ -66,6 +68,7 @@ public class Engine extends Thread
                 }
                 else
                 {
+                    player2.writeOutput("incorrect position");
                     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
                 }
             }

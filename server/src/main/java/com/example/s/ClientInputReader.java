@@ -25,11 +25,11 @@ public class ClientInputReader
         try {
             System.out.println("czytam inpita");
             String input = null;
-            while(input == null)
+            while (input == null || input.isEmpty())
             {
                 System.out.println("elo");
                 input = inputReader.readLine();
-                System.out.println(input);
+                // System.out.println(input);
             }
             return input;
         } catch (IOException e) {

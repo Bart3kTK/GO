@@ -20,6 +20,6 @@ public class OutputWriter
 
     public void wariteOutput(String outputMessage)
     {
-        out.println(outputMessage);
+        out.println(outputMessage + "\n");
     }
 }
