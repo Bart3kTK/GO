@@ -56,27 +56,38 @@ public class ClientConnection implements Runnable{
         });
 
         pane.setOnMouseClicked(e -> {
+            System.out.println("click");
             if (!isMyTurn)
             {
                 return;
             }
+            System.out.println("click2");
+
+            boolean messageisSent = false;
 
             for (GUIPawn[] row : pawnsGrid) {
                 for (GUIPawn pawn : row) {
                     if (pawn.isClicked() && !pawn.isUsed())
                     {
+                        System.out.println(pawn.getRow() + " " + pawn.getColumn());
                         out.println(pawn.getRow() + " " + pawn.getColumn());
                         pawn.setUsed(true);
                         pawn.setClicked(false);
                         isMyTurn = false;
-                    }
-                    pawn.lock();
-                    
+                        messageisSent = true; 
+                    }                       
                 }
-
             }
-        });
+            if (messageisSent)
+            {
+                for (GUIPawn[] row : pawnsGrid) {
+                    for (GUIPawn pawn : row) {
+                        pawn.lock();
+                    }
+                }
+            }
 
+        });
     }
     @Override
     public void run() {
@@ -138,20 +149,23 @@ public class ClientConnection implements Runnable{
     private void handleOneWordCommand(String[] splitedCommand){
         String command = splitedCommand[0];
         switch (command){
-            case ("pass"):
-                isMyTurn = true;
+            case ("surrender"):
+                isMyTurn = true; //TODO: do przemyslenia
                 break;
-                case ("surrender"):
-                    isMyTurn = true; //TODO: do przemyslenia
-                    break;
-                case ("done"):
-                    for (GUIPawn[] row : pawnsGrid) {
-                        for (GUIPawn pawn : row) {
+            case ("pass"):
+            case ("done"):
+                for (GUIPawn[] row : pawnsGrid) {
+                    for (GUIPawn pawn : row) {
+                        if(!pawn.isUsed())
+                        {
                             pawn.unlock();
                         }
+
+                        
                     }
-                    isMyTurn = true;
-                    break;
+                }
+                isMyTurn = true;
+                break;
             default:
                 break;
         }
@@ -169,15 +183,12 @@ public class ClientConnection implements Runnable{
             switch (color){
                 case ("black"):
                     pawn.setBlack();
-                    pawn.setUsed(true);
                     break;
                 case ("white"):
                     pawn.setWhite();
-                    pawn.setUsed(true);
                     break;
                 case ("clear"):
                     pawn.setClear();
-                    pawn.setUsed(false);
                     break;
                 default:
                     break;

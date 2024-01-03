@@ -21,7 +21,7 @@ public class GUIPawn extends Circle{
         setClear();
 
         setOnMouseClicked(e -> {
-            if (!isLocked){
+            if (!isLocked && !isUsed){
                 isClicked = true;
                 isLocked = true;
             }
@@ -37,18 +37,23 @@ public class GUIPawn extends Circle{
         setFill(Color.TRANSPARENT);
         setStroke(Color.TRANSPARENT);
         isClicked = false;
+        isUsed = false;
     }
     public void setBlack()
     {
         setFill(Color.BLACK);
         setStroke(Color.BLACK);
-        isClicked = true;
+        isClicked = false;
+        isUsed = true;
+        isLocked = true;
     }
     public void setWhite()
     {
         setFill(Color.WHITE);
         setStroke(Color.BLACK);
-        isClicked = true; 
+        isClicked = false;
+        isUsed = true; 
+        isLocked = true;
     }
     public boolean isClicked()
     {
