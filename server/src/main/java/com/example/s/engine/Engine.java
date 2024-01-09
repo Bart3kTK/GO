@@ -1,10 +1,12 @@
 package com.example.s.engine;
 
 import java.net.Socket;
+import java.util.logging.Level;
 
 import com.example.s.board.Board;
 import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.WhitePawn;
+import com.example.s.logger.MyLogger;
 import com.example.s.players.IPlayer;
 
 public class Engine extends Thread
@@ -19,31 +21,29 @@ public class Engine extends Thread
         this.player2 = player2;
         this.gameBoard = gameBoard;
     }
-    
-    @Override
-    public void run()
+
+    /*
+     *  Method implements whole turn and its logic
+     */
+    private void turn(IPlayer currentPlayer, IPlayer opponentPlayer, String color)
     {
-        System.out.println(player1.introduce() + " and " + player2.introduce() + " started game");
-        System.out.println("biali zaczynają (bo są lepsi)");
         while (true)
-        {
-            while (true)
             {
-                player1.writeOutput("done");   // tells client that now is his turn
-                player1.loadInput();  // loads input from client
-                if(player1.getIsPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
+                currentPlayer.writeOutput("done");   // tells client that now is his turn
+                currentPlayer.loadInput();  // loads input from client
+                if(currentPlayer.getIsPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
                 {
-                    System.out.println("spasował :(");
+                    MyLogger.logger.log(Level.INFO, "Player passed");
                     break;
                 }
-                int[] player1Request = player1.moveRequest();
+                int[] playerRequest = currentPlayer.moveRequest();
                 System.out.println("przeczytałem, pozdro");
-                if (gameBoard.isPositionFree(player1Request[0], player1Request[1])) // to trzeba uzupełnić  // już nie trzeba
+                if (gameBoard.isPositionFree(playerRequest[0], playerRequest[1])) // to trzeba uzupełnić  // już nie trzeba
                 {
-                    gameBoard.putPawn(player1Request[0], player1Request[1], new WhitePawn());
-                    player1.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " white");
-                    player2.writeOutput(Integer.toString(player1Request[0]) + " " + Integer.toString(player1Request[1]) + " white");
-                    // System.out.println("stoi");
+                    gameBoard.putPawn(playerRequest[0], playerRequest[1], color);
+                    currentPlayer.writeOutput(Integer.toString(playerRequest[0]) + " " + Integer.toString(playerRequest[1]) + " " + color);
+                    opponentPlayer.writeOutput(Integer.toString(playerRequest[0]) + " " + Integer.toString(playerRequest[1]) + " " + color);
+                    MyLogger.logger.info("Pawn placed");
                     break;
                 }
                 else
@@ -52,29 +52,18 @@ public class Engine extends Thread
                     // player1.writeOutput("incorrect position");
                 }
             }
+    }
+    
+    @Override
+    public void run()
+    {
+        System.out.println(player1.introduce() + " and " + player2.introduce() + " started game");
+        System.out.println("biali zaczynają (bo są lepsi)");
+        while (true)
+        {
+           turn(player1, player2, "white");
 
-            while (true)
-            {
-                player2.writeOutput("done");
-                player2.loadInput();
-                if(player2.getIsPassed())
-                {
-                    break;
-                }
-                int[] player2Request = player2.moveRequest();
-                if (gameBoard.isPositionFree(player2Request[0], player2Request[1])) // to trzeba uzupełnić
-                {
-                    gameBoard.putPawn(player2Request[0], player2Request[1], new BlackPawn());
-                    player1.writeOutput(Integer.toString(player2Request[0]) + " " + Integer.toString(player2Request[1]) + " black");
-                    player2.writeOutput(Integer.toString(player2Request[0]) + " " + Integer.toString(player2Request[1]) + " black");
-                    break;
-                }
-                else
-                {
-                    // player2.writeOutput("incorrect position");
-                    System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
-                }
-            }
+           turn(player2, player1, "black");
         }
     }
 }

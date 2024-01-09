@@ -1,6 +1,8 @@
 package com.example.s.board;
 
+import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.Pawn;
+import com.example.s.board.pawns.WhitePawn;
 
 /*
  *  @brief class wich represents board and holds pawns in 2D array
@@ -26,6 +28,18 @@ public class Board
     public void putPawn(final int row, final int column, final Pawn pawn)
     {
         this.board[row][column] = pawn;
+    }
+
+    public void putPawn(final int row, final int column, final String color)
+    {
+        if (color.equals("white"))
+        {
+            this.board[row][column] = new WhitePawn();
+        }
+        else
+        {
+            this.board[row][column] = new BlackPawn();
+        }
     }
 
     public void removePawn(final int row, final int column)
