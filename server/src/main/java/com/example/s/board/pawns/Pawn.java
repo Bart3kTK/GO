@@ -14,10 +14,19 @@ public abstract class Pawn
     protected String color;
     protected int row;
     protected int column;
+    protected Pawn[] neighbours = new Pawn[4];
 
     public String getColor()
     {
         return this.color;
+    }
+    public Pawn[] getNeighbours()
+    {
+        return this.neighbours;
+    }
+    public void setNeighbours(Pawn[] neighbours)
+    {
+        this.neighbours = neighbours;
     }
 
     

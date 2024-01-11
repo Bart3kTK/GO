@@ -40,7 +40,7 @@ public class Server
 
                 ClientInputReader inputReader = new ClientInputReader(playerSocket);
 
-                // oczekujemy stringa w postaci: "pvp/bot 9x9/13x13/19/19
+                // oczekujemy stringa w postaci: "pvp/bot 9x9/13x13/19x19" update: ZROBIONE I TAK SIE DZIEJE
                 String userPreferences = inputReader.readInput();
                 System.out.println(userPreferences);
                 String[] splitedUserPreferences = userPreferences.split(" ");

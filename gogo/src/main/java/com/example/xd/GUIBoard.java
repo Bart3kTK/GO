@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class GUIBoard{
 
-    public GUIBoard(Stage stage) throws IOException{
+    public GUIBoard(Stage stage, int size, String gameType) throws IOException{
         Parent parent = FXMLLoader.load(getClass().getResource("GUIBoard.fxml"));
 
         Scene scene = new Scene(parent);
@@ -28,7 +28,7 @@ public class GUIBoard{
         TextField textfield = (TextField) scene.lookup("#testarea");
 
 
-        new GamePane(pane, 10, okButton, textfield, passButton, surrenderButton);
+        new GamePane(pane, size, okButton, textfield, passButton, surrenderButton, gameType);
 
 
     //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
@@ -45,4 +45,5 @@ public class GUIBoard{
       stage.show();
 
     }
+
 }

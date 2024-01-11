@@ -20,8 +20,8 @@ public class GUISquare extends Rectangle {
         setStrokeWidth(1);
         column = index / size;
         row = index % size;
-        setX(100+ side * column);
-        setY(100+ side * row);
+        setX(50+ side * column);
+        setY(50+ side * row);
         if(index / size == size - 1)
         {
             setVisible(false);

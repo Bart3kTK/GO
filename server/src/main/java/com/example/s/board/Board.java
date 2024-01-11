@@ -28,6 +28,10 @@ public class Board
     public void putPawn(final int row, final int column, final Pawn pawn)
     {
         this.board[row][column] = pawn;
+
+        pawn.setNeighbours(this.getActualneighbours(row, column));
+        //TODO: PROBLEM TRZEBA Z MACKIEM OBADAC JAK SKONCZY OGLADAC WYKLAD
+        //TOOD: tu trzeba ustawic ze sąsiadom ze ten pionek mieszka obok nich
     }
 
     public void putPawn(final int row, final int column, final String color)
@@ -82,6 +86,72 @@ public class Board
     public Pawn[][] getboard()
     {
         return this.board;
+    }
+
+
+    /*
+     * @brief this method is used to set actual neighbours for pawn on board
+     */
+    public void setNeighbours(int row, int column)
+    {
+        
+        if (this.isPositionFree(row, column))
+        {
+            Pawn pawn = board[row][column];
+            pawn.setNeighbours(getActualneighbours(row, column));
+        }
+    }
+
+
+
+
+
+    // [ ][a][ ][ ]          Pawn[0] = a
+    // [b][x][c][ ]          Pawn[1] = b
+    // [ ][d][ ][ ]          Pawn[2] = c
+    // [ ][ ][ ][ ]          Pawn[3] = d
+
+    /*
+     * @brief method returns actual neighbours for pawn on board
+     */
+    public Pawn[] getActualneighbours(int row, int column)
+    {
+        Pawn[] neighbours = new Pawn[4];
+        if(row == 0)
+        {
+            neighbours[0] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+        }
+        else
+        {
+            neighbours[0] = board[row-1][column];
+        }
+
+        if(row == rows-1)
+        {
+            neighbours[3] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+        }
+        else
+        {
+            neighbours[3] = board[row+1][column];
+        }
+
+        if(column == 0)
+        {
+            neighbours[1] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+        }
+        else
+        {
+            neighbours[1] = board[row][column-1];
+        }
+        if(column == columns - 1)
+        {
+            neighbours[2] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+        }
+        else
+        {
+            neighbours[2] = board[row][column+1];
+        }
+        return neighbours;
     }
 
 }

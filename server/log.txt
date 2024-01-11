@@ -1,0 +1,52 @@
+Jan 10, 2024 12:03:32 PM com.example.s.Server main
+INFO: Huj
+Jan 10, 2024 12:04:30 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:32 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:34 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:35 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:37 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:38 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:40 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:41 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:42 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:43 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:45 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:47 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:48 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:49 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:51 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:52 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:53 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:55 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:56 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:57 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:04:59 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:05:00 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:05:01 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:05:03 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 10, 2024 12:05:04 PM com.example.s.engine.Engine turn
+INFO: Pawn placed

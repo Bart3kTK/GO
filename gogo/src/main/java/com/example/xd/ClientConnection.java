@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
@@ -25,7 +24,7 @@ public class ClientConnection implements Runnable{
     private boolean isRunning = true;
     
 
-    public ClientConnection(String host, int port, GUIPawn[][] pawnsGrid, Pane pane, Button passButton, Button surrenderButton) throws UnknownHostException, IOException {
+    public ClientConnection(String host, int port, GUIPawn[][] pawnsGrid, Pane pane, Button passButton, Button surrenderButton, String gameType) throws UnknownHostException, IOException {
         this.host = host;
         this.port = port;
         this.pawnsGrid = pawnsGrid;
@@ -36,7 +35,7 @@ public class ClientConnection implements Runnable{
         socket = new Socket(host, port); 
         out = new PrintWriter(socket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        out.println("elo 123");
+        out.println(gameType + " " + pawnsGrid.length);
 
         passButton.setOnMouseClicked(e -> {
 
@@ -56,12 +55,10 @@ public class ClientConnection implements Runnable{
         });
 
         pane.setOnMouseClicked(e -> {
-            System.out.println("click");
             if (!isMyTurn)
             {
                 return;
             }
-            System.out.println("click2");
 
             boolean messageisSent = false;
 
@@ -69,7 +66,6 @@ public class ClientConnection implements Runnable{
                 for (GUIPawn pawn : row) {
                     if (pawn.isClicked() && !pawn.isUsed())
                     {
-                        System.out.println(pawn.getRow() + " " + pawn.getColumn());
                         out.println(pawn.getRow() + " " + pawn.getColumn());
                         pawn.setUsed(true);
                         pawn.setClicked(false);

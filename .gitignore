@@ -2,3 +2,5 @@
 *.lst
 /gogo/target/
 /server/target/
+.vscode/
+```

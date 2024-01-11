@@ -14,6 +14,7 @@ public abstract class Pawn
     protected String color;
     protected int row;
     protected int column;
+    protected Pawn[] neighbours = new Pawn[4];
 
     public String getColor()
     {

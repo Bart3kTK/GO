@@ -18,13 +18,13 @@ public class GamePane{
         private ClientConnection clientConnection;
     ArrayList<GUISquare> squares = new ArrayList<>();
 
-    public GamePane(Pane pane, int size, Button okButton, TextField textField, Button passButton, Button surrenderButton) throws UnknownHostException, IOException
+    public GamePane(Pane pane, int size, Button okButton, TextField textField, Button passButton, Button surrenderButton, String gameType) throws UnknownHostException, IOException
     {
         this.pane = pane;
         this.size = size;
 
         initBoard();
-        clientConnection = new ClientConnection("localhost", 8888, pawnsGrid, pane, passButton, surrenderButton);
+        clientConnection = new ClientConnection("localhost", 8888, pawnsGrid, pane, passButton, surrenderButton, gameType);
         Thread thread = new Thread(clientConnection);
         thread.start();
 
