@@ -29,25 +29,47 @@ public class Board
     {
         this.board[row][column] = pawn;
 
-        pawn.setNeighbours(this.getActualneighbours(row, column));
-        //TODO: PROBLEM TRZEBA Z MACKIEM OBADAC JAK SKONCZY OGLADAC WYKLAD
-        //TOOD: tu trzeba ustawic ze sąsiadom ze ten pionek mieszka obok nich
+        pawn.setNeighbours(this.getActualneighbours(pawn));
+
+        for (Pawn neighbour : pawn.getNeighbours()) 
+        {   
+            neighbour.setNeighbours(this.getActualneighbours(neighbour));
+        }
+        
     }
 
     public void putPawn(final int row, final int column, final String color)
     {
+        Pawn pawn;
         if (color.equals("white"))
         {
-            this.board[row][column] = new WhitePawn();
+            pawn = new WhitePawn();
+            this.board[row][column] = pawn;
         }
         else
-        {
-            this.board[row][column] = new BlackPawn();
+        {                                                                   /// to trzeba zmienic na jekgiegoś buildra czy coś
+            pawn = new BlackPawn();
+            this.board[row][column] = pawn;
+        }
+
+        pawn.setNeighbours(this.getActualneighbours(pawn));
+
+        for (Pawn neighbour : pawn.getNeighbours()) 
+        {   
+            neighbour.setNeighbours(this.getActualneighbours(neighbour));
         }
     }
 
     public void removePawn(final int row, final int column)
     {
+        Pawn pawn = this.board[row][column];
+        if (pawn != null)
+        {
+            for (Pawn neighbour : pawn.getNeighbours()) 
+            {   
+                neighbour.setNeighbours(this.getActualneighbours(neighbour));
+            }  
+        }
         this.board[row][column] = null;
     }
 
@@ -89,33 +111,24 @@ public class Board
     }
 
 
-    /*
-     * @brief this method is used to set actual neighbours for pawn on board
-     */
-    public void setNeighbours(int row, int column)
-    {
-        
-        if (this.isPositionFree(row, column))
-        {
-            Pawn pawn = board[row][column];
-            pawn.setNeighbours(getActualneighbours(row, column));
-        }
-    }
 
 
 
 
 
     // [ ][a][ ][ ]          Pawn[0] = a
-    // [b][x][c][ ]          Pawn[1] = b
-    // [ ][d][ ][ ]          Pawn[2] = c
+    // [d][x][b][ ]          Pawn[1] = b
+    // [ ][c][ ][ ]          Pawn[2] = c
     // [ ][ ][ ][ ]          Pawn[3] = d
 
     /*
      * @brief method returns actual neighbours for pawn on board
      */
-    public Pawn[] getActualneighbours(int row, int column)
+    public Pawn[] getActualneighbours(Pawn pawn)
     {
+        int row = pawn.getRow();
+        int column = pawn.getColumn();
+
         Pawn[] neighbours = new Pawn[4];
         if(row == 0)
         {
@@ -128,30 +141,56 @@ public class Board
 
         if(row == rows-1)
         {
+            neighbours[2] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+        }
+        else
+        {
+            neighbours[2] = board[row+1][column];
+        }
+
+        if(column == 0)
+        {
             neighbours[3] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
         }
         else
         {
-            neighbours[3] = board[row+1][column];
+            neighbours[3] = board[row][column-1];
         }
-
-        if(column == 0)
+        if(column == columns - 1)
         {
             neighbours[1] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
         }
         else
         {
-            neighbours[1] = board[row][column-1];
-        }
-        if(column == columns - 1)
-        {
-            neighbours[2] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
-        }
-        else
-        {
-            neighbours[2] = board[row][column+1];
+            neighbours[1] = board[row][column+1];
         }
         return neighbours;
     }
 
+    boolean checkIsSurrounded(final int row, final int column)
+    {
+        Pawn pawn = board[row][column];
+        pawn.setIsChecked(true);
+        Boolean isNeighboursSurrounded = false;
+
+        for (Pawn neighbour : pawn.getNeighbours())
+        {
+            if (neighbour == null)
+            {
+                pawn.setIsChecked(false);
+                return true;
+            }
+        }
+
+        for (Pawn neighbour : pawn.getNeighbours())
+        {
+            if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false)
+            {
+                isNeighboursSurrounded = isNeighboursSurrounded || checkIsSurrounded(neighbour.getRow(), neighbour.getColumn());
+            }
+        }
+
+        pawn.setIsChecked(false);
+        return isNeighboursSurrounded;
+    }
 }

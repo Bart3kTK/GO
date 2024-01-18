@@ -14,6 +14,7 @@ public abstract class Pawn
     protected String color;
     protected int row;
     protected int column;
+    protected boolean isChecked = false;
     protected Pawn[] neighbours = new Pawn[4];
 
     public String getColor()
@@ -29,5 +30,23 @@ public abstract class Pawn
         this.neighbours = neighbours;
     }
 
-    
+    public int getRow()
+    {
+        return row;
+    }
+
+    public int getColumn()
+    {
+        return column;
+    }
+
+    public void setIsChecked(boolean isChecked)
+    {
+        this.isChecked = isChecked;
+    }
+
+    public boolean getChecked()
+    {
+        return isChecked;
+    }
 }
