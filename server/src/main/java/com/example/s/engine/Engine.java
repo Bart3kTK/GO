@@ -5,6 +5,7 @@ import java.util.logging.Level;
 
 import com.example.s.board.Board;
 import com.example.s.board.pawns.BlackPawn;
+import com.example.s.board.pawns.PawnFactory;
 import com.example.s.board.pawns.WhitePawn;
 import com.example.s.logger.MyLogger;
 import com.example.s.players.IPlayer;
@@ -12,8 +13,10 @@ import com.example.s.players.IPlayer;
 public class Engine extends Thread
 {
     private Board gameBoard;
+    private PawnFactory pawnFactory = new PawnFactory();
     protected final IPlayer player1;
     protected final IPlayer player2;   // w grze z botem player dwa to będzie bot
+
 
     public Engine(final IPlayer player1, final IPlayer player2, Board gameBoard)
     {
@@ -40,10 +43,18 @@ public class Engine extends Thread
                 System.out.println("przeczytałem, pozdro");
                 if (gameBoard.isPositionFree(playerRequest[0], playerRequest[1])) // to trzeba uzupełnić  // już nie trzeba
                 {
-                    gameBoard.putPawn(playerRequest[0], playerRequest[1], color);
+                    gameBoard.putPawn( pawnFactory.producePawn(color, playerRequest[0], playerRequest[1]) );
+                    // DO POPRAWY
+                    //  |
+                    //  |
+                    //  \/
                     currentPlayer.writeOutput(Integer.toString(playerRequest[0]) + " " + Integer.toString(playerRequest[1]) + " " + color);
                     opponentPlayer.writeOutput(Integer.toString(playerRequest[0]) + " " + Integer.toString(playerRequest[1]) + " " + color);
                     MyLogger.logger.info("Pawn placed");
+                    //  ^
+                    //  |
+                    //  |
+                    // DO POPRAWY
                     break;
                 }
                 else

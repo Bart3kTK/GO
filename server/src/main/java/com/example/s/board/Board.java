@@ -25,9 +25,9 @@ public class Board
         this.board = new Pawn[rows][columns];
     }
 
-    public void putPawn(final int row, final int column, final Pawn pawn)
+    public void putPawn(final Pawn pawn) //to musi zwracac string z update dla klienta
     {
-        this.board[row][column] = pawn;
+        this.board[pawn.getRow()][pawn.getColumn()] = pawn;
 
         pawn.setNeighbours(this.getActualneighbours(pawn));
 
@@ -35,42 +35,45 @@ public class Board
         {   
             neighbour.setNeighbours(this.getActualneighbours(neighbour));
         }
+
+        doPossibleUpdates(pawn);
         
     }
 
-    public void putPawn(final int row, final int column, final String color)
+    // public void putPawn(final int row, final int column, final String color)
+    // {
+    //     Pawn pawn;
+    //     if (color.equals("white"))
+    //     {
+    //         pawn = new WhitePawn();
+    //         this.board[row][column] = pawn;
+    //     }
+    //     else
+    //     {                                                                   /// to trzeba zmienic na jekgiegoś buildra czy coś
+    //         pawn = new BlackPawn();
+    //         this.board[row][column] = pawn;
+    //     }
+
+    //     pawn.setNeighbours(this.getActualneighbours(pawn));
+
+    //     for (Pawn neighbour : pawn.getNeighbours()) 
+    //     {   
+    //         neighbour.setNeighbours(this.getActualneighbours(neighbour));
+    //     }
+    // }
+
+    public void removePawn(final Pawn pawn)
     {
-        Pawn pawn;
-        if (color.equals("white"))
-        {
-            pawn = new WhitePawn();
-            this.board[row][column] = pawn;
-        }
-        else
-        {                                                                   /// to trzeba zmienic na jekgiegoś buildra czy coś
-            pawn = new BlackPawn();
-            this.board[row][column] = pawn;
-        }
-
-        pawn.setNeighbours(this.getActualneighbours(pawn));
-
-        for (Pawn neighbour : pawn.getNeighbours()) 
-        {   
-            neighbour.setNeighbours(this.getActualneighbours(neighbour));
-        }
-    }
-
-    public void removePawn(final int row, final int column)
-    {
-        Pawn pawn = this.board[row][column];
         if (pawn != null)
         {
+            this.board[pawn.getRow()][pawn.getColumn()] = null;
+
             for (Pawn neighbour : pawn.getNeighbours()) 
             {   
                 neighbour.setNeighbours(this.getActualneighbours(neighbour));
             }  
         }
-        this.board[row][column] = null;
+        
     }
 
     /*
@@ -109,11 +112,6 @@ public class Board
     {
         return this.board;
     }
-
-
-
-
-
 
 
     // [ ][a][ ][ ]          Pawn[0] = a
@@ -167,9 +165,38 @@ public class Board
         return neighbours;
     }
 
-    boolean checkIsSurrounded(final int row, final int column)
+    public void doPossibleUpdates(Pawn pawn)
     {
-        Pawn pawn = board[row][column];
+        for (Pawn neighbour : pawn.getNeighbours()) 
+        {   
+            if (neighbour != null)
+            {
+                if (!neighbour.getColor().equals(pawn.getColor()))
+                {
+                    if (checkIsSurrounded(neighbour))
+                    {
+                        removeRecursion(pawn);
+                    }
+                }
+            }
+        }
+    }
+
+    public void removeRecursion(Pawn pawn)
+    {
+        pawn.setIsChecked(true);
+
+        for (Pawn neighbour : pawn.getNeighbours())
+        {
+            if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false)
+            {
+                removeRecursion(neighbour);
+            }
+        }
+
+    }
+    public boolean checkIsSurrounded(Pawn pawn)
+    {
         pawn.setIsChecked(true);
         Boolean isNeighboursSurrounded = false;
 
@@ -186,7 +213,7 @@ public class Board
         {
             if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false)
             {
-                isNeighboursSurrounded = isNeighboursSurrounded || checkIsSurrounded(neighbour.getRow(), neighbour.getColumn());
+                isNeighboursSurrounded = isNeighboursSurrounded || checkIsSurrounded(neighbour);
             }
         }
 
