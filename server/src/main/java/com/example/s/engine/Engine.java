@@ -69,6 +69,7 @@ public class Engine extends Thread
                     currentPlayer.writeOutput("server Incorrect_position_try_again!");
                     // player1.writeOutput("incorrect position");
                 }
+                //sprawdzam czy sąsiedzi są uduszeni
             }
     }
     
