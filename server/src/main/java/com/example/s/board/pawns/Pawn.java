@@ -49,4 +49,14 @@ public abstract class Pawn
     {
         return isChecked;
     }
+
+    public String toString()
+    {
+        return Integer.toString(row) + " " + Integer.toString(column) + " " + color;
+    }
+
+    public String toStringClearMessage()
+    {
+        return Integer.toString(row) + " " + Integer.toString(column) + " clear";
+    }
 }
