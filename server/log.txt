@@ -1,52 +1,2134 @@
-Jan 10, 2024 12:03:32 PM com.example.s.Server main
+Jan 22, 2024 9:03:11 PM com.example.s.Server main
 INFO: Huj
-Jan 10, 2024 12:04:30 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:24 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:03:24 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 2 white
+Jan 22, 2024 9:03:24 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:32 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:03:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:03:25 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 2 black
+Jan 22, 2024 9:03:25 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:34 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:03:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:03:26 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 3 white
+Jan 22, 2024 9:03:26 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:35 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:27 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 black
+Jan 22, 2024 9:03:27 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 6 black
+Jan 22, 2024 9:03:27 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:37 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:03:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:03:30 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 2 white
+Jan 22, 2024 9:03:30 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:38 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:33 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:03:33 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 black
+Jan 22, 2024 9:03:33 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 6 black
+Jan 22, 2024 9:03:33 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:40 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Last update: 3 1 white;3 2 clear
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Last update: 3 1 white;3 2 clear;3 2 clear
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Last update: 3 1 white;3 2 clear;3 2 clear;3 2 clear
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board removePawn
+INFO: Last update: 3 1 white;3 2 clear;3 2 clear;3 2 clear;3 2 clear
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:03:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:03:34 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 1 white;3 2 clear;3 2 clear;3 2 clear;3 2 clear
+Jan 22, 2024 9:03:34 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:41 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:11 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:11 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:04:11 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:04:11 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:04:11 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:04:11 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 2 black
+Jan 22, 2024 9:04:11 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:42 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:04:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 black
+Jan 22, 2024 9:04:25 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 5 white
+Jan 22, 2024 9:04:25 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:43 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:04:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:04:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:04:26 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 3 black
+Jan 22, 2024 9:04:26 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:45 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:04:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:04:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:28 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 5 white
+Jan 22, 2024 9:04:28 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:47 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:04:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:04:32 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 4 black
+Jan 22, 2024 9:04:32 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:48 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:04:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:34 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 6 white
+Jan 22, 2024 9:04:34 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:49 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 3 white
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 3 black;3 3 clear
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 3 white
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 3 black;3 3 clear;3 3 clear
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 3 white
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 3 black;3 3 clear;3 3 clear;3 3 clear
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 3 white
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 3 black;3 3 clear;3 3 clear;3 3 clear;3 3 clear
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:04:36 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:36 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 3 black;3 3 clear;3 3 clear;3 3 clear;3 3 clear
+Jan 22, 2024 9:04:36 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:51 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:39 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:04:39 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:39 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 7 white
+Jan 22, 2024 9:04:39 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:52 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:41 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:04:41 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:04:41 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:04:41 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 1 black
+Jan 22, 2024 9:04:41 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:53 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:04:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:04:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 black
+Jan 22, 2024 9:04:43 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 7 white
+Jan 22, 2024 9:04:43 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:55 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 2 white
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 2 black;2 2 clear
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 2 white
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 2 black;2 2 clear;2 2 clear
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 2 white
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 2 black;2 2 clear;2 2 clear;2 2 clear
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 2 white
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 2 black;2 2 clear;2 2 clear;2 2 clear;2 2 clear
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:04:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:04:47 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 2 black;2 2 clear;2 2 clear;2 2 clear;2 2 clear
+Jan 22, 2024 9:04:47 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:56 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear;1 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear;1 6 clear;2 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear;1 6 clear;2 6 clear;2 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear;1 6 clear;2 6 clear;2 6 clear;2 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear;1 6 clear;2 6 clear;2 6 clear;2 6 clear;1 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board removePawn
+INFO: Last update: 0 6 white;1 6 clear;1 6 clear;2 6 clear;2 6 clear;2 6 clear;1 6 clear;1 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:04:49 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 6 white;1 6 clear;1 6 clear;2 6 clear;2 6 clear;2 6 clear;1 6 clear;1 6 clear
+Jan 22, 2024 9:04:49 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:57 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:04:59 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:04:59 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:04:59 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:04:59 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:04:59 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 6 black
+Jan 22, 2024 9:04:59 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:04:59 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:05:01 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:05:01 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:05:01 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:05:01 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:05:01 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:05:01 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 3 white
+Jan 22, 2024 9:05:01 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:05:00 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:05:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:05:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:05:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:05:16 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 4 black
+Jan 22, 2024 9:05:16 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:05:01 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 6 black
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 6 white;2 6 clear
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 6 white;2 6 clear;2 6 clear
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 6 white;2 6 clear;2 6 clear;2 6 clear
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 6 black
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 6 white;2 6 clear;2 6 clear;2 6 clear;2 6 clear
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:05:18 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 6 white;2 6 clear;2 6 clear;2 6 clear;2 6 clear
+Jan 22, 2024 9:05:18 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:05:03 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:05:20 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 black
+Jan 22, 2024 9:05:20 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:20 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 6 black
+Jan 22, 2024 9:05:20 PM com.example.s.engine.Engine turn
 INFO: Pawn placed
-Jan 10, 2024 12:05:04 PM com.example.s.engine.Engine turn
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 2 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 2 white;3 2 clear
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 2 white;3 2 clear;3 2 clear
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 2 white;3 2 clear;3 2 clear;3 2 clear
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 2 black
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board removePawn
+INFO: Last update: 2 2 white;3 2 clear;3 2 clear;3 2 clear;3 2 clear
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:05:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:05:22 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 2 white;3 2 clear;3 2 clear;3 2 clear;3 2 clear
+Jan 22, 2024 9:05:22 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:39 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 7 black
+Jan 22, 2024 9:05:39 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 7 white
+Jan 22, 2024 9:05:39 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:39 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 7 black
+Jan 22, 2024 9:05:39 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:42 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:05:42 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:05:42 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:05:42 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:05:42 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 4 white
+Jan 22, 2024 9:05:42 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:46 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 black
+Jan 22, 2024 9:05:46 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:05:46 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:05:46 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 4 black
+Jan 22, 2024 9:05:46 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 5 black
+Jan 22, 2024 9:05:46 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:48 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:05:48 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 7 black
+Jan 22, 2024 9:05:48 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 black
+Jan 22, 2024 9:05:48 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 7 white
+Jan 22, 2024 9:05:48 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:05:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 black
+Jan 22, 2024 9:05:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 black
+Jan 22, 2024 9:05:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:05:49 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 5 black
+Jan 22, 2024 9:05:49 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:51 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:05:51 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 black
+Jan 22, 2024 9:05:51 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 6 white
+Jan 22, 2024 9:05:51 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:52 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 black
+Jan 22, 2024 9:05:52 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:05:52 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:05:52 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 5 black
+Jan 22, 2024 9:05:52 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:05:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 black
+Jan 22, 2024 9:05:54 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 5 white
+Jan 22, 2024 9:05:54 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:56 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:05:56 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:05:56 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 black
+Jan 22, 2024 9:05:56 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 4 black
+Jan 22, 2024 9:05:56 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:05:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:05:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:05:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:05:57 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 4 white
+Jan 22, 2024 9:05:57 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:03 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:03 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:03 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:03 PM com.example.s.engine.Engine turn
+INFO: mess to client: 8 0 black
+Jan 22, 2024 9:06:03 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:06:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:06:21 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 3 white
+Jan 22, 2024 9:06:21 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 3 black
+Jan 22, 2024 9:06:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:06:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:06:23 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 3 black
+Jan 22, 2024 9:06:23 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 6 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 6 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 6 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 6 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 3 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear;4 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear;4 3 clear;5 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear;4 3 clear;5 3 clear;5 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear;4 3 clear;5 3 clear;5 3 clear;5 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 3 black
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board removePawn
+INFO: Last update: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear;4 3 clear;5 3 clear;5 3 clear;5 3 clear;5 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:06:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:06:26 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 2 white;4 3 clear;3 4 clear;3 5 clear;3 5 clear;4 6 clear;4 6 clear;4 6 clear;4 6 clear;4 5 clear;5 5 clear;5 5 clear;5 4 clear;5 4 clear;5 4 clear;5 5 clear;4 5 clear;4 5 clear;3 5 clear;3 4 clear;3 4 clear;3 4 clear;4 4 clear;4 4 clear;4 4 clear;4 3 clear;4 3 clear;4 3 clear;5 3 clear;5 3 clear;5 3 clear;5 3 clear
+Jan 22, 2024 9:06:26 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 0 black
+Jan 22, 2024 9:06:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:47 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:47 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 0 black
+Jan 22, 2024 9:06:47 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 0 white
+Jan 22, 2024 9:06:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 0 black
+Jan 22, 2024 9:06:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:49 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 0 white
+Jan 22, 2024 9:06:49 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:51 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 1 black
+Jan 22, 2024 9:06:51 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:06:51 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 2 white
+Jan 22, 2024 9:06:51 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 1 black
+Jan 22, 2024 9:06:51 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:53 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 1 white
+Jan 22, 2024 9:06:53 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 0 black
+Jan 22, 2024 9:06:53 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 1 white
+Jan 22, 2024 9:06:53 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:53 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 5 black
+Jan 22, 2024 9:06:53 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:06:53 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 5 black
+Jan 22, 2024 9:06:53 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 7 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 0 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 7 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 0 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 7 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear;7 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 0 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 7 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear;7 0 clear;7 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 0 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear;7 0 clear;7 0 clear;8 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear;7 0 clear;7 0 clear;8 0 clear;8 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear;7 0 clear;7 0 clear;8 0 clear;8 0 clear;8 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 8 0 black
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board removePawn
+INFO: Last update: 8 1 white;7 0 clear;7 0 clear;7 0 clear;7 0 clear;8 0 clear;8 0 clear;8 0 clear;8 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 8 1 white
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:06:54 PM com.example.s.engine.Engine turn
+INFO: mess to client: 8 1 white;7 0 clear;7 0 clear;7 0 clear;7 0 clear;8 0 clear;8 0 clear;8 0 clear;8 0 clear
+Jan 22, 2024 9:06:54 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:14 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:14 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 black
+Jan 22, 2024 9:07:14 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:14 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 3 black
+Jan 22, 2024 9:07:14 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:15 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 3 white
+Jan 22, 2024 9:07:15 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:07:15 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 3 white
+Jan 22, 2024 9:07:15 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 black
+Jan 22, 2024 9:07:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:16 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:16 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 4 black
+Jan 22, 2024 9:07:16 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 4 white
+Jan 22, 2024 9:07:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:07:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 5 black
+Jan 22, 2024 9:07:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 3 white
+Jan 22, 2024 9:07:17 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 4 white
+Jan 22, 2024 9:07:17 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:19 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 5 black
+Jan 22, 2024 9:07:19 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:19 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:07:19 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:19 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 5 black
+Jan 22, 2024 9:07:19 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:20 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 6 white
+Jan 22, 2024 9:07:20 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:07:20 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:07:20 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 6 white
+Jan 22, 2024 9:07:20 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 4 black
+Jan 22, 2024 9:07:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 5 black
+Jan 22, 2024 9:07:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 black
+Jan 22, 2024 9:07:21 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 4 black
+Jan 22, 2024 9:07:21 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 6 white
+Jan 22, 2024 9:07:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 6 white
+Jan 22, 2024 9:07:22 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 5 black
+Jan 22, 2024 9:07:22 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 6 white
+Jan 22, 2024 9:07:22 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 black
+Jan 22, 2024 9:07:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 4 black
+Jan 22, 2024 9:07:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:23 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 3 black
+Jan 22, 2024 9:07:23 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:24 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 7 white
+Jan 22, 2024 9:07:24 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 6 white
+Jan 22, 2024 9:07:24 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 7 white
+Jan 22, 2024 9:07:24 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 2 black
+Jan 22, 2024 9:07:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 black
+Jan 22, 2024 9:07:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:25 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 2 black
+Jan 22, 2024 9:07:25 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 7 white
+Jan 22, 2024 9:07:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:07:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 7 white
+Jan 22, 2024 9:07:26 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:07:26 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 7 white
+Jan 22, 2024 9:07:26 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 2 black
+Jan 22, 2024 9:07:28 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 1 black
+Jan 22, 2024 9:07:28 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:29 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 2 white
+Jan 22, 2024 9:07:29 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:07:29 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:07:29 PM com.example.s.engine.Engine turn
+INFO: mess to client: 6 2 white
+Jan 22, 2024 9:07:29 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 black
+Jan 22, 2024 9:07:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:34 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:34 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 0 black
+Jan 22, 2024 9:07:34 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:40 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 0 white
+Jan 22, 2024 9:07:40 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:07:40 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:40 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 0 white
+Jan 22, 2024 9:07:40 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:07:43 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 5 black
+Jan 22, 2024 9:07:43 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:45 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 0 white
+Jan 22, 2024 9:07:45 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 0 white
+Jan 22, 2024 9:07:45 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:45 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 0 white
+Jan 22, 2024 9:07:45 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:49 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 1 black
+Jan 22, 2024 9:07:49 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 1 black
+Jan 22, 2024 9:07:49 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 0 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 5 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 5 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 5 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 5 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 5 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is the same color
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 2 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 1 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 5 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 4 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear;0 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear;0 1 clear;0 1 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 2 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removeRecursion
+INFO: Neighbour is null
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 0 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear;0 1 clear;0 1 clear;0 0 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 0 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear;0 1 clear;0 1 clear;0 0 clear;0 0 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 0 0 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear;0 1 clear;0 1 clear;0 0 clear;0 0 clear;0 0 clear
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 1 black
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:07:57 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:07:57 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 0 white;0 0 clear;0 1 clear;0 2 clear;0 3 clear;0 4 clear;0 5 clear;0 5 clear;0 5 clear;0 4 clear;1 4 clear;1 4 clear;2 3 clear;2 3 clear;2 3 clear;2 3 clear;1 3 clear;1 2 clear;2 1 clear;2 1 clear;2 1 clear;2 1 clear;1 1 clear;1 1 clear;1 2 clear;1 3 clear;1 4 clear;0 4 clear;0 3 clear;0 3 clear;0 2 clear;0 2 clear;0 1 clear;0 1 clear;0 0 clear;0 0 clear;0 0 clear
+Jan 22, 2024 9:07:57 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:12 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:08:12 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:08:12 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 4 black
+Jan 22, 2024 9:08:12 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:08:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:08:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 5 white
+Jan 22, 2024 9:08:17 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:08:17 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 5 white
+Jan 22, 2024 9:08:17 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:18 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:08:18 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 3 black
+Jan 22, 2024 9:08:18 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 white
+Jan 22, 2024 9:08:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:08:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 7 white
+Jan 22, 2024 9:08:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 6 white
+Jan 22, 2024 9:08:21 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:08:21 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 6 white
+Jan 22, 2024 9:08:21 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 7 black
+Jan 22, 2024 9:08:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:08:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 7 white
+Jan 22, 2024 9:08:23 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 6 white
+Jan 22, 2024 9:08:23 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 7 black
+Jan 22, 2024 9:08:23 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 white
+Jan 22, 2024 9:08:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 5 white
+Jan 22, 2024 9:08:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 6 white
+Jan 22, 2024 9:08:25 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:08:25 PM com.example.s.engine.Engine turn
+INFO: mess to client: 3 5 white
+Jan 22, 2024 9:08:25 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:27 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 7 black
+Jan 22, 2024 9:08:27 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 7 white
+Jan 22, 2024 9:08:27 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 7 6 white
+Jan 22, 2024 9:08:27 PM com.example.s.engine.Engine turn
+INFO: mess to client: 7 7 black
+Jan 22, 2024 9:08:27 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 white
+Jan 22, 2024 9:08:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:08:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 3 white
+Jan 22, 2024 9:08:28 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 2 white
+Jan 22, 2024 9:08:28 PM com.example.s.engine.Engine turn
+INFO: mess to client: 5 3 white
+Jan 22, 2024 9:08:28 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:08:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 0 white
+Jan 22, 2024 9:08:30 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 1 black
+Jan 22, 2024 9:08:30 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 5 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 4 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear;4 5 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 4 5 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear;4 5 clear;4 5 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 6 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear;4 5 clear;4 5 clear;5 4 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear;4 5 clear;4 5 clear;5 4 clear;5 4 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear;4 5 clear;4 5 clear;5 4 clear;5 4 clear;5 4 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 5 4 black
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board removePawn
+INFO: Last update: 4 4 white;4 5 clear;4 5 clear;4 5 clear;4 5 clear;5 4 clear;5 4 clear;5 4 clear;5 4 clear
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 4 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 5 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 6 4 white
+Jan 22, 2024 9:08:32 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 5 3 white
+Jan 22, 2024 9:08:32 PM com.example.s.engine.Engine turn
+INFO: mess to client: 4 4 white;4 5 clear;4 5 clear;4 5 clear;4 5 clear;5 4 clear;5 4 clear;5 4 clear;5 4 clear
+Jan 22, 2024 9:08:32 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:11:26 PM com.example.s.engine.Engine turn
+INFO: Player passed
+Jan 22, 2024 9:11:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 white
+Jan 22, 2024 9:11:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:11:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:11:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 3 3 white
+Jan 22, 2024 9:11:30 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:11:30 PM com.example.s.engine.Engine turn
+INFO: mess to client: 2 3 white
+Jan 22, 2024 9:11:30 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:11:36 PM com.example.s.engine.Engine turn
+INFO: Player passed
+Jan 22, 2024 9:11:37 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 white
+Jan 22, 2024 9:11:37 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:11:37 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 2 white
+Jan 22, 2024 9:11:37 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 1 black
+Jan 22, 2024 9:11:37 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 2 white
+Jan 22, 2024 9:11:37 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:11:38 PM com.example.s.engine.Engine turn
+INFO: Player passed
+Jan 22, 2024 9:11:40 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 white
+Jan 22, 2024 9:11:40 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 0 UNDEFINED
+Jan 22, 2024 9:11:40 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:11:40 PM com.example.s.engine.Engine turn
+INFO: mess to client: 0 3 white
+Jan 22, 2024 9:11:40 PM com.example.s.engine.Engine turn
+INFO: Pawn placed
+Jan 22, 2024 9:11:41 PM com.example.s.engine.Engine turn
+INFO: Player passed
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 5 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 4 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 3 black
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board doPossibleUpdates
+INFO: Neighbour is surrounded
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 3 black
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 4 white;1 3 clear
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 3 black
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 4 white;1 3 clear;1 3 clear
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 3 black
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 4 white;1 3 clear;1 3 clear;1 3 clear
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Removing pawn: 1 3 black
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board removePawn
+INFO: Last update: 1 4 white;1 3 clear;1 3 clear;1 3 clear;1 3 clear
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 0 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 4 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 2 3 white
+Jan 22, 2024 9:11:43 PM com.example.s.board.Board getActualneighbours
+INFO: Getting neighbours for pawn: 1 2 white
+Jan 22, 2024 9:11:43 PM com.example.s.engine.Engine turn
+INFO: mess to client: 1 4 white;1 3 clear;1 3 clear;1 3 clear;1 3 clear
+Jan 22, 2024 9:11:43 PM com.example.s.engine.Engine turn
 INFO: Pawn placed

@@ -41,7 +41,7 @@ public class Engine extends Thread
                 }
                 int[] playerRequest = currentPlayer.moveRequest();
                 System.out.println("przeczytałem, pozdro");
-                if (gameBoard.isPositionFree(playerRequest[0], playerRequest[1])) // to trzeba uzupełnić  // już nie trzeba
+                if (gameBoard.isPositionAllowed(playerRequest[0], playerRequest[1], color)) // to trzeba uzupełnić  // już nie trzeba
                 {
                     gameBoard.putPawn( pawnFactory.producePawn(color, playerRequest[0], playerRequest[1]) );
                     String messageToClient = gameBoard.getLastUpdate();

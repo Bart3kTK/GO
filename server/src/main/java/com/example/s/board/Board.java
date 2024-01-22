@@ -3,6 +3,7 @@ package com.example.s.board;
 import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.BorderPawn;
 import com.example.s.board.pawns.Pawn;
+import com.example.s.board.pawns.PawnFactory;
 import com.example.s.board.pawns.WhitePawn;
 import com.example.s.logger.MyLogger;
 
@@ -113,13 +114,24 @@ public class Board
         return textRepresentation;
     }
 
-    public boolean isPositionFree(final int row, final int column)
+    public boolean isPositionAllowed(final int row, final int column, String color)
     {
-        if (board[row][column] == null)
+        PawnFactory pawnFactory = new PawnFactory();
+        Pawn testPawn = pawnFactory.producePawn(color, row, column);
+        testPawn.setNeighbours(this.getActualneighbours(testPawn));
+
+        if (board[row][column] != null)
         {
-            return true;
+            return false;
         }
-        return false;
+        else if(!checkIsNotSurrounded(testPawn))
+        {
+            return false;
+        }
+        
+        
+
+        return true;
     }
 
     public Pawn[][] getboard()
