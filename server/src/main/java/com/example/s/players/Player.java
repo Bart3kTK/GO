@@ -32,6 +32,10 @@ public class Player implements IPlayer
         {
             this.isPassed = true;
         }
+        else
+        {
+            this.isPassed = false;
+        }
 
     }
 
