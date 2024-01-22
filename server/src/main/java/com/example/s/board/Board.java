@@ -4,6 +4,7 @@ import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.BorderPawn;
 import com.example.s.board.pawns.Pawn;
 import com.example.s.board.pawns.WhitePawn;
+import com.example.s.logger.MyLogger;
 
 /*
  *  @brief class wich represents board and holds pawns in 2D array
@@ -36,7 +37,11 @@ public class Board
 
         for (Pawn neighbour : pawn.getNeighbours()) 
         {   
-            neighbour.setNeighbours(this.getActualneighbours(neighbour));
+            if (neighbour != null)
+            {
+                neighbour.setNeighbours(this.getActualneighbours(neighbour));                
+            }
+
         }
 
         doPossibleUpdates(pawn);
@@ -71,10 +76,15 @@ public class Board
         {
             this.board[pawn.getRow()][pawn.getColumn()] = null;
             this.lastUpdate += ";" + pawn.toStringClearMessage();
+            MyLogger.logger.info("Removing pawn: " + pawn.toString());
+            MyLogger.logger.info("Last update: " + this.lastUpdate);
 
             for (Pawn neighbour : pawn.getNeighbours()) 
             {   
-                neighbour.setNeighbours(this.getActualneighbours(neighbour));
+                if (neighbour != null)
+                {
+                    neighbour.setNeighbours(this.getActualneighbours(neighbour));                
+                }
             }  
         }
         
@@ -128,6 +138,8 @@ public class Board
      */
     public Pawn[] getActualneighbours(Pawn pawn)
     {
+        MyLogger.logger.info("Getting neighbours for pawn: " + pawn.toString());
+
         int row = pawn.getRow();
         int column = pawn.getColumn();
 
@@ -177,9 +189,10 @@ public class Board
             {
                 if (!neighbour.getColor().equals(pawn.getColor()))
                 {
-                    if (checkIsSurrounded(neighbour))
+                    if (!checkIsNotSurrounded(neighbour))
                     {
-                        removeRecursion(pawn);
+                        MyLogger.logger.info("Neighbour is surrounded");
+                        removeRecursion(neighbour);
                     }
                 }
             }
@@ -192,15 +205,23 @@ public class Board
 
         for (Pawn neighbour : pawn.getNeighbours())
         {
+            if (neighbour == null)
+            {
+                MyLogger.logger.info("Neighbour is null");
+                continue;
+            }
+
             if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false)
             {
+                MyLogger.logger.info("Neighbour is the same color");
                 removeRecursion(neighbour);
-                removePawn(pawn);
+ 
             }
+            removePawn(pawn);
         }
 
     }
-    public boolean checkIsSurrounded(Pawn pawn)
+    public boolean checkIsNotSurrounded(Pawn pawn)
     {
         pawn.setIsChecked(true);
         Boolean isNeighboursSurrounded = false;
@@ -216,9 +237,13 @@ public class Board
 
         for (Pawn neighbour : pawn.getNeighbours())
         {
-            if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false)
+            if (neighbour == null)
             {
-                isNeighboursSurrounded = isNeighboursSurrounded || checkIsSurrounded(neighbour);
+                continue;
+            }
+            if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false ) 
+            {
+                isNeighboursSurrounded = isNeighboursSurrounded || checkIsNotSurrounded(neighbour);
             }
         }
 

@@ -4,12 +4,12 @@ public class WhitePawn extends Pawn
 {
    public WhitePawn()
    {
-        color = "White";
+        color = "white";
    }
 
    public WhitePawn(final int row, final int column)
    {
-        color = "White";
+        color = "white";
         this.row = row;
         this.column = column;
    }

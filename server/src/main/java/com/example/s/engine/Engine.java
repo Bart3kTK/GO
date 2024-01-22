@@ -45,6 +45,7 @@ public class Engine extends Thread
                 {
                     gameBoard.putPawn( pawnFactory.producePawn(color, playerRequest[0], playerRequest[1]) );
                     String messageToClient = gameBoard.getLastUpdate();
+                    MyLogger.logger.log(Level.INFO, "mess to client: " + messageToClient);
                     currentPlayer.writeOutput(messageToClient);
                     opponentPlayer.writeOutput(messageToClient);
                     MyLogger.logger.info("Pawn placed");

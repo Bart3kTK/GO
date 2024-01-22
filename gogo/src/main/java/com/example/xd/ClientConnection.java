@@ -176,6 +176,7 @@ public class ClientConnection implements Runnable{
         int row = Integer.parseInt(splitedCommand[0]);
         int column = Integer.parseInt(splitedCommand[1]);
         String color = splitedCommand[2];
+        System.out.println("row: " + row + " column: " + column + " color: " + color);
         GUIPawn pawn = pawnsGrid[row][column];
         if (color.equals("done")) {
             isMyTurn = true;
