@@ -44,17 +44,10 @@ public class Engine extends Thread
                 if (gameBoard.isPositionFree(playerRequest[0], playerRequest[1])) // to trzeba uzupełnić  // już nie trzeba
                 {
                     gameBoard.putPawn( pawnFactory.producePawn(color, playerRequest[0], playerRequest[1]) );
-                    // DO POPRAWY
-                    //  |
-                    //  |
-                    //  \/
-                    currentPlayer.writeOutput(Integer.toString(playerRequest[0]) + " " + Integer.toString(playerRequest[1]) + " " + color);
-                    opponentPlayer.writeOutput(Integer.toString(playerRequest[0]) + " " + Integer.toString(playerRequest[1]) + " " + color);
+                    String messageToClient = gameBoard.getLastUpdate();
+                    currentPlayer.writeOutput(messageToClient);
+                    opponentPlayer.writeOutput(messageToClient);
                     MyLogger.logger.info("Pawn placed");
-                    //  ^
-                    //  |
-                    //  |
-                    // DO POPRAWY
                     break;
                 }
                 else

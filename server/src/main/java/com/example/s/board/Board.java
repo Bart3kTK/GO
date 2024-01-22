@@ -1,6 +1,7 @@
 package com.example.s.board;
 
 import com.example.s.board.pawns.BlackPawn;
+import com.example.s.board.pawns.BorderPawn;
 import com.example.s.board.pawns.Pawn;
 import com.example.s.board.pawns.WhitePawn;
 
@@ -17,6 +18,7 @@ public class Board
     private final int rows;
     private final int columns;
     private final Pawn board[][];
+    private String lastUpdate;
 
     public Board(final int rows, final int columns)
     {
@@ -28,6 +30,7 @@ public class Board
     public void putPawn(final Pawn pawn) //to musi zwracac string z update dla klienta
     {
         this.board[pawn.getRow()][pawn.getColumn()] = pawn;
+        this.lastUpdate = pawn.toString();
 
         pawn.setNeighbours(this.getActualneighbours(pawn));
 
@@ -67,6 +70,7 @@ public class Board
         if (pawn != null)
         {
             this.board[pawn.getRow()][pawn.getColumn()] = null;
+            this.lastUpdate += ";" + pawn.toStringClearMessage();
 
             for (Pawn neighbour : pawn.getNeighbours()) 
             {   
@@ -130,7 +134,7 @@ public class Board
         Pawn[] neighbours = new Pawn[4];
         if(row == 0)
         {
-            neighbours[0] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+            neighbours[0] = new BorderPawn(); //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
         }
         else
         {
@@ -139,7 +143,7 @@ public class Board
 
         if(row == rows-1)
         {
-            neighbours[2] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+            neighbours[2] = new BorderPawn(); //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
         }
         else
         {
@@ -148,7 +152,7 @@ public class Board
 
         if(column == 0)
         {
-            neighbours[3] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+            neighbours[3] = new BorderPawn(); //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
         }
         else
         {
@@ -156,7 +160,7 @@ public class Board
         }
         if(column == columns - 1)
         {
-            neighbours[1] = null; //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
+            neighbours[1] = new BorderPawn(); //TODO: tu nie null tylko trzeba dac ten Mackowy pionek, którego jeszcze nie ma
         }
         else
         {
@@ -191,6 +195,7 @@ public class Board
             if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false)
             {
                 removeRecursion(neighbour);
+                removePawn(pawn);
             }
         }
 
@@ -219,5 +224,10 @@ public class Board
 
         pawn.setIsChecked(false);
         return isNeighboursSurrounded;
+    }
+
+    public String getLastUpdate()
+    {
+        return this.lastUpdate;
     }
 }
