@@ -131,15 +131,20 @@ public class ClientConnection implements Runnable{
 
     private void handleServerCommand(String command)
     {
+        System.out.println("ELo dostałem: " + command);
+        String[] splitedCommands = command.split(";");
 
-        String[] splitedCommand = command.split(" ");
-        if(splitedCommand.length == 1)
-        {
-            handleOneWordCommand(splitedCommand);
-        }
-        else if(splitedCommand.length == 3)
-        {
-            handleThreeWordCommand(splitedCommand);
+        for (String splitedCommand : splitedCommands){
+            String[] splitedCommand2 = splitedCommand.split(" ");
+
+            if(splitedCommand2.length == 1)
+            {
+                handleOneWordCommand(splitedCommand2);
+            }
+            else if(splitedCommand2.length == 3)
+            {
+                handleThreeWordCommand(splitedCommand2);
+            }
         }
     }
     private void handleOneWordCommand(String[] splitedCommand){
@@ -188,7 +193,6 @@ public class ClientConnection implements Runnable{
                     break;
                 default:
                     break;
-
         };
         });
     }
