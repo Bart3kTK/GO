@@ -3,5 +3,5 @@
 /gogo/target/
 /server/target/
 .vscode/
-/server/src/main/java/com/example/s/log
+/server/src/main/java/com/example/s/logs/
 ```
