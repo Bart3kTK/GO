@@ -11,8 +11,18 @@ public interface IPlayer
     public int[] moveRequest();
     public void loadInput();
     public void writeOutput(String outputMessage);
+
+    // control isPassed flags
     public Boolean getIsPassed();
     public void setIsPassed(Boolean isPassed);
+
+    // basiclly says "hi, i'm + nickname"
     public String introduce();
+
+    // checks whether player is connected
     public Boolean isConnected();
+
+    // methods to track number of beated opponents
+    public int getCollectedPawnsCount();
+    public void incrementCollectedPawnsCount(int newBeatedPawnsNumber);
 }
