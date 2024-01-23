@@ -29,6 +29,7 @@ public class GUIBoard{
         Text player2 = (Text) scene.lookup("#player2");
         Text server = (Text) scene.lookup("#server");
         server.setText("ELO");
+        player2.setText("dziala");
 
         Text[] texts = {player1, player2, server};
         Button[] buttons = {passButton, surrenderButton};

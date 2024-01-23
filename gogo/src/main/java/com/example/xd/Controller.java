@@ -11,13 +11,13 @@ public class Controller {
     private Pane MyPane;
 
     @FXML
-    private Text palyer2;
-
-    @FXML
     private Button pass;
 
     @FXML
     private Text player1;
+
+    @FXML
+    private Text player2;
 
     @FXML
     private Text server;

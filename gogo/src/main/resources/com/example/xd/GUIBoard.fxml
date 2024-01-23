@@ -36,7 +36,7 @@
             <Text layoutX="265.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" />
             <Text layoutX="370.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" />
             <Text fx:id="player1" layoutX="326.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123" />
-            <Text fx:id="palyer2" layoutX="434.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123" />
+            <Text fx:id="player2" layoutX="434.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="123" />
             <Text layoutX="557.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server: " wrappingWidth="52.85693359375" />
             <Text fx:id="server" layoutX="618.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="167.7294921875" />
          </children>
