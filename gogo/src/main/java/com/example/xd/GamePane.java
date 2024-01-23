@@ -8,6 +8,7 @@ import java.util.Scanner;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 
 public class GamePane{
@@ -18,13 +19,13 @@ public class GamePane{
         private ClientConnection clientConnection;
     ArrayList<GUISquare> squares = new ArrayList<>();
 
-    public GamePane(Pane pane, int size, Button okButton, TextField textField, Button passButton, Button surrenderButton, String gameType) throws UnknownHostException, IOException
+    public GamePane(Pane pane, int size, String gameType, Text[] texts, Button[] buttons) throws UnknownHostException, IOException
     {
         this.pane = pane;
         this.size = size;
 
         initBoard();
-        clientConnection = new ClientConnection("localhost", 8888, pawnsGrid, pane, passButton, surrenderButton, gameType);
+        clientConnection = new ClientConnection("localhost", 8888, pawnsGrid, pane, texts, buttons, gameType);
         Thread thread = new Thread(clientConnection);
         thread.start();
 

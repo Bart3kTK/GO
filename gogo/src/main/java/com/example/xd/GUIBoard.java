@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -24,11 +25,16 @@ public class GUIBoard{
         Pane pane = (Pane) scene.lookup("#MyPane");
         Button surrenderButton = (Button) scene.lookup("#surrender");
         Button passButton = (Button) scene.lookup("#pass");
-        Button okButton = (Button) scene.lookup("#testok");
-        TextField textfield = (TextField) scene.lookup("#testarea");
+        Text player1 = (Text) scene.lookup("#player1");
+        Text player2 = (Text) scene.lookup("#player2");
+        Text server = (Text) scene.lookup("#server");
+        server.setText("ELO");
+
+        Text[] texts = {player1, player2, server};
+        Button[] buttons = {passButton, surrenderButton};
 
 
-        new GamePane(pane, size, okButton, textfield, passButton, surrenderButton, gameType);
+        new GamePane(pane, size, gameType, texts, buttons);
 
 
     //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
