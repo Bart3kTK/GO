@@ -31,6 +31,10 @@ public class Player extends AbstractPlayer
         {
             this.isPassed = true;
         }
+        else
+        {
+            this.isPassed = false;
+        }
 
     }
 
