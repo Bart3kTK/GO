@@ -14,4 +14,5 @@ public interface IPlayer
     public Boolean getIsPassed();
     public void setIsPassed(Boolean isPassed);
     public String introduce();
+    public Boolean isConnected();
 }

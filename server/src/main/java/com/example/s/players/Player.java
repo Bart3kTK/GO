@@ -68,5 +68,10 @@ public class Player implements IPlayer
     public void writeOutput(String outputMessage) {
         writer.wariteOutput(outputMessage);
     }
+
+    @Override
+    public Boolean isConnected() {
+        return socket.isConnected();
+    }
     
 }

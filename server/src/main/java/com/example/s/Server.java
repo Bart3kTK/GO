@@ -27,7 +27,9 @@ public class Server
 
     private static void start()
     {
-        Queue<IPlayer> queue = new LinkedList<IPlayer>();
+        Queue<IPlayer> queue9x9 = new LinkedList<IPlayer>();
+        Queue<IPlayer> queue13x13 = new LinkedList<IPlayer>();
+        Queue<IPlayer> queue19x19 = new LinkedList<IPlayer>();
 
         try (ServerSocket serverSocket = new ServerSocket(8888)) {
  
@@ -52,18 +54,60 @@ public class Server
 
                 }
 
-                else if (queue.isEmpty())
+                else if (splitedUserPreferences[1].equals("19"))
+                {
+                    if (queue19x19.isEmpty())
+                    {
+                        IPlayer player = new Player(playerSocket, inputReader);
+                        queue19x19.add(player);
+                    }
+                    else
+                    {
+                        IPlayer player1 = queue19x19.poll();
+                        IPlayer player2 = new Player(playerSocket, inputReader);
+
+                        //nowy wątek dla pvp
+                        if (player1.isConnected() && player2.isConnected()) //if player1.isConnected() && player2.isConnected()
+                        {
+                            Engine engine = new Engine(player1, player2, new Board(19, 19));
+                            engine.start();
+                        }
+                    }
+                }
+
+                else if (splitedUserPreferences[1].equals("13"))
+                {
+                    if (queue13x13.isEmpty())
+                    {
+                        IPlayer player = new Player(playerSocket, inputReader);
+                        queue13x13.add(player);
+                    }
+                    else
+                    {
+                        IPlayer player1 = queue13x13.poll();
+                        IPlayer player2 = new Player(playerSocket, inputReader);
+
+                        //nowy wątek dla pvp
+                        if (player1.isConnected() && player2.isConnected()) //if player1.isConnected() && player2.isConnected()
+                        {
+                            Engine engine = new Engine(player1, player2, new Board(13, 13));
+                            engine.start();
+                        }
+                    }
+                }
+
+                else if (queue9x9.isEmpty())
                 {
                     IPlayer player = new Player(playerSocket, inputReader);
-                    queue.add(player);
+                    queue9x9.add(player);
                 }
                 else
                 {
-                    IPlayer player1 = queue.poll();
+                    IPlayer player1 = queue9x9.poll();
                     IPlayer player2 = new Player(playerSocket, inputReader);
 
                     //nowy wątek dla pvp
-                    if (true) //if player1.isConnected() && player2.isConnected()
+                    if (player1.isConnected() && player2.isConnected()) //if player1.isConnected() && player2.isConnected()
                     {
                         Engine engine = new Engine(player1, player2, new Board(9, 9));
                         engine.start();
