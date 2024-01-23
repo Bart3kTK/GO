@@ -46,6 +46,19 @@ public class Engine extends Thread
                     gameBoard.putPawn( pawnFactory.producePawn(color, playerRequest[0], playerRequest[1]) );
                     String messageToClient = gameBoard.getLastUpdate();
                     MyLogger.logger.log(Level.INFO, "mess to client: " + messageToClient);
+
+                    // if move beats opponent's pawns then increment count of collected pawns for player and inform players
+                    if (messageToClient.contains("clear"))
+                    {
+                        String[] messageContent = messageToClient.split(";");
+                        for (String information : messageContent) 
+                        {
+                            currentPlayer.incrementCollectedPawnsCount();   
+                        }
+                        currentPlayer.writeOutput(Integer.toString(currentPlayer.getCollectedPawnsCount()));
+                        opponentPlayer.writeOutput(Integer.toString(currentPlayer.getCollectedPawnsCount()));
+                    }
+
                     currentPlayer.writeOutput(messageToClient);
                     opponentPlayer.writeOutput(messageToClient);
                     MyLogger.logger.info("Pawn placed");
@@ -54,6 +67,8 @@ public class Engine extends Thread
                 else
                 {
                     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
+                    currentPlayer.writeOutput("display");
+                    currentPlayer.writeOutput("Illegal move! Try again");
                     // player1.writeOutput("incorrect position");
                 }
             }
