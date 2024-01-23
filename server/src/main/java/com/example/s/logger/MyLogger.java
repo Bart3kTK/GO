@@ -16,7 +16,7 @@ public class MyLogger
 
         try
         {
-            FileHandler fh = new FileHandler("./src/main/java/com/example/s/log.txt");
+            FileHandler fh = new FileHandler("./src/main/java/com/example/s/logs/log.txt");
             fh.setLevel(Level.ALL);
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
