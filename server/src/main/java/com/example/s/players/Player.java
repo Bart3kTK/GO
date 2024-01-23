@@ -6,10 +6,9 @@ import java.net.Socket;
 import com.example.s.ClientInputReader;
 import com.example.s.OutputWriter;
 
-public class Player implements IPlayer
+public class Player extends AbstractPlayer
 {
     private final Socket socket;
-    private final String nickname = "Wściekły bot";
     private final ClientInputReader reader;
     private final OutputWriter writer;
 
@@ -31,10 +30,6 @@ public class Player implements IPlayer
         if (playerInput.equals("pass"))
         {
             this.isPassed = true;
-        }
-        else
-        {
-            this.isPassed = false;
         }
 
     }
@@ -61,11 +56,6 @@ public class Player implements IPlayer
     public void setIsPassed(Boolean isPassed) 
     {
         this.isPassed = isPassed;
-    }
-
-    @Override
-    public String introduce() {
-        return "hi, I'm " + nickname;
     }
 
     @Override
