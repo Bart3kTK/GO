@@ -116,18 +116,60 @@ public class Board
 
     public boolean isPositionAllowed(final int row, final int column, String color)
     {
-        PawnFactory pawnFactory = new PawnFactory();
-        Pawn testPawn = pawnFactory.producePawn(color, row, column);
-        testPawn.setNeighbours(this.getActualneighbours(testPawn));
-
+        // first check if position is free
         if (board[row][column] != null)
         {
             return false;
         }
-        else if(!checkIsNotSurrounded(testPawn))
-        {
-            return false;
-        }
+
+
+        // then check if pawn is not surrounded
+        PawnFactory pawnFactory = new PawnFactory();                                //
+        Pawn testPawn = pawnFactory.producePawn(color, row, column);                // Creating test pawn
+        this.board[testPawn.getRow()][testPawn.getColumn()] = testPawn;             //
+        
+        testPawn.setNeighbours(this.getActualneighbours(testPawn));                 //
+        for (Pawn neighbour : testPawn.getNeighbours())                             //
+        {                                                                           // Setting neighbours for test pawn
+            if (neighbour != null)                                                  // Updating neighbours their neighbours
+            {                                                                       //
+                neighbour.setNeighbours(this.getActualneighbours(neighbour));       //       
+            }                                                                       //
+        }                                                                           //
+
+
+
+
+        if(!checkIsNotSurrounded(testPawn))                                                         
+        {        
+            Boolean returnFlag = false;
+
+            for (Pawn neighbour : testPawn.getNeighbours())                                         //
+            {                                                                                       //
+                if (neighbour != null)                                                              //
+                {                                                                                   //
+                    if (!neighbour.getColor().equals(testPawn.getColor()))                          //
+                    {                                                                               //
+                        if (!checkIsNotSurrounded(neighbour))                                       //
+                        {                                                                           //  If move is suicide
+                            returnFlag = true;                                                      //  but there is a possibility 
+                        }                                                                           //  of shortness of breath
+                    }                                                                               //
+                }
+    
+            }
+
+
+            this.board[testPawn.getRow()][testPawn.getColumn()] = null;                     //
+            for (Pawn neighbour : testPawn.getNeighbours())                                 //
+            {                                                                               //
+                if (neighbour != null)                                                      // If move is suicide move
+                {                                                                           //
+                    neighbour.setNeighbours(this.getActualneighbours(neighbour));           //
+                }                                                                           //
+            }                                                                               //
+            return returnFlag;                                                              //
+        }                                                                                   //
         
         
 

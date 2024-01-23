@@ -5,7 +5,6 @@ import javafx.scene.shape.Circle;
 
 public class GUIPawn extends Circle{
     private boolean isClicked = false;
-    private boolean isUsed = false;
     private int row;
     private int column;
     private boolean isLocked = true;
@@ -21,9 +20,8 @@ public class GUIPawn extends Circle{
         setClear();
 
         setOnMouseClicked(e -> {
-            if (!isLocked && !isUsed){
+            if (!isLocked){
                 isClicked = true;
-                isLocked = true;
             }
 
             
@@ -37,14 +35,12 @@ public class GUIPawn extends Circle{
         setFill(Color.TRANSPARENT);
         setStroke(Color.TRANSPARENT);
         isClicked = false;
-        isUsed = false;
     }
     public void setBlack()
     {
         setFill(Color.BLACK);
         setStroke(Color.BLACK);
         isClicked = false;
-        isUsed = true;
         isLocked = true;
     }
     public void setWhite()
@@ -52,7 +48,6 @@ public class GUIPawn extends Circle{
         setFill(Color.WHITE);
         setStroke(Color.BLACK);
         isClicked = false;
-        isUsed = true; 
         isLocked = true;
     }
     public boolean isClicked()
@@ -70,14 +65,6 @@ public class GUIPawn extends Circle{
     public int getRow()
     {
         return row;
-    }
-    public boolean isUsed()
-    {
-        return isUsed;
-    }
-    public void setUsed(boolean isUsed)
-    {
-        this.isUsed = isUsed;
     }
     public void lock()
     {

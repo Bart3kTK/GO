@@ -9,6 +9,7 @@ import java.net.UnknownHostException;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 public class ClientConnection implements Runnable{
     private String host;
@@ -20,17 +21,23 @@ public class ClientConnection implements Runnable{
     private Pane pane;
     private Button passButton;
     private Button surrenderButton;
+    private Text player1;
+    private Text player2;
+    private Text server;
     private boolean isMyTurn = false;
     private boolean isRunning = true;
     
 
-    public ClientConnection(String host, int port, GUIPawn[][] pawnsGrid, Pane pane, Button passButton, Button surrenderButton, String gameType) throws UnknownHostException, IOException {
+    public ClientConnection(String host, int port, GUIPawn[][] pawnsGrid, Pane pane, Text[] texts, Button[] buttons, String gameType) throws UnknownHostException, IOException {
         this.host = host;
         this.port = port;
         this.pawnsGrid = pawnsGrid;
         this.pane = pane;
-        this.passButton = passButton;
-        this.surrenderButton = surrenderButton;
+        this.passButton = buttons[0];
+        this.surrenderButton = buttons[1];
+        this.player1 = texts[0];
+        this.player2 = texts[1];
+        this.server = texts[2];
 
         socket = new Socket(host, port); 
         out = new PrintWriter(socket.getOutputStream(), true);
@@ -64,11 +71,9 @@ public class ClientConnection implements Runnable{
 
             for (GUIPawn[] row : pawnsGrid) {
                 for (GUIPawn pawn : row) {
-                    if (pawn.isClicked() && !pawn.isUsed())
+                    if (pawn.isClicked())
                     {
                         out.println(pawn.getRow() + " " + pawn.getColumn());
-                        pawn.setUsed(true);
-                        pawn.setClicked(false);
                         isMyTurn = false;
                         messageisSent = true; 
                     }                       
@@ -78,6 +83,7 @@ public class ClientConnection implements Runnable{
             {
                 for (GUIPawn[] row : pawnsGrid) {
                     for (GUIPawn pawn : row) {
+                        pawn.setClicked(false);
                         pawn.lock();
                     }
                 }
@@ -157,10 +163,7 @@ public class ClientConnection implements Runnable{
             case ("done"):
                 for (GUIPawn[] row : pawnsGrid) {
                     for (GUIPawn pawn : row) {
-                        if(!pawn.isUsed())
-                        {
                             pawn.unlock();
-                        }
 
                         
                     }
@@ -184,14 +187,20 @@ public class ClientConnection implements Runnable{
         Platform.runLater(() -> {
             switch (color){
                 case ("black"):
+                    server.setText("Nigga");
                     pawn.setBlack();
                     break;
                 case ("white"):
+                    server.setText("Hello!");
                     pawn.setWhite();
                     break;
                 case ("clear"):
+                    server.setText("The war is just starting!");
                     pawn.setClear();
                     break;
+                // case ("display"):
+                //     //
+
                 default:
                     break;
         };
