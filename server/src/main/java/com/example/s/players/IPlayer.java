@@ -24,5 +24,5 @@ public interface IPlayer
 
     // methods to track number of beated opponents
     public int getCollectedPawnsCount();
-    public void incrementCollectedPawnsCount();
+    public void incrementCollectedPawnsCount(int newBeatedPawnsNumber);
 }

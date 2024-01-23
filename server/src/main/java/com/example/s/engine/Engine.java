@@ -51,10 +51,7 @@ public class Engine extends Thread
                     if (messageToClient.contains("clear"))
                     {
                         String[] messageContent = messageToClient.split(";");
-                        for (String information : messageContent) 
-                        {
-                            currentPlayer.incrementCollectedPawnsCount();   
-                        }
+                        currentPlayer.incrementCollectedPawnsCount(messageContent.length - 1);
                         currentPlayer.writeOutput(Integer.toString(currentPlayer.getCollectedPawnsCount()));
                         opponentPlayer.writeOutput(Integer.toString(currentPlayer.getCollectedPawnsCount()));
                     }
