@@ -52,8 +52,9 @@ public class Engine extends Thread
                     {
                         String[] messageContent = messageToClient.split(";");
                         currentPlayer.incrementCollectedPawnsCount(messageContent.length - 1);
-                        currentPlayer.writeOutput("display" + color + Integer.toString(currentPlayer.getCollectedPawnsCount()));
-                        opponentPlayer.writeOutput("display" + color + Integer.toString(currentPlayer.getCollectedPawnsCount()));
+                        MyLogger.logger.log(Level.INFO, "collected pawns: " + currentPlayer.getCollectedPawnsCount());  
+                        currentPlayer.writeOutput(color + " " + Integer.toString(currentPlayer.getCollectedPawnsCount()));
+                        opponentPlayer.writeOutput(color + " " + Integer.toString(currentPlayer.getCollectedPawnsCount()));
                     }
 
                     currentPlayer.writeOutput(messageToClient);

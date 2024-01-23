@@ -147,11 +147,33 @@ public class ClientConnection implements Runnable{
             {
                 handleOneWordCommand(splitedCommand2);
             }
+            else if(splitedCommand2.length == 2)
+            {
+                handleTwoWordCommand(splitedCommand2);
+            }
             else if(splitedCommand2.length == 3)
             {
                 handleThreeWordCommand(splitedCommand2);
             }
         }
+    }
+    private void handleTwoWordCommand(String[] splitedCommand) {
+;
+        String color = splitedCommand[0];
+        String nb = splitedCommand[1];
+
+        Platform.runLater(() -> {
+            switch (color){
+                case ("black"):
+                    player2.setText(nb);
+                    break;
+                case ("white"):
+                    player1.setText(nb);
+                    break;
+                default:
+                    break;
+        };
+        });
     }
     private void handleOneWordCommand(String[] splitedCommand){
         String command = splitedCommand[0];
@@ -181,9 +203,6 @@ public class ClientConnection implements Runnable{
         String color = splitedCommand[2];
         System.out.println("row: " + row + " column: " + column + " color: " + color);
         GUIPawn pawn = pawnsGrid[row][column];
-        if (color.equals("done")) {
-            isMyTurn = true;
-        }
         Platform.runLater(() -> {
             switch (color){
                 case ("black"):
@@ -198,9 +217,6 @@ public class ClientConnection implements Runnable{
                     server.setText("The war is just starting!");
                     pawn.setClear();
                     break;
-                // case ("display"):
-                //     //
-
                 default:
                     break;
         };
