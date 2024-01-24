@@ -159,16 +159,19 @@ public class ClientConnection implements Runnable{
     }
     private void handleTwoWordCommand(String[] splitedCommand) {
 ;
-        String color = splitedCommand[0];
-        String nb = splitedCommand[1];
+        String type = splitedCommand[0];
+        String value = splitedCommand[1];
 
         Platform.runLater(() -> {
-            switch (color){
-                case ("black"):
-                    player2.setText(nb);
+            switch (type){
+                case ("black"): //player2
+                    player2.setText(value);
                     break;
-                case ("white"):
-                    player1.setText(nb);
+                case ("white"): //player1
+                    player1.setText(value);
+                    break;
+                case ("server"): //server message
+                    server.setText(value);
                     break;
                 default:
                     break;
@@ -206,15 +209,12 @@ public class ClientConnection implements Runnable{
         Platform.runLater(() -> {
             switch (color){
                 case ("black"):
-                    server.setText("Nigga");
                     pawn.setBlack();
                     break;
                 case ("white"):
-                    server.setText("Hello!");
                     pawn.setWhite();
                     break;
                 case ("clear"):
-                    server.setText("The war is just starting!");
                     pawn.setClear();
                     break;
                 default:

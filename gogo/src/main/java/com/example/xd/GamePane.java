@@ -25,7 +25,7 @@ public class GamePane{
         this.size = size;
 
         initBoard();
-        clientConnection = new ClientConnection("localhost", 8888, pawnsGrid, pane, texts, buttons, gameType);
+        clientConnection = new ClientConnection("192.168.43.175", 8888, pawnsGrid, pane, texts, buttons, gameType);
         Thread thread = new Thread(clientConnection);
         thread.start();
 
