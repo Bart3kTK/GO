@@ -60,13 +60,13 @@ public class Engine extends Thread
                     currentPlayer.writeOutput(messageToClient);
                     opponentPlayer.writeOutput(messageToClient);
                     MyLogger.logger.info("Pawn placed");
+                    currentPlayer.writeOutput("server _");
                     break;
                 }
                 else
                 {
                     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
-                    currentPlayer.writeOutput("display");
-                    currentPlayer.writeOutput("Illegal move! Try again");
+                    currentPlayer.writeOutput("server Incorrect_position_try_again!");
                     // player1.writeOutput("incorrect position");
                 }
             }
