@@ -52,7 +52,7 @@ public class Server
                     System.out.println("wybral bota");
                     // new bot_game(playerSocket)
 
-                }
+                }                       // tutaj będzie builder
 
                 else if (splitedUserPreferences[1].equals("19"))
                 {

@@ -21,6 +21,8 @@ public class Board
     private final int columns;
     private final Pawn board[][];
     private String lastUpdate;
+    private String lastBoardState;
+    private String lastlastBoardState;
 
     public Board(final int rows, final int columns)
     {
@@ -46,6 +48,9 @@ public class Board
         }
 
         doPossibleUpdates(pawn);
+
+        this.lastlastBoardState = lastBoardState;
+        this.lastBoardState = this.toString();
         
     }
 
@@ -151,9 +156,15 @@ public class Board
                     if (!neighbour.getColor().equals(testPawn.getColor()))                          //
                     {                                                                               //
                         if (!checkIsNotSurrounded(neighbour))                                       //
-                        {                                                                           //  If move is suicide
-                            returnFlag = true;                                                      //  but there is a possibility 
-                        }                                                                           //  of shortness of breath
+                        {   
+                            board[neighbour.getRow()][neighbour.getColumn()] = null;
+                            if (!this.toString().equals(this.lastlastBoardState))
+                            {
+                                returnFlag = true;
+                            }     
+                            board[neighbour.getRow()][neighbour.getColumn()] = neighbour;           //  If move is suicide
+                        }                                                                           //  but there is a possibility 
+                                                                                                    //  of shortness of breath
                     }                                                                               //
                 }
     
@@ -271,8 +282,9 @@ public class Board
                 removeRecursion(neighbour);
  
             }
-            removePawn(pawn);
         }
+
+        removePawn(pawn);
 
     }
     public boolean checkIsNotSurrounded(Pawn pawn)
