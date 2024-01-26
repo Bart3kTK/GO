@@ -11,6 +11,7 @@ import java.util.Queue;
 import java.util.logging.Level;
 
 import com.example.s.engine.Engine;
+import com.example.s.engine.EngineFactory;
 import com.example.s.logger.MyLogger;
 import com.example.s.players.BotPlayer;
 import com.example.s.players.IPlayer;
@@ -22,18 +23,14 @@ public class Server
     public static void main(String[] args) 
     {
         MyLogger.loggerConfig();
-        MyLogger.logger.log(Level.INFO, "Huj");
         start();
     }
 
     private static void start()
     {
-        Queue<IPlayer> queue9x9 = new LinkedList<IPlayer>();
-        Queue<IPlayer> queue13x13 = new LinkedList<IPlayer>();
-        Queue<IPlayer> queue19x19 = new LinkedList<IPlayer>();
-
-        try (ServerSocket serverSocket = new ServerSocket(8888)) {
- 
+        try (ServerSocket serverSocket = new ServerSocket(8888)) 
+        {
+            EngineFactory engineFactory = new EngineFactory();
             System.out.println("Server is listening on port 8888");
  
             while (true) 
@@ -45,82 +42,16 @@ public class Server
 
                 // oczekujemy stringa w postaci: "pvp/bot 9x9/13x13/19x19" update: ZROBIONE I TAK SIE DZIEJE
                 String userPreferences = inputReader.readInput();
-                System.out.println(userPreferences);
-                String[] splitedUserPreferences = userPreferences.split(" ");
+                IPlayer player = new Player(playerSocket, inputReader);
 
-                if (splitedUserPreferences[0].equals("bot"))
+                Engine engine = engineFactory.getEngine(userPreferences, player);
+
+                if (engine == null)
                 {
-                    IPlayer player = new Player(playerSocket, inputReader);
-
-                    if (splitedUserPreferences[1].equals("9"))
-                    {
-                        Engine engine = new Engine(player, new BotPlayer(9, 9), new Board(9, 9));
-                        engine.start();
-                    }
-
-                }                       // tutaj będzie builder
-
-                else if (splitedUserPreferences[1].equals("19"))
-                {
-                    if (queue19x19.isEmpty())
-                    {
-                        IPlayer player = new Player(playerSocket, inputReader);
-                        queue19x19.add(player);
-                    }
-                    else
-                    {
-                        IPlayer player1 = queue19x19.poll();
-                        IPlayer player2 = new Player(playerSocket, inputReader);
-
-                        //nowy wątek dla pvp
-                        if (player1.isConnected() && player2.isConnected()) //if player1.isConnected() && player2.isConnected()
-                        {
-                            Engine engine = new Engine(player1, player2, new Board(19, 19));
-                            engine.start();
-                        }
-                    }
+                    continue;
                 }
 
-                else if (splitedUserPreferences[1].equals("13"))
-                {
-                    if (queue13x13.isEmpty())
-                    {
-                        IPlayer player = new Player(playerSocket, inputReader);
-                        queue13x13.add(player);
-                    }
-                    else
-                    {
-                        IPlayer player1 = queue13x13.poll();
-                        IPlayer player2 = new Player(playerSocket, inputReader);
-
-                        //nowy wątek dla pvp
-                        if (player1.isConnected() && player2.isConnected()) //if player1.isConnected() && player2.isConnected()
-                        {
-                            Engine engine = new Engine(player1, player2, new Board(13, 13));
-                            engine.start();
-                        }
-                    }
-                }
-
-                else if (queue9x9.isEmpty())
-                {
-                    IPlayer player = new Player(playerSocket, inputReader);
-                    queue9x9.add(player);
-                }
-                else
-                {
-                    IPlayer player1 = queue9x9.poll();
-                    IPlayer player2 = new Player(playerSocket, inputReader);
-
-                    //nowy wątek dla pvp
-                    if (player1.isConnected() && player2.isConnected()) //if player1.isConnected() && player2.isConnected()
-                    {
-                        Engine engine = new Engine(player1, player2, new Board(9, 9));
-                        engine.start();
-                    }
-                }
-                // TODO: Tu trzeba wymyslic thread ktory uruchamai sie po dalaczeniu kazdego gracza
-                // TODO: w ktorym bedzie jakas kolejka dolaczania do graczy
+                engine.start();
             }
  
         } catch (IOException ex) {
