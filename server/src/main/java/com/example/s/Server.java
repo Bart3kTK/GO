@@ -12,6 +12,7 @@ import java.util.logging.Level;
 
 import com.example.s.engine.Engine;
 import com.example.s.logger.MyLogger;
+import com.example.s.players.BotPlayer;
 import com.example.s.players.IPlayer;
 import com.example.s.players.Player;
 import com.example.s.board.Board;
@@ -49,8 +50,13 @@ public class Server
 
                 if (splitedUserPreferences[0].equals("bot"))
                 {
-                    System.out.println("wybral bota");
-                    // new bot_game(playerSocket)
+                    IPlayer player = new Player(playerSocket, inputReader);
+
+                    if (splitedUserPreferences[1].equals("9"))
+                    {
+                        Engine engine = new Engine(player, new BotPlayer(9, 9), new Board(9, 9));
+                        engine.start();
+                    }
 
                 }                       // tutaj będzie builder
 
