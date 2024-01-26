@@ -10,7 +10,7 @@ public abstract class AbstractPlayer implements IPlayer
         return collectedPawnsCount;
     }
 
-    public void incrementCollectedPawnsCount(int newBeatedPawnsNumber)
+    public void incrementCollectedPawnsCount(final int newBeatedPawnsNumber)
     {
         collectedPawnsCount += newBeatedPawnsNumber;
     }
