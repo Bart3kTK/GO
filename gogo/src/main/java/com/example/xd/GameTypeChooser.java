@@ -19,12 +19,14 @@ public class GameTypeChooser{
     private String gameType;
 
     public GameTypeChooser(Stage stage) throws IOException{
+
         Parent parent = FXMLLoader.load(getClass().getResource("GameTypeChooser.fxml"));
 
         Scene scene = new Scene(parent);
 
         Button botButton = (Button) scene.lookup("#botButton");
         Button multiButton = (Button) scene.lookup("#multiButton");
+        Button replayButton = (Button) scene.lookup("#replays");
 
 
         botButton.setOnMouseClicked(e -> {
@@ -38,6 +40,13 @@ public class GameTypeChooser{
         multiButton.setOnMouseClicked(e -> {
             try {
               new BoardTypeChooser(stage, "pvp");
+            } catch (IOException e1) {
+              e1.printStackTrace();
+            }
+        });
+        replayButton.setOnMouseClicked(e -> {
+            try {
+              new BoardTypeChooser(stage, "replay");
             } catch (IOException e1) {
               e1.printStackTrace();
             }

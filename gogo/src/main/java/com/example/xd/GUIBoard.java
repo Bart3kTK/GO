@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
@@ -28,20 +29,27 @@ public class GUIBoard{
         Button passButton = (Button) scene.lookup("#pass");
         Button left = (Button) scene.lookup("#left");
         Button right = (Button) scene.lookup("#right");
+        Button confirm = (Button) scene.lookup("#confirm");
         Text player1 = (Text) scene.lookup("#player1");
         Text player2 = (Text) scene.lookup("#player2");
         Text server = (Text) scene.lookup("#server");
+        Label label = (Label) scene.lookup("#label");
+        TextField area = (TextField) scene.lookup("#area");
+
 
         server.setText("ELO");
         player2.setText("dziala");
+        
 
         Text[] texts = {player1, player2, server};
-        Button[] buttons = {passButton, surrenderButton, left, right};
+        Button[] buttons = {passButton, surrenderButton, left, right, confirm};
+        Label[] labels = {label};
+        TextField[] textFields = {area};
 
         
         //new GamePane(pane, size, gameType, texts, buttons);
 
-        clientConnection = new ClientConnection(pane, texts, buttons, gameType, size);
+        clientConnection = new ClientConnection(pane, texts, buttons, labels, textFields, gameType, size);
         Thread thread = new Thread(clientConnection);
         thread.start();
 

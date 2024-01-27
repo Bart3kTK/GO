@@ -8,6 +8,8 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
@@ -19,22 +21,34 @@ public class ClientConnection implements Runnable{
     private Pane pane;
     private Button passButton;
     private Button surrenderButton;
+    private Button left;
+    private Button right;
+    private Button confirm;
     private Text player1;
     private Text player2;
     private Text server;
+    private TextField area;
+    private Label label;
     private boolean isMyTurn = false;
     private boolean isRunning = true;
     private int size;
+    private String gameType;
     
 
-    public ClientConnection(Pane pane, Text[] texts, Button[] buttons, String gameType, int size) throws UnknownHostException, IOException {
+    public ClientConnection(Pane pane, Text[] texts, Button[] buttons,Label[] labels, TextField[] textFields, String gameType, int size) throws UnknownHostException, IOException {
         this.pane = pane;
         this.passButton = buttons[0];
         this.surrenderButton = buttons[1];
+        this.left = buttons[2];
+        this.right = buttons[3];
+        this.confirm = buttons[4];
         this.player1 = texts[0];
         this.player2 = texts[1];
         this.server = texts[2];
+        this.area = textFields[0];
+        this.label = labels[0];
         this.size = size;
+        this.gameType = gameType;
 
         socket = new Socket("localhost", 8888); 
         out = new PrintWriter(socket.getOutputStream(), true);
@@ -42,15 +56,21 @@ public class ClientConnection implements Runnable{
 
         if (!gameType.equals("replay"))
         {
-            buttons[2].setVisible(false);
-            buttons[3].setVisible(false);
+            left.setVisible(false);
+            right.setVisible(false);
+            confirm.setVisible(false);
+            area.setVisible(false);
             initBoard();
             events();
             out.println(gameType + " " + pawnsGrid.length);
         }
         else
         {
-            out.println(gameType);
+            surrenderButton.setVisible(false);
+            passButton.setVisible(false);
+            player1.setVisible(false);
+            player2.setVisible(false);
+            out.println(gameType + " " + 888);
         }
     }
 
@@ -116,7 +136,10 @@ public class ClientConnection implements Runnable{
                 String mess = in.readLine();
                 if (mess != null)
                 {   
-                    handleServerCommand(mess);
+                    if(!gameType.equals("replay")) handleServerCommand(mess);
+                    else handleReplayCommand(mess);
+
+                    
                 }
             }
         }
@@ -215,7 +238,6 @@ public class ClientConnection implements Runnable{
                 break;
         }
     }
-
     private void handleThreeWordCommand(String[] splitedCommand){
         int row = Integer.parseInt(splitedCommand[0]);
         int column = Integer.parseInt(splitedCommand[1]);
@@ -238,7 +260,10 @@ public class ClientConnection implements Runnable{
         };
         });
     }
-
+    private void handleReplayCommand(String command)
+    {
+        String[] splitedString = command.split(" ");
+    }
     private void initBoard()
     {
 

@@ -2,33 +2,44 @@ package com.example.xd;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
-public final class Controller {
+public class Controller {
 
     @FXML
-    public Pane MyPane;
+    private Pane MyPane;
 
     @FXML
-    public Button left;
+    private TextField area;
 
     @FXML
-    public Button pass;
+    private Button confirm;
 
     @FXML
-    public Text player1;
+    private Label label;
 
     @FXML
-    public Text player2;
+    private Button left;
 
     @FXML
-    public Button right;
+    private Button pass;
 
     @FXML
-    public Text server;
+    private Text player1;
 
     @FXML
-    public Button surrender;
+    private Text player2;
+
+    @FXML
+    private Button right;
+
+    @FXML
+    private Text server;
+
+    @FXML
+    private Button surrender;
 
 }

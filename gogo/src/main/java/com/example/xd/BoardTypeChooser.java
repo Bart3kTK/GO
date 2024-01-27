@@ -19,56 +19,65 @@ public class BoardTypeChooser{
     private String gameType;
 
     public BoardTypeChooser(Stage stage, String gameType) throws IOException{
-        Parent parent = FXMLLoader.load(getClass().getResource("BoardTypeChooser.fxml"));
 
-        Scene scene = new Scene(parent);
-
-        Button button9 = (Button) scene.lookup("#button9");
-        Button button13 = (Button) scene.lookup("#button13");
-        Button button19 = (Button) scene.lookup("#button19");
-
-
-
-        button9.setOnMouseClicked(e -> {
-            try {
-                new GUIBoard(stage, 9, gameType);
-            } catch (IOException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-        });
-        button13.setOnMouseClicked(e -> {
-            try {
-                new GUIBoard(stage, 13, gameType);
-            } catch (IOException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-        });
-        button19.setOnMouseClicked(e -> {
-            try {
-                new GUIBoard(stage, 19, gameType);
-            } catch (IOException e1) {
-                // TODO Auto-generated catch block
-                e1.printStackTrace();
-            }
-        });
+        if (gameType.equals("replay"))
+        {
+            new GUIBoard(stage, 0, gameType);
+        }
+        else
+        {
+            Parent parent = FXMLLoader.load(getClass().getResource("BoardTypeChooser.fxml"));
 
 
+            Scene scene = new Scene(parent);
+
+            Button button9 = (Button) scene.lookup("#button9");
+            Button button13 = (Button) scene.lookup("#button13");
+            Button button19 = (Button) scene.lookup("#button19");
+
+
+
+            button9.setOnMouseClicked(e -> {
+                try {
+                    new GUIBoard(stage, 9, gameType);
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            });
+            button13.setOnMouseClicked(e -> {
+                try {
+                    new GUIBoard(stage, 13, gameType);
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            });
+            button19.setOnMouseClicked(e -> {
+                try {
+                    new GUIBoard(stage, 19, gameType);
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            });
+        
 
 
     //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
 
     // //   stage.setHeight(Settings.getWindowHeight());
     // //   stage.setWidth(Settings.getWindowWdth());
-      stage.setOnCloseRequest(e ->{
-        Platform.exit();
-        System.exit(0);
-      });
+        stage.setOnCloseRequest(e ->{
+            Platform.exit();
+            System.exit(0);
+        });
 
-      stage.setTitle("GO");
-      stage.setScene(scene);
-      stage.show();
+        stage.setTitle("GO");
+        stage.setScene(scene);
+        stage.show();
+
+        }
 
     }
 
