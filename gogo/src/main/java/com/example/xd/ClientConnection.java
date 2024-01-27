@@ -12,8 +12,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class ClientConnection implements Runnable{
-    private String host;
-    private int port;
     private Socket socket;
     private PrintWriter out;
     private BufferedReader in;
@@ -26,24 +24,40 @@ public class ClientConnection implements Runnable{
     private Text server;
     private boolean isMyTurn = false;
     private boolean isRunning = true;
+    private int size;
     
 
-    public ClientConnection(String host, int port, GUIPawn[][] pawnsGrid, Pane pane, Text[] texts, Button[] buttons, String gameType) throws UnknownHostException, IOException {
-        this.host = host;
-        this.port = port;
-        this.pawnsGrid = pawnsGrid;
+    public ClientConnection(Pane pane, Text[] texts, Button[] buttons, String gameType, int size) throws UnknownHostException, IOException {
         this.pane = pane;
         this.passButton = buttons[0];
         this.surrenderButton = buttons[1];
         this.player1 = texts[0];
         this.player2 = texts[1];
         this.server = texts[2];
+        this.size = size;
 
-        socket = new Socket(host, port); 
+        socket = new Socket("localhost", 8888); 
         out = new PrintWriter(socket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        out.println(gameType + " " + pawnsGrid.length);
 
+        if (!gameType.equals("replay"))
+        {
+            buttons[2].setVisible(false);
+            buttons[3].setVisible(false);
+            initBoard();
+            events();
+            out.println(gameType + " " + pawnsGrid.length);
+        }
+        else
+        {
+            out.println(gameType);
+        }
+    }
+
+
+
+    private void events()
+    {
         passButton.setOnMouseClicked(e -> {
 
             if(isMyTurn)
@@ -91,6 +105,8 @@ public class ClientConnection implements Runnable{
 
         });
     }
+
+
     @Override
     public void run() {
         try
@@ -221,5 +237,21 @@ public class ClientConnection implements Runnable{
                     break;
         };
         });
+    }
+
+    private void initBoard()
+    {
+
+        pawnsGrid = new GUIPawn[size][size];
+
+        for (int i = 0; i< size * size; i++)
+        {
+            GUISquare sq = new GUISquare(size);
+            pane.getChildren().add(sq);
+            GUIPawn pawn = new GUIPawn(sq.getXpos(), sq.getYpos(), sq.getRow(), sq.getColumn());
+            pawnsGrid[sq.getRow()][sq.getColumn()] = pawn;
+            pane.getChildren().add(pawn);
+
+        }
     }
 }

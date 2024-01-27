@@ -5,15 +5,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="multiButton" focusTraversable="false" layoutX="72.0" layoutY="114.0" mnemonicParsing="false" prefHeight="172.0" prefWidth="211.0" text="Multiplayer" textAlignment="CENTER">
+      <Button fx:id="multiButton" focusTraversable="false" layoutX="58.0" layoutY="114.0" mnemonicParsing="false" prefHeight="172.0" prefWidth="211.0" text="Multiplayer" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="botButton" focusTraversable="false" layoutX="332.0" layoutY="114.0" mnemonicParsing="false" prefHeight="172.0" prefWidth="211.0" text="Bot" textAlignment="CENTER">
+      <Button fx:id="botButton" focusTraversable="false" layoutX="331.0" layoutY="114.0" mnemonicParsing="false" prefHeight="172.0" prefWidth="211.0" text="Bot" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -23,5 +22,6 @@
             <Font size="37.0" />
          </font>
       </Text>
+      <Button fx:id="replays" layoutX="228.0" layoutY="338.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="143.0" text="Replays" />
    </children>
 </Pane>

@@ -33,6 +33,10 @@ public class EngineFactory
             int size = Integer.parseInt(splitedRequirements[1]);
             player2 = new BotPlayer(size, size);
         }
+        else if(splitedRequirements[0].equals("replay"))
+        {
+            
+        }
 
         if (splitedRequirements[1].equals("9"))
         {

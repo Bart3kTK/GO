@@ -5,24 +5,30 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
-public class Controller {
+public final class Controller {
 
     @FXML
-    private Pane MyPane;
+    public Pane MyPane;
 
     @FXML
-    private Button pass;
+    public Button left;
 
     @FXML
-    private Text player1;
+    public Button pass;
 
     @FXML
-    private Text player2;
+    public Text player1;
 
     @FXML
-    private Text server;
+    public Text player2;
 
     @FXML
-    private Button surrender;
+    public Button right;
+
+    @FXML
+    public Text server;
+
+    @FXML
+    public Button surrender;
 
 }

@@ -6,6 +6,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.logging.Level;
@@ -23,6 +26,19 @@ public class Server
     public static void main(String[] args) 
     {
         MyLogger.loggerConfig();
+        // System.out.println("XD\n\n\n\n\n\n\n\nXD");
+        // DatabaseManager databaseManager = DatabaseManager.getInstance();
+        // int indexBoard = databaseManager.addNewGame();
+        // System.out.println("indexBoard: " + indexBoard);
+        // databaseManager.addBoardString("Elo!", indexBoard);
+        // for (String s : databaseManager.getGameSave(indexBoard))
+        // {
+        //     System.out.println(s);
+        // }
+        // for (String[] s : databaseManager.getGameList())
+        // {
+        //     System.out.println(s[0] + " " + s[1]);
+        // }
         start();
     }
 
