@@ -5,6 +5,7 @@ import java.util.Queue;
 
 import com.example.s.board.Board;
 import com.example.s.board.BoardFactory;
+import com.example.s.logger.MyLogger;
 import com.example.s.players.BotPlayer;
 import com.example.s.players.IPlayer;
 
@@ -21,7 +22,7 @@ public class EngineFactory
     Queue<IPlayer> queue13x13 = new LinkedList<IPlayer>();
     Queue<IPlayer> queue19x19 = new LinkedList<IPlayer>();
 
-    public Engine getEngine(String requirements, IPlayer player)
+    public IEngine getEngine(String requirements, IPlayer player)
     {
         String[] splitedRequirements = requirements.split(" ");
         IPlayer player2 = null;
@@ -35,7 +36,7 @@ public class EngineFactory
         }
         else if(splitedRequirements[0].equals("replay"))
         {
-            
+            return new ReplayEngine(player);
         }
 
         if (splitedRequirements[1].equals("9"))

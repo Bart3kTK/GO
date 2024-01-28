@@ -33,7 +33,7 @@ public class GUIBoard{
         Text player1 = (Text) scene.lookup("#player1");
         Text player2 = (Text) scene.lookup("#player2");
         Text server = (Text) scene.lookup("#server");
-        Label label = (Label) scene.lookup("#label");
+        Text label = (Text) scene.lookup("#label");
         TextField area = (TextField) scene.lookup("#area");
 
 
@@ -41,9 +41,9 @@ public class GUIBoard{
         player2.setText("dziala");
         
 
-        Text[] texts = {player1, player2, server};
+        Text[] texts = {player1, player2, server, label};
         Button[] buttons = {passButton, surrenderButton, left, right, confirm};
-        Label[] labels = {label};
+        Label[] labels = {};
         TextField[] textFields = {area};
 
         

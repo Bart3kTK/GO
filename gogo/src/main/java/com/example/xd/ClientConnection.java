@@ -28,7 +28,7 @@ public class ClientConnection implements Runnable{
     private Text player2;
     private Text server;
     private TextField area;
-    private Label label;
+    private Text label;
     private boolean isMyTurn = false;
     private boolean isRunning = true;
     private int size;
@@ -46,7 +46,7 @@ public class ClientConnection implements Runnable{
         this.player2 = texts[1];
         this.server = texts[2];
         this.area = textFields[0];
-        this.label = labels[0];
+        this.label = texts[3];
         this.size = size;
         this.gameType = gameType;
 
@@ -61,7 +61,7 @@ public class ClientConnection implements Runnable{
             confirm.setVisible(false);
             area.setVisible(false);
             initBoard();
-            events();
+            events1();
             out.println(gameType + " " + pawnsGrid.length);
         }
         else
@@ -70,13 +70,16 @@ public class ClientConnection implements Runnable{
             passButton.setVisible(false);
             player1.setVisible(false);
             player2.setVisible(false);
+            left.setVisible(false);
+            right.setVisible(false);
+            events2();
             out.println(gameType + " " + 888);
         }
     }
 
 
 
-    private void events()
+    private void events1()
     {
         passButton.setOnMouseClicked(e -> {
 
@@ -125,7 +128,39 @@ public class ClientConnection implements Runnable{
 
         });
     }
+    private void events2()
+    {
+        left.setOnMouseClicked(e -> {
+            if (isMyTurn)
+            {
+                out.println("0 1");
+                isMyTurn = false;
+            }
+        });
+        right.setOnMouseClicked(e -> {
+            if (isMyTurn)
+            {
+                out.println("1 0");
+                isMyTurn = false;
+            }
+        });
+        confirm.setOnMouseClicked(e -> {
+            if (isMyTurn)
+            {
+                try
+                {
+                    int number = Integer.parseInt(area.getText());
+                    out.println("2 " + number);
+                    isMyTurn = false;
+                }
+                catch (NumberFormatException exception)
+                {
+                    area.setText("It have to be a number!");
+                }
+            }
+        });
 
+    }
 
     @Override
     public void run() {
@@ -136,8 +171,15 @@ public class ClientConnection implements Runnable{
                 String mess = in.readLine();
                 if (mess != null)
                 {   
-                    if(!gameType.equals("replay")) handleServerCommand(mess);
-                    else handleReplayCommand(mess);
+                    if(!gameType.equals("replay"))
+                    {
+                        handleServerCommand(mess);
+                    } 
+                    else
+                    {
+                        handleReplayCommand(mess);
+                    }
+
 
                     
                 }
@@ -262,21 +304,82 @@ public class ClientConnection implements Runnable{
     }
     private void handleReplayCommand(String command)
     {
-        String[] splitedString = command.split(" ");
+        String[] splitedString = command.split(";");
+        System.out.println("Dostałem: " + command  );
+
+        if (splitedString[0].equals("data"))
+        {
+            for (String s : splitedString)
+            {
+                if(s.equals("data"))
+                {
+                    continue;
+                }
+                System.out.println(s);
+                label.setText(label.getText() + "\n" + s);
+            }            
+        }
+        else if (splitedString[0].equals("done"))
+        {
+            isMyTurn = true;
+        }
+        else if(splitedString[0].equals("prepare"))
+        {
+            confirm.setVisible(false);
+            area.setVisible(false);
+            label.setVisible(false);
+            left.setVisible(true);
+            right.setVisible(true);
+            size = Integer.parseInt(splitedString[1]);
+            initBoard();
+        }
+        else if(splitedString[0].equals("board"))
+        {
+            System.out.println(1);
+            String board = splitedString[1];
+            System.out.println(2);
+            String[] splitedBoard = board.split("/");
+            Platform.runLater(() -> {
+                for (int i = 0; i < size; i++)
+                {
+                    String[] splitedColumn = splitedBoard[i].split(" ");
+                    for (int j = 0; j < size; j++)
+                    {
+                        if (splitedColumn[j].equals("white"))
+                        {
+                            pawnsGrid[i][j].setWhite();
+                        }
+                        else if (splitedColumn[j].equals("black"))
+                        {
+                            pawnsGrid[i][j].setBlack();
+                        }
+                        else
+                        {
+                            pawnsGrid[i][j].setClear();
+                        }
+                        
+                    }
+                }    
+            });
+
+
+        }
+
     }
     private void initBoard()
     {
 
         pawnsGrid = new GUIPawn[size][size];
-
-        for (int i = 0; i< size * size; i++)
-        {
-            GUISquare sq = new GUISquare(size);
-            pane.getChildren().add(sq);
-            GUIPawn pawn = new GUIPawn(sq.getXpos(), sq.getYpos(), sq.getRow(), sq.getColumn());
-            pawnsGrid[sq.getRow()][sq.getColumn()] = pawn;
-            pane.getChildren().add(pawn);
-
-        }
+        Platform.runLater(() -> {
+            for (int i = 0; i< size * size; i++)
+            {
+                GUISquare sq = new GUISquare(size);
+                pane.getChildren().add(sq);
+                GUIPawn pawn = new GUIPawn(sq.getXpos(), sq.getYpos(), sq.getRow(), sq.getColumn());
+                pawnsGrid[sq.getRow()][sq.getColumn()] = pawn;
+                pane.getChildren().add(pawn);
+    
+            }
+        });
     }
 }

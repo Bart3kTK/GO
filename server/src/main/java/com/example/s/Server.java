@@ -15,6 +15,7 @@ import java.util.logging.Level;
 
 import com.example.s.engine.Engine;
 import com.example.s.engine.EngineFactory;
+import com.example.s.engine.IEngine;
 import com.example.s.logger.MyLogger;
 import com.example.s.players.BotPlayer;
 import com.example.s.players.IPlayer;
@@ -60,7 +61,7 @@ public class Server
                 String userPreferences = inputReader.readInput();
                 IPlayer player = new Player(playerSocket, inputReader);
 
-                Engine engine = engineFactory.getEngine(userPreferences, player);
+                IEngine engine = engineFactory.getEngine(userPreferences, player);
 
                 if (engine == null)
                 {

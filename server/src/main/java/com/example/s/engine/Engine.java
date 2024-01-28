@@ -3,6 +3,9 @@ package com.example.s.engine;
 import java.net.Socket;
 import java.util.logging.Level;
 
+import org.h2.store.Data;
+
+import com.example.s.DatabaseManager;
 import com.example.s.board.Board;
 import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.PawnFactory;
@@ -10,12 +13,14 @@ import com.example.s.board.pawns.WhitePawn;
 import com.example.s.logger.MyLogger;
 import com.example.s.players.IPlayer;
 
-public class Engine extends Thread
+public class Engine extends Thread implements IEngine
 {
     private Board gameBoard;
     private PawnFactory pawnFactory = new PawnFactory();
     protected final IPlayer player1;
     protected final IPlayer player2;   // w grze z botem player dwa to będzie bot
+    private DatabaseManager databaseManager = DatabaseManager.getInstance();
+    private int gameID;
 
 
     public Engine(final IPlayer player1, final IPlayer player2, Board gameBoard)
@@ -61,6 +66,7 @@ public class Engine extends Thread
                     opponentPlayer.writeOutput(messageToClient);
                     MyLogger.logger.info("Pawn placed");
                     currentPlayer.writeOutput("server _");
+                    databaseManager.addBoardString(gameBoard.toString(), gameID);
                     break;
                 }
                 else
@@ -78,6 +84,7 @@ public class Engine extends Thread
     {
         System.out.println(player1.introduce() + " and " + player2.introduce() + " started game");
         System.out.println("biali zaczynają (bo są lepsi)");
+        gameID = databaseManager.addNewGame();
         while (true)
         {
            turn(player1, player2, "white");
@@ -85,6 +92,7 @@ public class Engine extends Thread
            turn(player2, player1, "black");
         }
     }
+
 }
 
 // TODO: Dołożyć działanieklasy main w serverze i przetestować połączenie dwóch graczy
