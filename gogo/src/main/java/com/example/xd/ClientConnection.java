@@ -62,6 +62,10 @@ public class ClientConnection implements Runnable{
             area.setVisible(false);
             initBoard();
             events1();
+            Platform.runLater(() -> {
+                player1.setText("Player1 : 0\nTerritory: 0");
+                player2.setText("Player2 : 0\nTerritory: 0");
+            });
             out.println(gameType + " " + pawnsGrid.length);
         }
         else
@@ -246,10 +250,10 @@ public class ClientConnection implements Runnable{
         Platform.runLater(() -> {
             switch (type){
                 case ("black"): //player2
-                    player2.setText(value);
+                    player2.setText("Player2 : " + value + "\n" + player2.getText().split("/n")[1]);
                     break;
                 case ("white"): //player1
-                    player1.setText(value);
+                    player1.setText("Player1 : " + value  + "\n" + player1.getText().split("/n")[1]);
                     break;
                 case ("server"): //server message
                     server.setText(value);
@@ -267,14 +271,16 @@ public class ClientConnection implements Runnable{
                 break;
             case ("pass"):
             case ("done"):
-                for (GUIPawn[] row : pawnsGrid) {
-                    for (GUIPawn pawn : row) {
-                            pawn.unlock();
+                Platform.runLater(() -> {
+                    for (GUIPawn[] row : pawnsGrid) {
+                        for (GUIPawn pawn : row) {
+                                pawn.unlock();
 
-                        
+                            
+                        }
                     }
-                }
-                isMyTurn = true;
+                    isMyTurn = true;
+                });
                 break;
             default:
                 break;
@@ -284,23 +290,36 @@ public class ClientConnection implements Runnable{
         int row = Integer.parseInt(splitedCommand[0]);
         int column = Integer.parseInt(splitedCommand[1]);
         String color = splitedCommand[2];
-        System.out.println("row: " + row + " column: " + column + " color: " + color);
-        GUIPawn pawn = pawnsGrid[row][column];
-        Platform.runLater(() -> {
-            switch (color){
-                case ("black"):
-                    pawn.setBlack();
-                    break;
-                case ("white"):
-                    pawn.setWhite();
-                    break;
-                case ("clear"):
-                    pawn.setClear();
-                    break;
-                default:
-                    break;
-        };
-        });
+        if (!color.equals("territory"))
+        {
+            GUIPawn pawn = pawnsGrid[row][column];
+            Platform.runLater(() -> {
+                switch (color){
+                    case ("black"):
+                        pawn.setBlack();
+                        break;
+                    case ("white"):
+                        pawn.setWhite();
+                        break;
+                    case ("clear"):
+                        pawn.setClear();
+                        break;
+                        
+                    default:
+                        break;
+            };
+            });
+        }
+        else
+        {
+            int whiteTerritory = Integer.parseInt(splitedCommand[0]);
+            int blackTerritory = Integer.parseInt(splitedCommand[1]);
+            Platform.runLater(() -> {
+                player1.setText(player1.getText().split("/n")[0] + "\nTerritory: " + whiteTerritory + "\n");
+                player2.setText(player2.getText().split("/n")[0] + "\nTerritory: " + blackTerritory + "\n");
+            });
+        }
+        
     }
     private void handleReplayCommand(String command)
     {

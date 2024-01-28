@@ -1,12 +1,15 @@
 package com.example.s.board;
 
+import java.util.ArrayList;
+
 import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.BorderPawn;
+import com.example.s.board.pawns.NullPawn;
 import com.example.s.board.pawns.Pawn;
 import com.example.s.board.pawns.PawnFactory;
 import com.example.s.board.pawns.WhitePawn;
 import com.example.s.logger.MyLogger;
-
+//TODO:zmeinaic ----- na 'null' w bazie
 /*
  *  @brief class wich represents board and holds pawns in 2D array
  *          null in array represents free space on board
@@ -29,9 +32,25 @@ public class Board
         this.rows = rows;
         this.columns = columns;
         this.board = new Pawn[rows][columns];
+        
+        for (int i = 0; i < rows; i++) 
+        {
+            for (int j = 0; j < columns; j++) 
+            {
+                this.board[i][j] = new NullPawn(i, j);
+            }
+        }
+
+        for (Pawn[] row : board) 
+        {
+            for (Pawn pawn : row) 
+            {
+                pawn.setNeighbours(this.getActualneighbours(pawn));
+            }
+        }
     }
 
-    public void putPawn(final Pawn pawn) //to musi zwracac string z update dla klienta
+    public void putPawn(final Pawn pawn)
     {
         this.board[pawn.getRow()][pawn.getColumn()] = pawn;
         this.lastUpdate = pawn.toString();
@@ -40,11 +59,7 @@ public class Board
 
         for (Pawn neighbour : pawn.getNeighbours()) 
         {   
-            if (neighbour != null)
-            {
-                neighbour.setNeighbours(this.getActualneighbours(neighbour));                
-            }
-
+            neighbour.setNeighbours(this.getActualneighbours(neighbour));                
         }
 
         doPossibleUpdates(pawn);
@@ -54,43 +69,26 @@ public class Board
         
     }
 
-    // public void putPawn(final int row, final int column, final String color)
-    // {
-    //     Pawn pawn;
-    //     if (color.equals("white"))
-    //     {
-    //         pawn = new WhitePawn();
-    //         this.board[row][column] = pawn;
-    //     }
-    //     else
-    //     {                                                                   /// to trzeba zmienic na jekgiegoś buildra czy coś
-    //         pawn = new BlackPawn();
-    //         this.board[row][column] = pawn;
-    //     }
-
-    //     pawn.setNeighbours(this.getActualneighbours(pawn));
-
-    //     for (Pawn neighbour : pawn.getNeighbours()) 
-    //     {   
-    //         neighbour.setNeighbours(this.getActualneighbours(neighbour));
-    //     }
-    // }
 
     public void removePawn(final Pawn pawn)
     {
-        if (pawn != null)
+        if (!pawn.getColor().equals("null") && !pawn.getColor().equals("UNDEFINED"))
         {
-            this.board[pawn.getRow()][pawn.getColumn()] = null;
+            Pawn nullPawn = new NullPawn(pawn.getRow(), pawn.getColumn());
+            this.board[pawn.getRow()][pawn.getColumn()] = nullPawn;
+            nullPawn.setNeighbours(this.getActualneighbours(nullPawn));
+
             this.lastUpdate += ";" + pawn.toStringClearMessage();
             MyLogger.logger.info("Removing pawn: " + pawn.toString());
             MyLogger.logger.info("Last update: " + this.lastUpdate);
 
             for (Pawn neighbour : pawn.getNeighbours()) 
             {   
-                if (neighbour != null)
+                if (!neighbour.getColor().equals("UNDIFINED"))
                 {
-                    neighbour.setNeighbours(this.getActualneighbours(neighbour));                
+                    neighbour.setNeighbours(this.getActualneighbours(neighbour));
                 }
+                                
             }  
         }
         
@@ -106,7 +104,7 @@ public class Board
         {
             for (Pawn pawn : row) 
             {
-                if (pawn == null)
+                if (pawn.getColor().equals("null"))
                 {
                     textRepresentation += "----- ";
                     continue;
@@ -122,7 +120,7 @@ public class Board
     public boolean isPositionAllowed(final int row, final int column, String color)
     {
         // first check if position is free
-        if (board[row][column] != null)
+        if (!board[row][column].getColor().equals("null"))
         {
             return false;
         }
@@ -133,48 +131,49 @@ public class Board
         Pawn testPawn = pawnFactory.producePawn(color, row, column);                // Creating test pawn
         this.board[testPawn.getRow()][testPawn.getColumn()] = testPawn;             //
         
-        testPawn.setNeighbours(this.getActualneighbours(testPawn));                 //
+        testPawn.setNeighbours(this.getActualneighbours(testPawn));
         for (Pawn neighbour : testPawn.getNeighbours())                             //
-        {                                                                           // Setting neighbours for test pawn
-            if (neighbour != null)                                                  // Updating neighbours their neighbours
-            {                                                                       //
-                neighbour.setNeighbours(this.getActualneighbours(neighbour));       //       
-            }                                                                       //
+        {       
+                if(!neighbour.getColor().equals("UNDEFINED"))
+                {
+                    neighbour.setNeighbours(this.getActualneighbours(neighbour));
+                }                     
         }                                                                           //
 
 
 
 
         if(!checkIsNotSurrounded(testPawn))                                                         
-        {        
+        {  
             Boolean returnFlag = false;
 
             for (Pawn neighbour : testPawn.getNeighbours())                                         //
-            {                                                                                       //
-                if (neighbour != null)                                                              //
-                {                                                                                   //
-                    if (!neighbour.getColor().equals(testPawn.getColor()))                          //
-                    {                                                                               //
-                        if (!checkIsNotSurrounded(neighbour))                                       //
-                        {   
-                            board[neighbour.getRow()][neighbour.getColumn()] = null;
-                            if (!this.toString().equals(this.lastlastBoardState))
-                            {
-                                returnFlag = true;
-                            }     
-                            board[neighbour.getRow()][neighbour.getColumn()] = neighbour;           //  If move is suicide
-                        }                                                                           //  but there is a possibility 
-                                                                                                    //  of shortness of breath
-                    }                                                                               //
-                }
+            {                                                                                                                                                               
+                if (!neighbour.getColor().equals(testPawn.getColor()) && !neighbour.getColor().equals("null" )&& !neighbour.getColor().equals("UNDEFINED"))                          //
+                {                                                                               //
+                    if (!checkIsNotSurrounded(neighbour))                                       //
+                    {   
+                        board[neighbour.getRow()][neighbour.getColumn()] = pawnFactory.producePawn("null", neighbour.getRow(), neighbour.getColumn());
+                        MyLogger.logger.info(lastlastBoardState);
+                        MyLogger.logger.info(lastBoardState);
+                        if (!this.toString().equals(this.lastlastBoardState))
+                        {
+                            returnFlag = true;
+                        }     
+                        board[neighbour.getRow()][neighbour.getColumn()] = neighbour;           //  If move is suicide
+                    }                                                                           //  but there is a possibility 
+                                                                                                //  of shortness of breath
+                }                                                                               //
     
             }
 
-
-            this.board[testPawn.getRow()][testPawn.getColumn()] = null;                     //
+            Pawn nullPawn = new NullPawn(testPawn.getRow(), testPawn.getColumn());
+            this.board[testPawn.getRow()][testPawn.getColumn()] = nullPawn;  
+            nullPawn.setNeighbours(this.getActualneighbours(nullPawn));
+            
             for (Pawn neighbour : testPawn.getNeighbours())                                 //
-            {                                                                               //
-                if (neighbour != null)                                                      // If move is suicide move
+            {                                                                             //
+                if (!neighbour.getColor().equals("UNDEFINED"))                                                      // If move is suicide move
                 {                                                                           //
                     neighbour.setNeighbours(this.getActualneighbours(neighbour));           //
                 }                                                                           //
@@ -245,32 +244,27 @@ public class Board
         }
         return neighbours;
     }
-
     public void doPossibleUpdates(Pawn pawn)
     {
         for (Pawn neighbour : pawn.getNeighbours()) 
         {   
-            if (neighbour != null)
+            if (!neighbour.getColor().equals(pawn.getColor()) && !neighbour.getColor().equals("null") && !neighbour.getColor().equals("UNDEFINED"))
             {
-                if (!neighbour.getColor().equals(pawn.getColor()))
+                if (!checkIsNotSurrounded(neighbour))
                 {
-                    if (!checkIsNotSurrounded(neighbour))
-                    {
-                        MyLogger.logger.info("Neighbour is surrounded");
-                        removeRecursion(neighbour);
-                    }
+                    MyLogger.logger.info("Neighbour is surrounded");
+                    removeRecursion(neighbour);
                 }
             }
         }
     }
-
     public void removeRecursion(Pawn pawn)
     {
         pawn.setIsChecked(true);
 
         for (Pawn neighbour : pawn.getNeighbours())
         {
-            if (neighbour == null)
+            if (neighbour.getColor().equals("null") || neighbour.getColor().equals("UNDEFINED"))
             {
                 MyLogger.logger.info("Neighbour is null");
                 continue;
@@ -290,23 +284,17 @@ public class Board
     public boolean checkIsNotSurrounded(Pawn pawn)
     {
         pawn.setIsChecked(true);
+
         Boolean isNeighboursSurrounded = false;
 
         for (Pawn neighbour : pawn.getNeighbours())
         {
-            if (neighbour == null)
+            if (neighbour.getColor().equals("null"))
             {
                 pawn.setIsChecked(false);
                 return true;
             }
-        }
 
-        for (Pawn neighbour : pawn.getNeighbours())
-        {
-            if (neighbour == null)
-            {
-                continue;
-            }
             if (neighbour.getColor().equals(pawn.getColor()) && neighbour.getChecked() == false ) 
             {
                 isNeighboursSurrounded = isNeighboursSurrounded || checkIsNotSurrounded(neighbour);
@@ -316,9 +304,92 @@ public class Board
         pawn.setIsChecked(false);
         return isNeighboursSurrounded;
     }
-
     public String getLastUpdate()
     {
         return this.lastUpdate;
+    }    
+    public boolean isTerritory(Pawn pawn, String teamColor)
+    {
+        if (pawn.getChecked() == true || !pawn.getColor().equals("null"))
+        {
+            return false;
+        }
+        boolean isAvaible = true;
+        pawn.setIsChecked(true);
+        for (Pawn neighbour : pawn.getNeighbours())
+        {
+            if (!neighbour.getColor().equals(teamColor) && !neighbour.getColor().equals("null") && !neighbour.getColor().equals("UNDEFINED"))
+            {
+                isAvaible = false;
+                continue;
+            }
+            else if (neighbour.getColor().equals(teamColor) || neighbour.getColor().equals("UNDEFINED") || neighbour.getChecked() == true)
+            {
+                continue;
+            }
+            else if (neighbour.getColor().equals("null"))
+            {
+                boolean wait = isTerritory(neighbour, teamColor);
+                isAvaible = isAvaible && wait;
+            }
+        }
+        return isAvaible;
     }
+    public int countTerritory(Pawn pawn)
+    {
+        int territory = 1;
+        pawn.setIsChecked(true);
+        for (Pawn neighbour : pawn.getNeighbours())
+        {
+            if (neighbour.getColor().equals("null") && neighbour.getChecked() == false)
+            {
+                territory += countTerritory(neighbour);
+            }
+        }
+        return territory;
+    }
+    public void clearChecked()
+    {
+        for (Pawn[] row : board) 
+        {
+            for (Pawn pawn : row) 
+            {
+                pawn.setIsChecked(false);
+            }
+        }
+    }
+    public ArrayList<Pawn> mainTerritoryPawns(String teamColor)
+    {
+        ArrayList<Pawn> mainTerritoryPawns = new ArrayList<Pawn>();
+
+        for (Pawn[] row : board) 
+        {
+            for (Pawn pawn : row) 
+            {
+                if (pawn.getColor().equals("null") && pawn.getChecked() == false)
+                {
+                    if (isTerritory(pawn, teamColor))
+                    {
+                        mainTerritoryPawns.add(pawn);
+                        MyLogger.logger.info("Territory pawn: " + pawn.toString());
+                    }
+                } 
+            }
+        }
+        clearChecked();
+        return mainTerritoryPawns;
+    }
+    public int countTerritoryPoints(String teamColor)
+    {
+        int territoryPoints = 0;
+        ArrayList<Pawn> mainTerritoryPawns = mainTerritoryPawns(teamColor);
+        for (Pawn pawn : mainTerritoryPawns)
+        {
+            territoryPoints += countTerritory(pawn);
+        }
+        clearChecked();
+        return territoryPoints;
+
+}
+
 }

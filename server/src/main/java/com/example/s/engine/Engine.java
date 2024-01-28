@@ -62,6 +62,8 @@ public class Engine extends Thread implements IEngine
                         opponentPlayer.writeOutput(color + " " + Integer.toString(currentPlayer.getCollectedPawnsCount()));
                     }
 
+                    currentPlayer.writeOutput(gameBoard.countTerritoryPoints("white") + " " + gameBoard.countTerritoryPoints("black") + " territory");
+                    opponentPlayer.writeOutput(gameBoard.countTerritoryPoints("white") + " " + gameBoard.countTerritoryPoints("black")+ " territory");
                     currentPlayer.writeOutput(messageToClient);
                     opponentPlayer.writeOutput(messageToClient);
                     MyLogger.logger.info("Pawn placed");
