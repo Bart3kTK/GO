@@ -1,7 +1,5 @@
 package com.example.xd;
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -18,7 +15,6 @@ import javafx.stage.Stage;
 public class GUIBoard{
 
     public GUIBoard(Stage stage, int size, String gameType) throws IOException{
-        ClientConnection clientConnection;
         Parent parent = FXMLLoader.load(getClass().getResource("GUIBoard.fxml"));
 
         Scene scene = new Scene(parent);
@@ -32,6 +28,8 @@ public class GUIBoard{
         Button confirm = (Button) scene.lookup("#confirm");
         Text player1 = (Text) scene.lookup("#player1");
         Text player2 = (Text) scene.lookup("#player2");
+        Text player11 = (Text) scene.lookup("#player11");
+        Text player21 = (Text) scene.lookup("#player21");
         Text server = (Text) scene.lookup("#server");
         Text label = (Text) scene.lookup("#label");
         TextField area = (TextField) scene.lookup("#area");
@@ -41,23 +39,26 @@ public class GUIBoard{
         player2.setText("dziala");
         
 
-        Text[] texts = {player1, player2, server, label};
+        Text[] texts = {player1, player2, server, label, player11, player21};
         Button[] buttons = {passButton, surrenderButton, left, right, confirm};
         Label[] labels = {};
         TextField[] textFields = {area};
 
         
         //new GamePane(pane, size, gameType, texts, buttons);
-
-        clientConnection = new ClientConnection(pane, texts, buttons, labels, textFields, gameType, size);
+      if (gameType.equals("replay"))
+      {
+        ReplayConnection replayConnection = new ReplayConnection(pane, texts, buttons, labels, textFields, gameType, size);
+        Thread thread = new Thread(replayConnection);
+        thread.start();
+      }
+      else
+      {
+        ClientConnection clientConnection = new ClientConnection(pane, texts, buttons, labels, textFields, gameType, size);
         Thread thread = new Thread(clientConnection);
         thread.start();
+      }
 
-
-    //   //pane.setClip(new Rectangle(0,0, Settings.getWindowWdth(), Settings.getWindowHeight()));
-
-    // //   stage.setHeight(Settings.getWindowHeight());
-    // //   stage.setWidth(Settings.getWindowWdth());
       stage.setOnCloseRequest(e ->{
         Platform.exit();
         System.exit(0);

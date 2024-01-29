@@ -21,14 +21,11 @@ public class ClientConnection implements Runnable{
     private Pane pane;
     private Button passButton;
     private Button surrenderButton;
-    private Button left;
-    private Button right;
-    private Button confirm;
     private Text player1;
     private Text player2;
+    private Text player11;
+    private Text player21;
     private Text server;
-    private TextField area;
-    private Text label;
     private boolean isMyTurn = false;
     private boolean isRunning = true;
     private int size;
@@ -39,14 +36,11 @@ public class ClientConnection implements Runnable{
         this.pane = pane;
         this.passButton = buttons[0];
         this.surrenderButton = buttons[1];
-        this.left = buttons[2];
-        this.right = buttons[3];
-        this.confirm = buttons[4];
         this.player1 = texts[0];
         this.player2 = texts[1];
+        this.player11 = texts[4];
+        this.player21 = texts[5];
         this.server = texts[2];
-        this.area = textFields[0];
-        this.label = texts[3];
         this.size = size;
         this.gameType = gameType;
 
@@ -54,36 +48,25 @@ public class ClientConnection implements Runnable{
         out = new PrintWriter(socket.getOutputStream(), true);
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-        if (!gameType.equals("replay"))
-        {
-            left.setVisible(false);
-            right.setVisible(false);
-            confirm.setVisible(false);
-            area.setVisible(false);
-            initBoard();
-            events1();
-            Platform.runLater(() -> {
-                player1.setText("Player1 : 0\nTerritory: 0");
-                player2.setText("Player2 : 0\nTerritory: 0");
-            });
-            out.println(gameType + " " + pawnsGrid.length);
-        }
-        else
-        {
-            surrenderButton.setVisible(false);
-            passButton.setVisible(false);
-            player1.setVisible(false);
-            player2.setVisible(false);
-            left.setVisible(false);
-            right.setVisible(false);
-            events2();
-            out.println(gameType + " " + 888);
-        }
+        buttons[2].setVisible(false);
+        buttons[3].setVisible(false);
+        buttons[4].setVisible(false);
+        texts[3].setVisible(false);
+        textFields[0].setVisible(false);
+        initBoard();
+        events();
+        Platform.runLater(() -> {
+            player1.setText("Player1 : 0");
+            player2.setText("Player2 : 0");
+            player11.setText("Territory : 0");
+            player21.setText("Territory : 0");
+        });
+        out.println(gameType + " " + pawnsGrid.length);
     }
 
 
 
-    private void events1()
+    private void events()
     {
         passButton.setOnMouseClicked(e -> {
 
@@ -132,40 +115,6 @@ public class ClientConnection implements Runnable{
 
         });
     }
-    private void events2()
-    {
-        left.setOnMouseClicked(e -> {
-            if (isMyTurn)
-            {
-                out.println("0 1");
-                isMyTurn = false;
-            }
-        });
-        right.setOnMouseClicked(e -> {
-            if (isMyTurn)
-            {
-                out.println("1 0");
-                isMyTurn = false;
-            }
-        });
-        confirm.setOnMouseClicked(e -> {
-            if (isMyTurn)
-            {
-                try
-                {
-                    int number = Integer.parseInt(area.getText());
-                    out.println("2 " + number);
-                    isMyTurn = false;
-                }
-                catch (NumberFormatException exception)
-                {
-                    area.setText("It have to be a number!");
-                }
-            }
-        });
-
-    }
-
     @Override
     public void run() {
         try
@@ -175,17 +124,8 @@ public class ClientConnection implements Runnable{
                 String mess = in.readLine();
                 if (mess != null)
                 {   
-                    if(!gameType.equals("replay"))
-                    {
-                        handleServerCommand(mess);
-                    } 
-                    else
-                    {
-                        handleReplayCommand(mess);
-                    }
-
-
-                    
+                    handleServerCommand(mess);
+        
                 }
             }
         }
@@ -250,10 +190,10 @@ public class ClientConnection implements Runnable{
         Platform.runLater(() -> {
             switch (type){
                 case ("black"): //player2
-                    player2.setText("Player2 : " + value + "\n" + player2.getText().split("/n")[1]);
+                    player2.setText("Player2 : " + value);
                     break;
                 case ("white"): //player1
-                    player1.setText("Player1 : " + value  + "\n" + player1.getText().split("/n")[1]);
+                    player1.setText("Player1 : " + value);
                     break;
                 case ("server"): //server message
                     server.setText(value);
@@ -315,75 +255,11 @@ public class ClientConnection implements Runnable{
             int whiteTerritory = Integer.parseInt(splitedCommand[0]);
             int blackTerritory = Integer.parseInt(splitedCommand[1]);
             Platform.runLater(() -> {
-                player1.setText(player1.getText().split("/n")[0] + "\nTerritory: " + whiteTerritory + "\n");
-                player2.setText(player2.getText().split("/n")[0] + "\nTerritory: " + blackTerritory + "\n");
+                player11.setText("Territory : " + whiteTerritory);
+                player21.setText("Territory : " + blackTerritory);
             });
         }
         
-    }
-    private void handleReplayCommand(String command)
-    {
-        String[] splitedString = command.split(";");
-        System.out.println("Dostałem: " + command  );
-
-        if (splitedString[0].equals("data"))
-        {
-            for (String s : splitedString)
-            {
-                if(s.equals("data"))
-                {
-                    continue;
-                }
-                System.out.println(s);
-                label.setText(label.getText() + "\n" + s);
-            }            
-        }
-        else if (splitedString[0].equals("done"))
-        {
-            isMyTurn = true;
-        }
-        else if(splitedString[0].equals("prepare"))
-        {
-            confirm.setVisible(false);
-            area.setVisible(false);
-            label.setVisible(false);
-            left.setVisible(true);
-            right.setVisible(true);
-            size = Integer.parseInt(splitedString[1]);
-            initBoard();
-        }
-        else if(splitedString[0].equals("board"))
-        {
-            System.out.println(1);
-            String board = splitedString[1];
-            System.out.println(2);
-            String[] splitedBoard = board.split("/");
-            Platform.runLater(() -> {
-                for (int i = 0; i < size; i++)
-                {
-                    String[] splitedColumn = splitedBoard[i].split(" ");
-                    for (int j = 0; j < size; j++)
-                    {
-                        if (splitedColumn[j].equals("white"))
-                        {
-                            pawnsGrid[i][j].setWhite();
-                        }
-                        else if (splitedColumn[j].equals("black"))
-                        {
-                            pawnsGrid[i][j].setBlack();
-                        }
-                        else
-                        {
-                            pawnsGrid[i][j].setClear();
-                        }
-                        
-                    }
-                }    
-            });
-
-
-        }
-
     }
     private void initBoard()
     {

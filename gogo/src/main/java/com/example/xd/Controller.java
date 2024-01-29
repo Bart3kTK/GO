@@ -30,7 +30,13 @@ public class Controller {
     private Text player1;
 
     @FXML
+    private Text player11;
+
+    @FXML
     private Text player2;
+
+    @FXML
+    private Text player21;
 
     @FXML
     private Button right;

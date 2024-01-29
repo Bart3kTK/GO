@@ -21,7 +21,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-
+//to nie singleton tylko proxy
 final public class DatabaseManager implements IDatabase
 {
     private static DatabaseManager instance;

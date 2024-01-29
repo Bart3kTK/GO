@@ -308,6 +308,8 @@ public class Board
     {
         return this.lastUpdate;
     }    
+    
+    
     public boolean isTerritory(Pawn pawn, String teamColor)
     {
         if (pawn.getChecked() == true || !pawn.getColor().equals("null"))
@@ -331,6 +333,7 @@ public class Board
             {
                 boolean wait = isTerritory(neighbour, teamColor);
                 isAvaible = isAvaible && wait;
+                
             }
         }
         return isAvaible;

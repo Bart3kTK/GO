@@ -65,36 +65,6 @@ public class ReplayEngine extends Thread implements IEngine
                     player1.writeOutput("board;" + game.get(moveCounter).replace("\n", "/"));
                     
                 }
-
-                // if (gameBoard.isPositionAllowed(playerRequest[0], playerRequest[1], color)) // to trzeba uzupełnić  // już nie trzeba
-                // {
-                //     gameBoard.putPawn( pawnFactory.producePawn(color, playerRequest[0], playerRequest[1]) );
-                //     String messageToClient = gameBoard.getLastUpdate();
-                //     MyLogger.logger.log(Level.INFO, "mess to client: " + messageToClient);
-
-                //     // if move beats opponent's pawns then increment count of collected pawns for player and inform players
-                //     if (messageToClient.contains("clear"))
-                //     {
-                //         String[] messageContent = messageToClient.split(";");
-                //         currentPlayer.incrementCollectedPawnsCount(messageContent.length - 1);
-                //         MyLogger.logger.log(Level.INFO, "collected pawns: " + currentPlayer.getCollectedPawnsCount());  
-                //         currentPlayer.writeOutput(color + " " + Integer.toString(currentPlayer.getCollectedPawnsCount()));
-                //         opponentPlayer.writeOutput(color + " " + Integer.toString(currentPlayer.getCollectedPawnsCount()));
-                //     }
-
-                //     currentPlayer.writeOutput(messageToClient);
-                //     opponentPlayer.writeOutput(messageToClient);
-                //     MyLogger.logger.info("Pawn placed");
-                //     currentPlayer.writeOutput("server _");
-                //     break;
-                // }
-                // else
-                // {
-                //     System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
-                //     currentPlayer.writeOutput("server Incorrect_position_try_again!");
-                //     // player1.writeOutput("incorrect position");
-                // }
-                //sprawdzam czy sąsiedzi są uduszeni
             }
     }
 
