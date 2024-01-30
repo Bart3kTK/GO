@@ -42,7 +42,7 @@ public class Engine extends Thread implements IEngine
                     {
                         MyLogger.logger.info("game stops"); 
                         currentPlayer.writeOutput("pause");
-                        currentPlayer.writeOutput("pause");
+                        opponentPlayer.writeOutput("pause");
                         isGamePaused = true;
                     }
                     break;
@@ -151,6 +151,8 @@ public class Engine extends Thread implements IEngine
                 {
                     playersTurn = handlePause(player1, player2);
                 }
+                isGamePaused = false;
+                continue;
             }
 
             if (playersTurn.equals("firstPlayer"))
