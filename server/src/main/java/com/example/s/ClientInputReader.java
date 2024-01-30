@@ -20,20 +20,38 @@ public class ClientInputReader
         }
     }
 
+    public void close()
+    {
+        try 
+        {
+            inputReader.close();
+        } 
+        catch (IOException e) 
+        {
+            e.printStackTrace();
+        }
+    }
+
     public String readInput()
     {
-        try {
+        try 
+        {
             System.out.println("czytam inpita");
             String input = null;
-            while (input == null || input.isEmpty())
+            input = inputReader.readLine();
+            System.out.println(input + " server kksdfs");
+            if (input == null)
             {
-                input = inputReader.readLine();
-                System.out.println(input);
+                return "exit";
             }
-            return input;
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            else
+            {
+                return input;
+            }
+        } 
+        catch (IOException e) 
+        {
+            System.out.println("output reader is closed");
             return null;
         }
     }

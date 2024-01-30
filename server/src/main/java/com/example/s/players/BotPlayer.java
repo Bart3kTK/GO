@@ -53,6 +53,12 @@ public class BotPlayer extends AbstractPlayer
     }
 
     @Override
+    public void disconnect()
+    {
+
+    }
+
+    @Override
     public Boolean isConnected() 
     {
         return true;

@@ -68,8 +68,28 @@ public class Player extends AbstractPlayer
     }
 
     @Override
-    public Boolean isConnected() {
-        return socket.isConnected();
+    public Boolean isConnected() 
+    {
+        if (playerInput == null)
+        {
+            return socket.isConnected();
+        }
+        return socket.isConnected()  && !(playerInput.equals("exit"));
+    }
+
+    @Override
+    public void disconnect()
+    {
+        try 
+        {
+            reader.close();
+            writer.close();
+            socket.close();
+        } 
+        catch (IOException e) 
+        {
+            e.printStackTrace();
+        }
     }
     
 }

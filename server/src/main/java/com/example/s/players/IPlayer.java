@@ -22,6 +22,9 @@ public interface IPlayer
     // checks whether player is connected
     public Boolean isConnected();
 
+    // disconnects player from server
+    public void disconnect();
+
     // methods to track number of beated opponents
     public int getCollectedPawnsCount();
     public void incrementCollectedPawnsCount(int newBeatedPawnsNumber);

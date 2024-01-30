@@ -18,8 +18,9 @@ public class Engine extends Thread implements IEngine
     private Board gameBoard;
     private PawnFactory pawnFactory = new PawnFactory();
     protected final IPlayer player1;
-    protected final IPlayer player2;   // w grze z botem player dwa to będzie bot
+    protected final IPlayer player2;   // bot is also instance of IPlayer
     private DatabaseManager databaseManager = DatabaseManager.getInstance();
+    private Boolean isGameWorking = true;
     private int gameID;
 
 
@@ -44,6 +45,20 @@ public class Engine extends Thread implements IEngine
                     MyLogger.logger.log(Level.INFO, "Player passed");
                     break;
                 }
+
+                /*
+                 * check is player still connected
+                 * if it is not, server closes sockets both of players
+                 */
+                else if (currentPlayer.isConnected() == false)
+                {
+                    currentPlayer.disconnect();
+                    opponentPlayer.writeOutput("server opponent_disconnected");
+                    opponentPlayer.disconnect();
+                    isGameWorking = false;
+                    break;
+                }
+
                 int[] playerRequest = currentPlayer.moveRequest();
                 System.out.println("przeczytałem, pozdro");
                 if (gameBoard.isPositionAllowed(playerRequest[0], playerRequest[1], color)) // to trzeba uzupełnić  // już nie trzeba
@@ -73,31 +88,28 @@ public class Engine extends Thread implements IEngine
                 }
                 else
                 {
-                    System.out.println("Weź jeszcze raz połóż ten żeton, tylko tym razem legalnie");
+                    MyLogger.logger.info("Pawn placed incorrect");
                     currentPlayer.writeOutput("server Incorrect_position_try_again!");
                     // player1.writeOutput("incorrect position");
                 }
-                //sprawdzam czy sąsiedzi są uduszeni
             }
     }
     
     @Override
     public void run()
     {
-        System.out.println(player1.introduce() + " and " + player2.introduce() + " started game");
-        System.out.println("biali zaczynają (bo są lepsi)");
         gameID = databaseManager.addNewGame();
-        while (true)
+        while (isGameWorking)
         {
            turn(player1, player2, "white");
+
+           if (!isGameWorking)
+           {
+            break;
+           }
 
            turn(player2, player1, "black");
         }
     }
 
 }
-
-// TODO: Dołożyć działanieklasy main w serverze i przetestować połączenie dwóch graczy
-// TODO: Przed wiekszym rozbudowaniem logiki stworzyć już jakieś połączenie Clienta i servera, tak by mie ć pewność, że wszystko działa
-// TODO: mieć dobry humor
-// elo
