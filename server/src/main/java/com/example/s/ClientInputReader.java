@@ -36,10 +36,9 @@ public class ClientInputReader
     {
         try 
         {
-            System.out.println("czytam inpita");
             String input = null;
             input = inputReader.readLine();
-            System.out.println(input + " server kksdfs");
+            System.out.println(input);
             if (input == null)
             {
                 return "exit";

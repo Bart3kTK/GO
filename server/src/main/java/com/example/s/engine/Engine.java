@@ -98,6 +98,7 @@ public class Engine extends Thread implements IEngine
     @Override
     public void run()
     {
+        System.out.println("new game started!");
         gameID = databaseManager.addNewGame();
         while (isGameWorking)
         {
