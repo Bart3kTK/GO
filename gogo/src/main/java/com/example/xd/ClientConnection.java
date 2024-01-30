@@ -69,12 +69,12 @@ public class ClientConnection implements Runnable{
     {
         passButton.setOnMouseClicked(e -> {
 
-            if(isMyTurn && !isPaused)
+            if(isMyTurn)
             {
                 out.println("pass");
                 isMyTurn = false;
             }
-            if (isMyTurn && isPaused) {
+            if (isPaused) {
                 out.println("end");
                 isPaused = false;
                 Platform.runLater(() -> {
@@ -85,12 +85,12 @@ public class ClientConnection implements Runnable{
         });
 
         surrenderButton.setOnMouseClicked(e -> {
-            if(isMyTurn && !isPaused)
+            if(isMyTurn)
             {
                 out.println("surrender");
                 isMyTurn = false;
             }
-            if (isMyTurn && isPaused) {
+            if (isPaused) {
                 out.println("continue");
                 isPaused = false;
                 Platform.runLater(() -> {
