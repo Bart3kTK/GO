@@ -10,6 +10,7 @@ public interface IPlayer
     */
     public int[] moveRequest();
     public void loadInput();
+    public String getRawInput();
     public void writeOutput(String outputMessage);
 
     // control isPassed flags

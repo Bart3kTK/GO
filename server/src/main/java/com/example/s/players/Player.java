@@ -15,6 +15,7 @@ public class Player extends AbstractPlayer
     private String playerInput;
 
     private Boolean isPassed = false;
+    private Boolean wantToContinue = false;
 
     public Player(final Socket socket, ClientInputReader clientInputReader) throws IOException
     {
@@ -36,6 +37,12 @@ public class Player extends AbstractPlayer
             this.isPassed = false;
         }
 
+    }
+
+    @Override
+    public String getRawInput()
+    {
+        return this.playerInput;
     }
 
     @Override

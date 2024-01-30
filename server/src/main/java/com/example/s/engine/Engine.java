@@ -1,15 +1,8 @@
 package com.example.s.engine;
-
-import java.net.Socket;
 import java.util.logging.Level;
-
-import org.h2.store.Data;
-
 import com.example.s.DatabaseManager;
 import com.example.s.board.Board;
-import com.example.s.board.pawns.BlackPawn;
 import com.example.s.board.pawns.PawnFactory;
-import com.example.s.board.pawns.WhitePawn;
 import com.example.s.logger.MyLogger;
 import com.example.s.players.IPlayer;
 
@@ -21,6 +14,7 @@ public class Engine extends Thread implements IEngine
     protected final IPlayer player2;   // bot is also instance of IPlayer
     private DatabaseManager databaseManager = DatabaseManager.getInstance();
     private Boolean isGameWorking = true;
+    private Boolean isGamePaused = false;
     private int gameID;
 
 
@@ -40,9 +34,17 @@ public class Engine extends Thread implements IEngine
             {
                 currentPlayer.writeOutput("done");   // tells client that now is his turn
                 currentPlayer.loadInput();  // loads input from client
-                if(currentPlayer.getIsPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
+
+                if (currentPlayer.getIsPassed())  // ta metoda będzie sprawdzaź czy input to pass, jęsli nie to zapisuje input i daje false
                 {
                     MyLogger.logger.log(Level.INFO, "Player passed");
+                    if (opponentPlayer.getIsPassed())
+                    {
+                        MyLogger.logger.info("game stops"); 
+                        currentPlayer.writeOutput("pause");
+                        currentPlayer.writeOutput("pause");
+                        isGamePaused = true;
+                    }
                     break;
                 }
 
@@ -94,22 +96,80 @@ public class Engine extends Thread implements IEngine
                 }
             }
     }
+
+    private String handlePause(IPlayer firstPlayer, IPlayer secondPlayer)
+    {
+        String playerTurn = "nobody";
+
+        player1.loadInput();
+        String player1Input = player1.getRawInput();
+        if (player1Input.equals("continue"))
+        {
+            playerTurn = "firstPlayer";
+        }
+        else if (player1Input.equals("end"))
+        {
+            playerTurn = "secondPlayer";
+        }
+
+        player2.loadInput();
+        String players2Input = player2.getRawInput();
+        if (players2Input.equals("continue"))
+        {
+            return playerTurn;
+        }
+        else if (players2Input.equals("end"))
+        {
+            if (playerTurn.equals("secondPlayer"))
+            {
+                return "nobody";
+            }
+            return "firstPlayer";
+        }
+
+        return null;
+
+    }
     
     @Override
     public void run()
     {
         System.out.println("new game started!");
+
+        String playersTurn = "firstPlayer";
+
         gameID = databaseManager.addNewGame();
         while (isGameWorking)
         {
-           turn(player1, player2, "white");
+            if (isGamePaused)
+            {
+                if (playersTurn.equals("firstPlayer"))
+                {
+                    playersTurn = handlePause(player2, player1);
+                }
+                else if (playersTurn.equals("secondPlayer"))
+                {
+                    playersTurn = handlePause(player1, player2);
+                }
+            }
 
-           if (!isGameWorking)
-           {
-            break;
-           }
-
-           turn(player2, player1, "black");
+            if (playersTurn.equals("firstPlayer"))
+            {
+                turn(player1, player2, "white");
+                playersTurn = "secondPlayer";
+            }
+            else if (playersTurn.equals("secondPlayer"))
+            {
+                turn(player2, player1, "black");
+                playersTurn = "firstPlayer";
+            }
+            else if (playersTurn.equals("nobody"))
+            {
+                // end game
+                player1.disconnect();
+                player2.disconnect();
+                break;
+            }
         }
     }
 

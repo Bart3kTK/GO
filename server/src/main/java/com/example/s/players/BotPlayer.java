@@ -59,6 +59,12 @@ public class BotPlayer extends AbstractPlayer
     }
 
     @Override
+    public String getRawInput() 
+    {
+        return Integer.toString(playerInput[0]) + " " + Integer.toString(playerInput[1]);
+    }
+
+    @Override
     public Boolean isConnected() 
     {
         return true;
