@@ -109,6 +109,10 @@ public class ReplayConnection implements Runnable{
                 {   
                         handleReplayCommand(mess);
                 }
+                else
+                {
+                    stop();
+                }
             }
         }
         catch (IOException e)
@@ -125,6 +129,10 @@ public class ReplayConnection implements Runnable{
     public void stop(){
         isRunning = false;
         closeSocket();
+        Platform.runLater(() -> {
+            server.setVisible(true);
+            server.setText("Server is down!");
+        });
     }
 
     private void closeSocket()
@@ -141,7 +149,6 @@ public class ReplayConnection implements Runnable{
             e.printStackTrace();
         }
     }
-
     private void handleReplayCommand(String command)
     {
         String[] splitedString = command.split(";");

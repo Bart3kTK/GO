@@ -29,7 +29,7 @@ public class ClientConnection implements Runnable{
     private boolean isMyTurn = false;
     private boolean isRunning = true;
     private int size;
-    private String gameType;
+    private boolean isPaused = false;
     
 
     public ClientConnection(Pane pane, Text[] texts, Button[] buttons,Label[] labels, TextField[] textFields, String gameType, int size) throws UnknownHostException, IOException {
@@ -42,7 +42,6 @@ public class ClientConnection implements Runnable{
         this.player21 = texts[5];
         this.server = texts[2];
         this.size = size;
-        this.gameType = gameType;
 
         socket = new Socket("localhost", 8888); 
         out = new PrintWriter(socket.getOutputStream(), true);
@@ -70,18 +69,34 @@ public class ClientConnection implements Runnable{
     {
         passButton.setOnMouseClicked(e -> {
 
-            if(isMyTurn)
+            if(isMyTurn && !isPaused)
             {
                 out.println("pass");
                 isMyTurn = false;
             }
+            if (isMyTurn && isPaused) {
+                out.println("end");
+                isPaused = false;
+                Platform.runLater(() -> {
+                    surrenderButton.setText("Surrender");
+                    passButton.setText("Pass");
+                });
+            }
         });
 
         surrenderButton.setOnMouseClicked(e -> {
-            if(isMyTurn)
+            if(isMyTurn && !isPaused)
             {
                 out.println("surrender");
                 isMyTurn = false;
+            }
+            if (isMyTurn && isPaused) {
+                out.println("continue");
+                isPaused = false;
+                Platform.runLater(() -> {
+                    surrenderButton.setText("Surrender");
+                    passButton.setText("Pass");
+                });
             }
         });
 
@@ -127,6 +142,10 @@ public class ClientConnection implements Runnable{
                     handleServerCommand(mess);
         
                 }
+                else
+                {
+                    stop();
+                }
             }
         }
         catch (IOException e)
@@ -143,6 +162,9 @@ public class ClientConnection implements Runnable{
     public void stop(){
         isRunning = false;
         closeSocket();
+        Platform.runLater(() -> {
+            server.setText("Server is down!");
+        });
     }
 
     private void closeSocket()
@@ -162,7 +184,6 @@ public class ClientConnection implements Runnable{
 
     private void handleServerCommand(String command)
     {
-        System.out.println("ELo dostałem: " + command);
         String[] splitedCommands = command.split(";");
 
         for (String splitedCommand : splitedCommands){
@@ -206,10 +227,13 @@ public class ClientConnection implements Runnable{
     private void handleOneWordCommand(String[] splitedCommand){
         String command = splitedCommand[0];
         switch (command){
-            case ("surrender"):
-                isMyTurn = true; //TODO: do przemyslenia
-                break;
-            case ("pass"):
+            case ("pause"):
+                isPaused = true;
+                Platform.runLater(() -> {
+                    surrenderButton.setText("Continue");
+                    passButton.setText("End");
+                    server.setText("Game is paused after double pass.\nClick continue to resume or end to finish game.");
+                });
             case ("done"):
                 Platform.runLater(() -> {
                     for (GUIPawn[] row : pawnsGrid) {
