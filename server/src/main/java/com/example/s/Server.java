@@ -3,17 +3,7 @@ package com.example.s;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-<<<<<<< HEAD
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.logging.Level;
-=======
->>>>>>> ceb17cf (rebase)
 
-import com.example.s.engine.Engine;
 import com.example.s.engine.EngineFactory;
 import com.example.s.engine.IEngine;
 import com.example.s.logger.MyLogger;
@@ -25,19 +15,6 @@ public class Server
     public static void main(String[] args) 
     {
         MyLogger.loggerConfig();
-        // System.out.println("XD\n\n\n\n\n\n\n\nXD");
-        // DatabaseManager databaseManager = DatabaseManager.getInstance();
-        // int indexBoard = databaseManager.addNewGame();
-        // System.out.println("indexBoard: " + indexBoard);
-        // databaseManager.addBoardString("Elo!", indexBoard);
-        // for (String s : databaseManager.getGameSave(indexBoard))
-        // {
-        //     System.out.println(s);
-        // }
-        // for (String[] s : databaseManager.getGameList())
-        // {
-        //     System.out.println(s[0] + " " + s[1]);
-        // }
         start();
     }
 
@@ -52,8 +29,10 @@ public class Server
             {
                 Socket playerSocket = serverSocket.accept();
                 System.out.println("Dolaczyl nowy uzytkownik!");
+                System.out.println(playerSocket);
 
                 ClientInputReader inputReader = new ClientInputReader(playerSocket);
+                System.out.println(inputReader);
 
                 // oczekujemy stringa w postaci: "pvp/bot 9x9/13x13/19x19" update: ZROBIONE I TAK SIE DZIEJE
                 String userPreferences = inputReader.readInput();

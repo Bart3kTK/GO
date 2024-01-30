@@ -18,6 +18,11 @@ public class OutputWriter
         }
     }
 
+    public void close()
+    {
+        out.close();
+    }
+
     public void wariteOutput(String outputMessage)
     {
         out.println(outputMessage + "\n");
