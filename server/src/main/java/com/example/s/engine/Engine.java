@@ -105,11 +105,11 @@ public class Engine extends Thread implements IEngine
         String player1Input = player1.getRawInput();
         if (player1Input.equals("continue"))
         {
-            playerTurn = "firstPlayer";
+            playerTurn = "secondPlayer";
         }
         else if (player1Input.equals("end"))
         {
-            playerTurn = "secondPlayer";
+            playerTurn = "firstPlayer";
         }
 
         player2.loadInput();
@@ -120,11 +120,11 @@ public class Engine extends Thread implements IEngine
         }
         else if (players2Input.equals("end"))
         {
-            if (playerTurn.equals("secondPlayer"))
+            if (playerTurn.equals("firstPlayer"))
             {
                 return "nobody";
             }
-            return "firstPlayer";
+            return "secondPlayer";
         }
 
         return null;
