@@ -51,8 +51,16 @@ public class Player extends AbstractPlayer
         String[] stringPosition = this.playerInput.split(" ");
         int[] intPosition = new int[2];
 
-        intPosition[0] = Integer.parseInt(stringPosition[0]);
-        intPosition[1] = Integer.parseInt(stringPosition[1]);
+        try
+        {
+            intPosition[0] = Integer.parseInt(stringPosition[0]);
+            intPosition[1] = Integer.parseInt(stringPosition[1]);
+        }
+        catch (NumberFormatException e)
+        {
+            intPosition[0] = -1;
+            intPosition[1] = -1;
+        }
 
         return intPosition;
     }

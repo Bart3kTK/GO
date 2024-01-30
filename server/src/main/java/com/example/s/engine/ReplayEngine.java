@@ -49,10 +49,21 @@ public class ReplayEngine extends Thread implements IEngine
                 player1.loadInput();  // loads input from client
                 int[] playerRequest = player1.moveRequest();
                 System.out.println("przeczytałem, pozdro");
+                if (playerRequest[0] == -1) {
+                    player1.writeOutput("server Wrong_input");
+                }
                 if (playerRequest[0] == 2)
                 {
-                    game = databaseManager.getGameSave(playerRequest[1]);
-                    player1.writeOutput("prepare;" + game.get(0).split("\n").length);
+                    try
+                    {
+                        game = databaseManager.getGameSave(playerRequest[1]);
+                        player1.writeOutput("prepare;" + game.get(0).split("\n").length);
+                    }
+                    catch (Exception e)
+                    {
+                        player1.writeOutput("server Wrong_input");
+                        continue;
+                    }
                 }
                 if (playerRequest[0] == 1 && moveCounter < game.size() - 1)
                 {

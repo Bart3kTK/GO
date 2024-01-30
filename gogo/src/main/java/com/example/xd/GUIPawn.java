@@ -74,6 +74,10 @@ public class GUIPawn extends Circle{
     {
         isLocked = false;
     }
+    public boolean isLocked()
+    {
+        return isLocked;
+    }
 
 
     

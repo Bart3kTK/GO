@@ -143,7 +143,6 @@ public class ClientConnection implements Runnable{
                 if (mess != null)
                 {   
                     handleServerCommand(mess);
-        
                 }
                 else
                 {
@@ -231,24 +230,35 @@ public class ClientConnection implements Runnable{
         String command = splitedCommand[0];
         switch (command){
             case ("pause"):
+
                 isPaused = true;
+
                 Platform.runLater(() -> {
+                    for (GUIPawn[] row : pawnsGrid) {
+                        for (GUIPawn pawn : row) {
+                                pawn.lock();
+                        }
+                    }
                     surrenderButton.setText("Continue");
                     passButton.setText("End");
                     server.setText("Game is paused after double pass.\nClick continue to resume or end to finish game.");
                 });
-            case ("done"):
-                Platform.runLater(() -> {
-                    for (GUIPawn[] row : pawnsGrid) {
-                        for (GUIPawn pawn : row) {
-                                pawn.unlock();
 
-                            
+            case ("done"):
+                if (!isPaused)
+                {
+                    Platform.runLater(() -> {
+                        for (GUIPawn[] row : pawnsGrid) {
+                            for (GUIPawn pawn : row) {
+                                    pawn.unlock();
+                            }
                         }
-                    }
-                    isMyTurn = true;
-                });
-                break;
+                    });
+                }
+                isMyTurn = true;
+                break;                
+            
+
             default:
                 break;
         }
@@ -271,7 +281,6 @@ public class ClientConnection implements Runnable{
                     case ("clear"):
                         pawn.setClear();
                         break;
-                        
                     default:
                         break;
             };
