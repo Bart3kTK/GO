@@ -32,6 +32,7 @@ public class Engine extends Thread implements IEngine
     {
         while (true)
             {
+                
                 currentPlayer.writeOutput("done");   // tells client that now is his turn
                 currentPlayer.loadInput();  // loads input from client
 
@@ -45,6 +46,20 @@ public class Engine extends Thread implements IEngine
                         opponentPlayer.writeOutput("pause");
                         isGamePaused = true;
                     }
+                    break;
+                }
+                if(currentPlayer.getIsSurrendered())
+                {
+                    currentPlayer.writeOutput("server " +color+"_surrendered\nServer_closed");
+                    opponentPlayer.writeOutput("server " +color+"_surrendered\nServer_closed"); 
+                    isGameWorking = false;
+                    try {
+                        sleep(10000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    player1.disconnect();
+                    player2.disconnect();
                     break;
                 }
 
@@ -127,7 +142,7 @@ public class Engine extends Thread implements IEngine
             return "secondPlayer";
         }
 
-        return null;
+        return "nobody";
 
     }
     
@@ -157,17 +172,24 @@ public class Engine extends Thread implements IEngine
 
             if (playersTurn.equals("firstPlayer"))
             {
+                player1.writeOutput("server " + playersTurn+"_turn");
+                player2.writeOutput("server " + playersTurn+"_turn");
+                
                 turn(player1, player2, "white");
                 playersTurn = "secondPlayer";
             }
             else if (playersTurn.equals("secondPlayer"))
             {
+                player1.writeOutput("server " + playersTurn+"_turn");
+                player2.writeOutput("server " + playersTurn+"_turn");
                 turn(player2, player1, "black");
                 playersTurn = "firstPlayer";
             }
             else if (playersTurn.equals("nobody"))
             {
-                // end game
+                player1.writeOutput("server END_OF_THE_GAME");
+                player2.writeOutput("server END_OF_THE_GAME");
+
                 player1.disconnect();
                 player2.disconnect();
                 break;

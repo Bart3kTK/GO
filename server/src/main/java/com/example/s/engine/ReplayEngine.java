@@ -43,12 +43,17 @@ public class ReplayEngine extends Thread implements IEngine
     {
         MyLogger.logger.log(Level.INFO, "Replay engine started");
         sendListOfGames();
+        player1.writeOutput("server REPLAYS!");
         while (true)
             {
                 player1.writeOutput("done");   // tells client that now is his turn
                 player1.loadInput();  // loads input from client
+                if(player1.isConnected() == false)
+                {
+                    player1.disconnect();
+                    break;
+                }
                 int[] playerRequest = player1.moveRequest();
-                System.out.println("przeczytałem, pozdro");
                 if (playerRequest[0] == -1) {
                     player1.writeOutput("server Wrong_input");
                 }
