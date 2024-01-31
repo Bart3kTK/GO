@@ -15,6 +15,8 @@ public interface IPlayer
 
     // control isPassed flags
     public Boolean getIsPassed();
+    // control isSurrender flags
+    public Boolean getIsSurrendered();
     public void setIsPassed(Boolean isPassed);
 
     // basiclly says "hi, i'm + nickname"

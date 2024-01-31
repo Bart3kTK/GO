@@ -45,6 +45,11 @@ public class BotPlayer extends AbstractPlayer
     {
         return false;
     }
+    @Override
+    public Boolean getIsSurrendered()
+    {
+        return false;
+    }
 
     @Override
     public void setIsPassed(Boolean isPassed) 

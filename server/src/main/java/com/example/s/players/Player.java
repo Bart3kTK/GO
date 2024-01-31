@@ -15,6 +15,7 @@ public class Player extends AbstractPlayer
     private String playerInput;
 
     private Boolean isPassed = false;
+    private Boolean isSurrendered = false;
     private Boolean wantToContinue = false;
 
     public Player(final Socket socket, ClientInputReader clientInputReader) throws IOException
@@ -35,6 +36,10 @@ public class Player extends AbstractPlayer
         else
         {
             this.isPassed = false;
+        }
+        if(playerInput.equals("surrender"))
+        {
+            this.isSurrendered = true;
         }
 
     }
@@ -69,6 +74,11 @@ public class Player extends AbstractPlayer
     public Boolean getIsPassed() 
     {
         return isPassed;
+    }
+    @Override
+    public Boolean getIsSurrendered()
+    {
+        return isSurrendered;
     }
 
     @Override

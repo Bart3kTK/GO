@@ -12,19 +12,17 @@
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>3.0.0</version>
+            <version>1.6.0</version>
             <executions>
                 <execution>
-                    <id>start-server</id>
-                    <phase>pre-integration-test</phase>
                     <goals>
                         <goal>java</goal>
                     </goals>
-                    <configuration>
-                        <mainClass>com.example.s.Server</mainClass>
-                    </configuration>
                 </execution>
             </executions>
+            <configuration>
+                <mainClass>com.example.s.Server</mainClass>
+            </configuration>
         </plugin>
     </plugins>
 </build>
