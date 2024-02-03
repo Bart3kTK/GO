@@ -1,16 +1,38 @@
 # GRA W GO!
+# **Uruchomienie**
+Program korzysta z bazy MarieDB i łączy się za pomocą JDBC
+Baza, z którą się łączy musi mieć nazwę go_games oraz
+posiadać dwie tabele i użytkownika o nazwie server
+i haśle GoGoPowerRanger
 
-## TASKI DO 20.12:
-1. Diagramy UML
-2. PawnGUI
-3. Proste GUI i planszą, która pozwala klaść pionki
-4. Utworzenie założeń
-5. Wstępna implementacja serwera
+```bash
+CREATE TABLE game (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date_column DATETIME,
+    index_gry INT,
+    INDEX idx_date (date_column),
+    INDEX idx_index_gry (index_gry)
+);
 
-## TASKI DO KONCA SEMESTRU:
-1. Diagram klas
-2. Logika
-3. i cala reszta
+
+CREATE TABLE board (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    index_gry INT,
+    board VARCHAR(3000),
+    INDEX idx_index_gry (index_gry),
+    INDEX idx_board (board)
+);
+
+CREATE USER 'server'@'localhost' IDENTIFIED BY 'GoGoPowerRangers';
+GRANT ALL PRIVILEGES ON *.* TO 'server'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+```
+
+## wlaczenie klenta
+- w ścieżce Go/gogo mvn javafx:run
+## wlaczenie servera
+- w ścieżce Go/server mvn clean install oraz mvn exec:java
 
 # **Założenia**
 ## Część klienta
